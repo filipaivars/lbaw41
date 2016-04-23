@@ -1,6 +1,6 @@
 <?php
   include_once('../../config/init.php');
-  include_once($BASE_DIR .'database/tweets.php');
+  include_once($BASE_DIR .'database/perguntas.php');
 
   $tweets = getAllTweets();  
   
@@ -17,5 +17,5 @@
   $smarty->assign('last_tweet_id', $tweets[0]['pergunta_id']);  
   
   $smarty->assign('tweets', $tweets);
-  $smarty->display('tweets/list.tpl');
+  $smarty->display('tweets/home.tpl');
 ?>

@@ -1,6 +1,6 @@
 <?php
   include_once('../../config/init.php');
-  include_once($BASE_DIR .'database/tweets.php');
+  include_once($BASE_DIR .'database/perguntas.php');
 
   if (!$_GET['username']) {
     $_SESSION['error_messages'][] = 'Undefined username';
@@ -23,5 +23,5 @@
   }  
   
   $smarty->assign('tweets', $tweets);
-  $smarty->display('tweets/list.tpl');
+  $smarty->display('tweets/home.tpl');
 ?>

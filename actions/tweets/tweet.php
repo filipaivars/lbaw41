@@ -1,6 +1,6 @@
 <?php
   include_once('../../config/init.php');
-  include_once($BASE_DIR .'database/tweets.php');  
+  include_once($BASE_DIR .'database/perguntas.php');  
 
   if (!$_SESSION['username']) {
     $_SESSION['error_messages'][] = 'Not allowed!';

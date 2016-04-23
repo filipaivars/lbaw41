@@ -1,10 +1,13 @@
 <?php
   
-  function getAllTweets() {
+  function getLastPerguntas() {
     global $conn;
-    $stmt = $conn->prepare("SELECT pergunta.pergunta_id, pergunta.conteudo,pergunta.titulo,utilizador.username 
-                            FROM pergunta, utilizador 
-                            where pergunta.criar_id = utilizador.user_id");
+    $stmt = $conn->prepare(
+        "SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date,utilizador.user_id 
+        FROM pergunta, utilizador 
+        WHERE pergunta.criar_id = utilizador.user_id 
+        ORDER BY pergunta.created_date DESC
+        LIMIT 10");
     $stmt->execute();
     return $stmt->fetchAll();
   }
