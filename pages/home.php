@@ -16,5 +16,5 @@ $perguntas = getLastPerguntas();
 
 
 $smarty->assign('perguntas', $perguntas);
-$smarty->display('tweets/home.tpl');
+$smarty->display('home/home.tpl');
 ?>
