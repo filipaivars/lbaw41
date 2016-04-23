@@ -1,7 +1,14 @@
 {include file='common/header.tpl'}
 
+
+
 <section id="tweets">
-  <h2>Tweets</h2>
+  <h4 style="margin-top: 0; padding-top: 20px">Recent Questions</h4>
+  <hr class="style-one">
+
+
+  <h4>Top Questions</h4>
+  <hr class="style-one">
 
   <div id="new_tweets"></div>
 
