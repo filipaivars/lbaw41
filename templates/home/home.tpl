@@ -28,6 +28,9 @@
                                 <div class="col-md-4">
                                     <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
                                 </div>
+                                <div class="col-md-1">
+                                    aqui
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-1">
