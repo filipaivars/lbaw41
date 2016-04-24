@@ -108,3 +108,12 @@ hr.style-two {
     align-items: center;
     justify-content: center;
 }
+
+a{
+    color: #282827;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #e94735;
+}
