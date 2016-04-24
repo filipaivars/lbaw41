@@ -32,8 +32,8 @@
       <file leaf-file-name="home.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/home/home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+            <state relative-caret-position="345">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -42,7 +42,7 @@
       <file leaf-file-name="perguntas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/perguntas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="-180">
               <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
               <folding>
                 <marker date="1461462722000" expanded="true" signature="96:333" placeholder="SELECT pergu... pergunta" />
@@ -842,7 +842,7 @@
       <workItem from="1461429017705" duration="2900000" />
       <workItem from="1461442985938" duration="237000" />
       <workItem from="1461443245265" duration="3801000" />
-      <workItem from="1461461439425" duration="1273000" />
+      <workItem from="1461461439425" duration="1442000" />
     </task>
     <task id="LOCAL-00001" summary="fixed filenames + query + more stuff">
       <created>1461445004423</created>
@@ -869,7 +869,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14371000" />
+    <option name="totallyTimeSpent" value="14540000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1088,9 +1088,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/perguntas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="-180">
           <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
           <folding>
             <marker date="1461462722000" expanded="true" signature="96:333" placeholder="SELECT pergu... pergunta" />
@@ -1102,18 +1110,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/home.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="345">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
           <folding />
         </state>
       </provider>

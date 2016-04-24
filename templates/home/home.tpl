@@ -8,6 +8,8 @@
 
             <div id="new_perguntas"></div>
             {foreach $perguntas as $pergunta}
+                <hr class="style-one">
+
                 <div id="questaoRecente">
                     <div class="row">
                         <div class="col-md-2">
@@ -31,11 +33,10 @@
                         </div>
                     </div>
                 </div>
-                <hr class="style-one">
             {/foreach}
 
 
-
+            <hr class="style-two">
             <h4>Top Questions</h4>
             <hr class="style-two">
 
