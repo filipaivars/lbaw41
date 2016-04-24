@@ -5,9 +5,9 @@
         <h4>{$pergunta.titulo}</h4>
         <hr class="style-one">
         <div class="row">
-            <div class="col-md-3" style="text-align: center">
+            <div class="col-md-3">
                 <img class="avatar" src="../../images/assets/default.png" width="50" height="50"><br>
-                {$pergunta.username}<br>
+                {$pergunta.username}<br><br>
                 <div class="perg-data">{$pergunta.created_date}</div>
 
 

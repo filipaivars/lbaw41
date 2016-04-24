@@ -23,11 +23,18 @@
                                         <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                             <div class="perg-titulo">{$pergunta.titulo}</div>
                                         </a>
+                                        <div class="col-md-1">
+                                            aqui1
+                                        </div>
+                                        <div class="col-md-1">
+                                            aqui2
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
                                 </div>
+
                             </div>
                         </div>
                         <div class="col-md-1">
