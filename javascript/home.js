@@ -32,5 +32,5 @@ function myFunction() {
 
 function roundMe(num) {
     var n = num.toFixed(2);
-    document.getElementsByClassName("starsAvg").innerHTML = n;
+    return n;
 }
