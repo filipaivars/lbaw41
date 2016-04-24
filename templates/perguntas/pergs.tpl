@@ -14,6 +14,12 @@
                 <div class="perg-conteudo">
                     {$pergunta.conteudo}
                 </div>
+                    {foreach $tags as $tag}
+                        <div style="background-color: yellow">
+                            {$tag.nome}
+                        </div>
+                    {/foreach}
+
             </div>
         </div>
     </div>
