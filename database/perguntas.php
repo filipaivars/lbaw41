@@ -1,6 +1,6 @@
 <?php
   
-  function getLastPerguntas() {
+function getLastPerguntas() {
     global $conn;
     $stmt = $conn->prepare(
         "SELECT pergunta.pergunta_id, pergunta.titulo,pergunta.created_date,utilizador.username, avg(votoutilizadorpergunta.valor) as average , count(resposta.resposta_id) as n_respostas
@@ -13,6 +13,20 @@
     $stmt->execute();
     return $stmt->fetchAll();
   }
+
+function getPergunta($pergunta_id) {
+  global $conn;
+  $stmt = $conn->prepare("
+        SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo
+        FROM pergunta
+        WHERE pergunta.pergunta_id = ? 
+                            ");
+  $stmt->execute();
+  return $stmt->fetchAll();
+}
+
+
+
   
   function getUserTweets($username) {
     global $conn;
