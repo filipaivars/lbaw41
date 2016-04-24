@@ -1,6 +1,6 @@
 {include file='common/header.tpl'}
 LALALALALAL<br>
-{$pergunta.titulo}
+{$pergunta[0].titulo}
 LALALALALAL<br>
 LALALALALAL<br>
 
