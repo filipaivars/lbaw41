@@ -21,6 +21,6 @@ $(function(){
     $("#includeHome").load("views/home.html");
 });
 
-$(document).ready(function(){
-    $(".defaultAvatar").html("<img src=/".."");
-});
+function myFunction() {
+    document.getElementById("avatar").src = "../../images/assets/default.png";
+}

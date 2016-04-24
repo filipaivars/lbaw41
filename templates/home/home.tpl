@@ -14,12 +14,6 @@
                     <div class="row">
                         <div class="col-md-2">
                             <img id="avatar" src="">
-                            <script>
-                                function myFunction() {
-                                    document.getElementById("avatar").src = "../../images/assets/default.png";
-                                }
-                                myFunction()
-                            </script>
                         </div>
                         <div class="col-md-8">
                             <div class="row">
@@ -42,6 +36,9 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    myFunction();
+                </script>
             {/foreach}
 
 
