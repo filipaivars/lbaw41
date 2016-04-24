@@ -38,7 +38,9 @@
         <i class="material-icons" style="font-size: 35px">email</i>
       </div>
       <div class="col-xs-2 col-md-1" style="text-align: right ">
-        <i class="material-icons" style="font-size: 35px">person</i>
+          <a href="../../pages/users/register.php">
+              <i class="material-icons" style="font-size: 35px">person</i>
+          </a>
       </div>
     </div>
   </div>
@@ -58,9 +60,7 @@
           <input type="text" name="questionTag" placeholder="tags" style="width: 100%; margin-top: 10px; border-style: none; height: 33px">
         </div>
         <div class="col-xs-12 col-md-4" style="text-align: right; border-style: none;">
-            <a href="../../pages/users/register.php">
-                <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post question</button>
-            </a>
+          <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post question</button>
 
         </div>
 
