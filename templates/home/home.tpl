@@ -28,8 +28,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-1">
-                            <div class="row" style="text-align: center">
+                        <div class="col-md-1" style="text-align: center">
+                            <div class="row">
                                 <div class="vcenter" style="background-color: #282827; color: white; height: 50px; width: 100%;">
                                         Answers
                                 </div>

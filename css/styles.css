@@ -100,7 +100,6 @@ hr.style-two {
 }
 
 .vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+    display: flex;
+    align-items: center;
 }
