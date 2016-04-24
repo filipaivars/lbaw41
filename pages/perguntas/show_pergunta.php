@@ -13,7 +13,6 @@
 
 
     $perguntas = getPergunta($pergunta_id);
-    $perguntas[0]->comentarios = getPerguntaComentarios($pergunta_id);
     $pergunta = $perguntas[0];
 
 
@@ -22,10 +21,6 @@
 
     $respostas = getPerguntaRespostas($pergunta_id);
 
-
-    foreach ($respostas as $resposta) {
-        $resposta->comentarios = getRespostaComentarios($resposta->resposta_id);
-    }
 
 
 
