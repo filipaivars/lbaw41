@@ -28,12 +28,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-1" style="text-align: center">
+                        <div class="col-md-1">
                             <div class="row">
                                 <div class="caixaPerg">
                                         Answers
                                 </div>
-                                <div class="caixaPerg">
+                                <div style="background-color: white; color: #282827; text-align: center">
                                     {$pergunta.n_respostas}
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                             <div class="caixaPerg">
                                 Stars
                             </div>
-                            <div class="starsAvg caixaPerg">
+                            <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
                                 <script>
                                     document.write(roundMe({$pergunta.average}));
                                 </script>
