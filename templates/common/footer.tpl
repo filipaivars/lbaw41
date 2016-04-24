@@ -27,7 +27,7 @@
             Square Enix<br>
             Rockstar<br>
             Blizzard<br>
-            Ubisoft<
+            Ubisoft
         </div>
     </div>
 </div>

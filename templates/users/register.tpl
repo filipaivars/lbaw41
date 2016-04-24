@@ -11,6 +11,7 @@
     <SCRIPT TYPE="text/javascript" src="../../fbapp/fb.js"></SCRIPT>
     <div class="fb-login-button" data-size="large" data-scope="public_profile,email" onlogin="checkLoginState();"></div>
     <br>
+    <br>
 </div>
 
 {include file='common/footer.tpl'}

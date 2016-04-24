@@ -126,3 +126,7 @@ a:hover{
     color: #e94735;
     text-decoration: none;
 }
+
+i::selection {
+    color: white;
+}
