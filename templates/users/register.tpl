@@ -8,9 +8,10 @@
             <input type="text" name="username" value="{$username}">
         </label>
         <br>
-        <!--<div class="fb-login-button" data-scope="public_profile, email" onlogin="checkLoginState();"></div> !-->
+        <!--<div class="fb-login-button" data-scope="public_profile, email" onlogin="checkLoginState();"></div>
         <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false"
-             data-auto-logout-link="false" data-scope="public_profile, email"></div>
+             data-auto-logout-link="false" data-scope="public_profile, email"></div> !-->
+        <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
         <br>
     </form>
 
