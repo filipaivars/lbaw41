@@ -13,7 +13,7 @@
                 <div id="questaoRecente">
                     <div class="row">
                         <div class="col-md-2">
-                            <img class="avatar" src="">
+                            <img class="avatar" src="" width="50" height="50">
                         </div>
                         <div class="col-md-8">
                             <div class="row">
