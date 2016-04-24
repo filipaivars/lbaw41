@@ -22,23 +22,22 @@
                                     <span class="perg-titulo">{$pergunta.created_date}</span>
                                 </div>
                             </div>
-                            <div class="perg-conteudo">{$pergunta.conteudo}</div>
                         </div>
                         <div class="col-md-1">
-                            ele
+                            RESPOSTAS
                         </div>
                         <div class="col-md-1">
-                            nos
+                            STARS
                         </div>
                     </div>
                 </div>
-
+                <hr class="style-one">
             {/foreach}
 
-            <hr class="style-one">
+
 
             <h4>Top Questions</h4>
-            <hr class="style-one">
+            <hr class="style-two">
 
         </section>
     </div>
