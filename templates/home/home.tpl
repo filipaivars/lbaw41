@@ -29,7 +29,10 @@
                             </div>
                         </div>
                         <div class="col-md-1">
-                            RESPOSTAS
+                            <div class="row">
+                                <div style="background-color: #282827; color: white; height: 50px">Answers</div>
+                                <div style="background-color: white; color: #282827">3</div>
+                            </div>
                         </div>
                         <div class="col-md-1">
                             STARS
