@@ -9,9 +9,10 @@
         </label>
         <br>
     </form>
-    <div id="bar" style="width: 20%; float: right;">
+    <div id="bar" style=" float: right;">
         <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
     </div>
+    <br>
 </div>
 
 {include file='common/footer.tpl'}
