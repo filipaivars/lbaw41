@@ -26,7 +26,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <span class="perg-date" style="text-align: right">{$pergunta.created_date}</span>
+                                    <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
                                 </div>
                             </div>
                         </div>

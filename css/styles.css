@@ -85,6 +85,10 @@ hr.style-two {
     font-style: italic;
 }
 
+.perg-data{
+    font-size: 11px;
+}
+
 
 .stylish-input-group .input-group-addon{
     background: white !important;
