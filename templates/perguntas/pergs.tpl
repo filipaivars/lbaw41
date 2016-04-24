@@ -19,6 +19,15 @@
                             {$tag.nome}
                         </div>
                     {/foreach}
+<br><br>
+                {foreach $respostas as $resposta}
+                    <div style="background-color: blue">
+                        {$resposta.conteudo}<br>
+                        {$resposta.username}<br>
+                        {$resposta.average}<br>
+                        {$resposta.created_date}
+                    </div>
+                {/foreach}
 
             </div>
         </div>
