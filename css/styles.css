@@ -99,9 +99,12 @@ hr.style-two {
     background:transparent;
 }
 
-.vcenter {
+.caixaPerg {
+    background-color: #282827;
+    color: white;
+    height: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
-    text-align: center;
-    width: 100%;
+    justify-content: center;
 }
