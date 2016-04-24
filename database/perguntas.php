@@ -21,7 +21,7 @@ function getPergunta($pergunta_id) {
         FROM pergunta
         WHERE pergunta.pergunta_id = ? 
                             ");
-  $stmt->execute();
+  $stmt->execute($pergunta_id);
   return $stmt->fetchAll();
 }
 
