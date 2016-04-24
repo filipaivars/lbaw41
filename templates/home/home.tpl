@@ -4,16 +4,30 @@
 
 <section id="perguntas">
   <h4 style="margin-top: 0; padding-top: 20px">Recent Questions</h4>
-  <hr class="style-one">
 
 
-  <h4>Top Questions</h4>
-  <hr class="style-one">
+
+
 
   <div id="new_perguntas"></div>
 
   {foreach $perguntas as $pergunta}
-
+    <div id="questaoRecente">
+      <div class="row">
+        <div class="col-md-2">
+          eu
+        </div>
+        <div class="col-md-8">
+          tu
+        </div>
+        <div class="col-md-1">
+          ele
+        </div>
+        <div class="col-md-1">
+          nos
+        </div>
+      </div>
+    </div>
   <article class="tweet-data">
     <!--<img src="{$BASE_URL}{$pergunta.photo}">
     <span class="realname">{$pergunta.realname}</span>
@@ -24,6 +38,11 @@
   </article>
 
   {/foreach}
+
+  <hr class="style-one">
+
+  <h4>Top Questions</h4>
+  <hr class="style-one">
 
 </section>
 
