@@ -29,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home/home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="135">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
@@ -125,9 +125,9 @@
         <option value="$PROJECT_DIR$/templates/tweets/list.tpl" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/database/perguntas.php" />
-        <option value="$PROJECT_DIR$/javascript/home.js" />
         <option value="$PROJECT_DIR$/templates/common/footer.tpl" />
         <option value="$PROJECT_DIR$/templates/home/home.tpl" />
+        <option value="$PROJECT_DIR$/javascript/home.js" />
       </list>
     </option>
   </component>
@@ -854,7 +854,7 @@
       <workItem from="1461429017705" duration="2900000" />
       <workItem from="1461442985938" duration="237000" />
       <workItem from="1461443245265" duration="3801000" />
-      <workItem from="1461461439425" duration="2665000" />
+      <workItem from="1461461439425" duration="2721000" />
     </task>
     <task id="LOCAL-00001" summary="fixed filenames + query + more stuff">
       <created>1461445004423</created>
@@ -881,7 +881,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15763000" />
+    <option name="totallyTimeSpent" value="15819000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1105,16 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/footer.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -1125,9 +1115,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/home.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="135">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

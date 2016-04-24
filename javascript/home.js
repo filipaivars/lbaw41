@@ -22,5 +22,5 @@ $(function(){
 });
 
 function myFunction() {
-    document.getElementById("avatar").src = "../../images/assets/default.png";
+    document.getElementsByClassName("avatar").src = "../../images/assets/default.png";
 }
