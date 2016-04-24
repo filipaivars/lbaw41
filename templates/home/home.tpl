@@ -43,7 +43,7 @@
                                 Stars
                             </div>
                             <div style="background-color: white; color: #282827">
-                                {$pergunta.average.toFixed(1)}
+                                {$pergunta.average}.toFixed(1);
                             </div>
                         </div>
                     </div>
