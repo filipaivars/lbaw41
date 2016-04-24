@@ -3,11 +3,13 @@
   function getLastPerguntas() {
     global $conn;
     $stmt = $conn->prepare(
-        "SELECT pergunta.pergunta_id, pergunta.titulo,pergunta.created_date,utilizador.username
-        FROM pergunta, utilizador 
-        WHERE pergunta.criar_id = utilizador.user_id 
+        "SELECT pergunta.pergunta_id, pergunta.titulo,pergunta.created_date,utilizador.username, avg(votoutilizadorpergunta.valor) as average , count(resposta.resposta_id) as n_respostas
+        FROM pergunta, utilizador, votoutilizadorpergunta,resposta
+        WHERE pergunta.criar_id = utilizador.user_id AND pergunta.criar_id = votoutilizadorpergunta.pergunta_id AND pergunta.pergunta_id = resposta.pergunta_id
+        GROUP BY pergunta.pergunta_id,utilizador.user_id
         ORDER BY pergunta.created_date DESC
-        LIMIT 10");
+        LIMIT 10
+    ");
     $stmt->execute();
     return $stmt->fetchAll();
   }
