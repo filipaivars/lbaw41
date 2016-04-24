@@ -15,9 +15,19 @@
     $perguntas = getPergunta($pergunta_id);
     $pergunta = $perguntas[0];
 
+    define($pergunta.comentarios, getPerguntaComentarios($pergunta_id));
+
     $tags = getPerguntaTags($pergunta_id);
 
     $respostas = getPerguntaRespostas($pergunta_id);
+
+
+    for ($i = 0; $i < count($respostas); $i++) {
+        define($respostas[$i].comentarios, getRespostaComentarios($respostas[$i].resposta_id));
+    }
+
+
+
 
     $smarty->assign('pergunta', $pergunta);
     $smarty->assign('tags', $tags);

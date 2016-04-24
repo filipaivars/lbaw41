@@ -40,6 +40,7 @@ function getPerguntaRespostas($pergunta_id) {
         LEFT OUTER JOIN votoutilizadorresposta ON (resposta.resposta_id = votoutilizadorresposta.resposta_id)
         WHERE pergunta.pergunta_id = ?
         GROUP BY resposta.resposta_id,pergunta.pergunta_id, utilizador.user_id
+        ORDER BY average DESC NULLS LAST
                             ");
     $stmt->execute(array($pergunta_id));
     return $stmt->fetchAll();
@@ -55,6 +56,32 @@ function getPerguntaTags($pergunta_id) {
         WHERE pergunta.pergunta_id = ? 
                             ");
     $stmt->execute(array($pergunta_id));
+    return $stmt->fetchAll();
+}
+
+function getPerguntaComentarios($pergunta_id) {
+    global $conn;
+    $stmt = $conn->prepare("
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        FROM comentario
+        JOIN pergunta ON (pergunta.pergunta_id = comentario.pergunta_id)
+        JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
+        WHERE pergunta.pergunta_id = ?
+                            ");
+    $stmt->execute(array($pergunta_id));
+    return $stmt->fetchAll();
+}
+
+function getRespostaComentarios($resposta_id) {
+    global $conn;
+    $stmt = $conn->prepare("
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        FROM comentario
+        JOIN resposta ON (resposta.resposta_id = comentario.resposta_id)
+        JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
+        WHERE resposta.resposta_id = ?
+                            ");
+    $stmt->execute(array($resposta_id));
     return $stmt->fetchAll();
 }
 
