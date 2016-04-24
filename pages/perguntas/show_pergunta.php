@@ -13,10 +13,10 @@
 
 
     $perguntas = getPergunta($pergunta_id);
+    $perguntas[0]->comentarios = getPerguntaComentarios($pergunta_id);
     $pergunta = $perguntas[0];
 
-    $comentarios = getPerguntaComentarios($pergunta_id);
-    $pergunta->comentarios = $comentarios;
+
 
     $tags = getPerguntaTags($pergunta_id);
 
@@ -31,7 +31,6 @@
 
 
     $smarty->assign('pergunta', $pergunta);
-    $smarty->assign('pergunta.comentarios', $comentarios);
     $smarty->assign('tags', $tags);
     $smarty->assign('respostas', $respostas);
 
