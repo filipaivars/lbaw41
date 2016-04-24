@@ -103,4 +103,5 @@ hr.style-two {
     display: flex;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
