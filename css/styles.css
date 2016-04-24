@@ -111,9 +111,9 @@ hr.style-two {
 
 a{
     color: #282827;
-    text-decoration: none;
 }
 
 a:hover{
     color: #e94735;
+    text-decoration: none;
 }
