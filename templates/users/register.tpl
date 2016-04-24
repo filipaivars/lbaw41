@@ -1,4 +1,5 @@
 {include file='common/header.tpl'}
+$username = $_POST['username'];
 
 <section id="register">
   <h2>Register</h2>
@@ -10,7 +11,7 @@
     <br>
   </form>
     <div id="sidebar" style="width: 20%; float: right">
-    <?php if(isset($_SESSION['name'])) {
+    <?php if(isset($_POST[$username])) {
 		?> <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false" data-scope></div>
         <?php } ?>
 
