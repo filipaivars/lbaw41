@@ -20,7 +20,7 @@
                                 <div class="col-md-8">
                                     <div class="row">
                                         <div class="perg-user">{$pergunta.username}</div>
-                                        <a href="../../pages/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
+                                        <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                             <div class="perg-titulo">{$pergunta.titulo}</div>
                                         </a>
                                     </div>
