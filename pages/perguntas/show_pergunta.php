@@ -13,10 +13,17 @@
 
 
     $perguntas = getPergunta($pergunta_id);
-
     $pergunta = $perguntas[0];
 
+    $tags = getPerguntaTags($pergunta_id);
+
+    $respostas = getPerguntaRespostas($pergunta_id);
+
     $smarty->assign('pergunta', $pergunta);
+    $smarty->assign('tags', $tags);
+    $smarty->assign('respostas', $respostas);
+
+
     $smarty->display('perguntas/pergs.tpl');
 
 ?>
