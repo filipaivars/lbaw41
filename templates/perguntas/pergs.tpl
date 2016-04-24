@@ -6,8 +6,9 @@
         <hr class="style-one">
         <div class="row">
             <div class="col-md-3">
-                <!--<img class="avatar" src="../../images/assets/default.png" width="50" height="50"><br>-->
-                {$pergunta.username}
+                <img class="avatar" src="../../images/assets/default.png" width="50" height="50"><br>
+                {$pergunta.username}<br>
+                {$pergunta.created_date}
             </div>
             <div class="col-md-9">
                 <div class="perg-conteudo">
