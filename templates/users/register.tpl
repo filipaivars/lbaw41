@@ -1,5 +1,4 @@
 {include file='common/header.tpl'}
-<?php $username = $_POST['username']; ?>
 
 <div id="register" align="center">
   <h2>Register</h2>
@@ -9,6 +8,7 @@
         </label>
         <br>
     </form>
+    <SCRIPT TYPE="text/javascript" src="../../fbapp/fb.js"></SCRIPT>
     <div id="bar" style=" float: right;">
         <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
     </div>
