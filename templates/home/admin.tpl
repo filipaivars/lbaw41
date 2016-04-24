@@ -10,7 +10,7 @@
     <div layout="column">
         <div layout="row">
             <div flex="20">
-                DENÚNCIAS:
+                DENUNCIAS:
             </div>
             <div flex="5">
                 <a>3</a>
