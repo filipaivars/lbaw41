@@ -22,5 +22,10 @@ $(function(){
 });
 
 function myFunction() {
-    document.getElementsByClassName("avatar").src = "../../images/assets/default.png";
+    var x = document.getElementsByClassName("avatar");
+    var i;
+    for (i in x) {
+        x[i].src = "../../images/assets/default.png";
+    }
+
 }
