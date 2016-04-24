@@ -6,7 +6,7 @@
         <hr class="style-one">
         <div class="row">
             <div class="col-md-3">
-                <img class="avatar" src="../../images/assets/default.png" width="50" height="50"><br>
+                <!--<img class="avatar" src="../../images/assets/default.png" width="50" height="50"><br>-->
                 {$pergunta.username}
             </div>
             <div class="col-md-9">
