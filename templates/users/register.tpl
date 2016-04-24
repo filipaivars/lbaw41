@@ -4,24 +4,17 @@
   <h2>Register</h2>
 
   <form action="{$BASE_URL}actions/users/register.php" method="post" enctype="multipart/form-data">
-    <label>Name:<br> 
-      <input type="text" name="realname" value="{$FORM_VALUES.realname}"> 
-      <span class="field_error">{$FIELD_ERRORS.username}</span>
-    </label>
-    <br>
-    <label>Username:<br> 
+    <label>Username:<br>
       <input type="text" name="username" value="{$FORM_VALUES.username}">
     </label>
     <br>
-    <label>Password:<br> 
-      <input type="password" name="password" value="">
-    </label>
-    <br>
-    <label>Photo:<br>
-      <input type="file" name="photo">
-    </label>
-    <input type="submit" value="Register">
   </form>
+    <div id="sidebar" style="width: 20%; float: right">
+    <?php if(isset($_SESSION['name'])) {
+		?> <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false" data-scope></div>
+        <?php } ?>
+
+
 
 </section>
 
