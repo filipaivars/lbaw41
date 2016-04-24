@@ -15,7 +15,7 @@
     $perguntas = getPergunta($pergunta_id);
     $pergunta = $perguntas[0];
 
-    $pergunta->comentarios = getPerguntaComentarios($pergunta_id);
+    $pergunta->$comentarios = getPerguntaComentarios($pergunta_id);
 
     $tags = getPerguntaTags($pergunta_id);
 
@@ -23,7 +23,7 @@
 
 
     foreach ($respostas as $resposta) {
-        $resposta->comentarios = getRespostaComentarios($resposta->resposta_id);
+        $resposta->comentarios = getRespostaComentarios($resposta->$resposta_id);
     }
 
 
