@@ -98,3 +98,9 @@ hr.style-two {
     border:0;
     background:transparent;
 }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
