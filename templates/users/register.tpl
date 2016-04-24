@@ -12,8 +12,9 @@
         <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false"
              data-auto-logout-link="false" data-scope="public_profile, email"></div> !-->
     </form>
-    <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
-
+    <div id="bar" style="width: 20%; float right">
+        <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+    </div>
 </div>
 
 {include file='common/footer.tpl'}
