@@ -33,14 +33,18 @@
                                 <div class="vcenter" style="background-color: #282827; color: white; height: 50px; width: 100%;">
                                         Answers
                                 </div>
-                                <div style="background-color: white; color: #282827">3</div>
+                                <div style="background-color: white; color: #282827">
+                                    {$pergunta.n_respostas}
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-1">
                             <div style="background-color: #282827; color: white; height: 50px; width: 100%">
                                 Stars
                             </div>
-                            <div style="background-color: white; color: #282827">4</div>
+                            <div style="background-color: white; color: #282827">
+                                {$pergunta.average}
+                            </div>
                         </div>
                     </div>
                 </div>
