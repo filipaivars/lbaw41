@@ -3,7 +3,7 @@
   function getLastPerguntas() {
     global $conn;
     $stmt = $conn->prepare(
-        "SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date,utilizador.user_id 
+        "SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date,utilizador.username 
         FROM pergunta, utilizador 
         WHERE pergunta.criar_id = utilizador.user_id 
         ORDER BY pergunta.created_date DESC
