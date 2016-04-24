@@ -8,10 +8,9 @@
             <input type="text" name="username" value="{$username}">
         </label>
         <br>
-    </form>
-    <div id="facebook" style="width: 20%; float: inherit">
         <div class="fb-login-button" data-scope="public_profile, email" onlogin="checkLoginState();"></div>
-    </div>
+        <br>
+    </form>
 
 </div>
 
