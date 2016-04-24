@@ -20,3 +20,7 @@ $(document).ready(function(){
 $(function(){
     $("#includeHome").load("views/home.html");
 });
+
+$(document).ready(function(){
+    $(".defaultAvatar").html("<img src=/".."");
+});

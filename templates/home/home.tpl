@@ -13,15 +13,24 @@
                 <div id="questaoRecente">
                     <div class="row">
                         <div class="col-md-2">
-                            <div class="perg-user">{$pergunta.username}</div>
+                            <img id="avatar" src="">
+                            <script>
+                                function myFunction() {
+                                    document.getElementById("avatar").src = "../../images/assets/default.png";
+                                }
+                                myFunction()
+                            </script>
                         </div>
                         <div class="col-md-8">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <span class="perg-titulo">{$pergunta.titulo}</span>
+                                    <div class="row">
+                                        <div class="perg-user">{$pergunta.username}</div>
+                                        <div class="perg-titulo">{$pergunta.titulo}</div>
+                                    </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <span class="perg-titulo">{$pergunta.created_date}</span>
+                                    <span class="perg-date">{$pergunta.created_date}</span>
                                 </div>
                             </div>
                         </div>
