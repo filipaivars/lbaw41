@@ -7,12 +7,27 @@
   <hr class="style-one">
 
 
-  <h4>Top Questions</h4>
-  <hr class="style-one">
-
   <div id="new_tweets"></div>
 
   {foreach $tweets as $tweet}
+
+
+    <div id="questaoRecente">
+      <div class="row">
+        <div class="col-md-2">
+            eu
+        </div>
+        <div class="col-md-8">
+            tu
+        </div>
+        <div class="col-md-1">
+            ele
+        </div>
+        <div class="col-md-1">
+            nos
+        </div>
+      </div>
+    </div>
 
   <article class="tweet-data">
     <!--<img src="{$BASE_URL}{$tweet.photo}">
@@ -24,6 +39,9 @@
   </article>
 
   {/foreach}
+
+  <h4>Top Questions</h4>
+  <hr class="style-one">
 
 </section>
 
