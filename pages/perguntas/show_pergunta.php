@@ -21,7 +21,6 @@
 
     $respostas = getPerguntaRespostas($pergunta_id);
 
-    var_dump($respostas);
 
 
 
