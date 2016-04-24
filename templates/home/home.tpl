@@ -24,23 +24,29 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <span class="perg-date">{$pergunta.created_date}</span>
+                                    <span class="perg-date" style="text-align: right">{$pergunta.created_date}</span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-1" style="text-align: center">
-                            <div class="row">
-                                <div class="vcenter" style="background-color: #282827; color: white; height: 50px; width: 100%;">
-                                        Answers
-                                </div>
-                                <div style="background-color: white; color: #282827">3</div>
                             </div>
                         </div>
                         <div class="col-md-1">
-                            <div style="background-color: #282827; color: white; height: 50px; width: 100%">
+                            <div class="row">
+                                <div class="caixaPerg">
+                                        Answers
+                                </div>
+                                <div style="background-color: white; color: #282827; text-align: center">
+                                    {$pergunta.n_respostas}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="caixaPerg">
                                 Stars
                             </div>
-                            <div style="background-color: white; color: #282827">4</div>
+                            <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
+                                <script>
+                                    document.write(roundMe({$pergunta.average}));
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
