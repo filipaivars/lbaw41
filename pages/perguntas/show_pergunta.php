@@ -12,7 +12,9 @@
     $pergunta_id = $_GET['pergunta_id'];
 
 
-    $pergunta = getPergunta($pergunta_id);
+    $perguntas = getPergunta($pergunta_id);
+
+    $pergunta = $perguntas[0];
 
     $smarty->assign('pergunta', $pergunta);
     $smarty->display('perguntas/pergs.tpl');
