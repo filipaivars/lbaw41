@@ -9,9 +9,7 @@
         <br>
     </form>
     <SCRIPT TYPE="text/javascript" src="../../fbapp/fb.js"></SCRIPT>
-    <div id="bar" style=" float: right;">
-        <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
-    </div>
+    <div class="fb-login-button" data-size="large" data-scope="public_profile,email" onlogin="checkLoginState();"></div>
     <br>
 </div>
 
