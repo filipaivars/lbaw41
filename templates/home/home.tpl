@@ -42,8 +42,7 @@
                             <div style="background-color: #282827; color: white; height: 50px; width: 100%">
                                 Stars
                             </div>
-                            <div style="background-color: white; color: #282827">
-                                {$pergunta.average}.toFixed(1);
+                            <div class="starsAvg" style="background-color: white; color: #282827" onload="roundMe({$pergunta.average})">
                             </div>
                         </div>
                     </div>
