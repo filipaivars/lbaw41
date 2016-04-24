@@ -31,6 +31,7 @@
 
 
     $smarty->assign('pergunta', $pergunta);
+    $smarty->assign('pergunta.comentarios', $comentarios);
     $smarty->assign('tags', $tags);
     $smarty->assign('respostas', $respostas);
 
