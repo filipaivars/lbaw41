@@ -29,7 +29,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home/home.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
@@ -39,17 +39,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="perguntas.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="perguntas.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/perguntas.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="114" selection-start-line="5" selection-start-column="114" selection-end-line="5" selection-end-column="114" />
+              <caret line="5" column="95" selection-start-line="5" selection-start-column="95" selection-end-line="5" selection-end-column="95" />
               <folding>
-                <marker date="1461463577000" expanded="true" signature="96:351" placeholder="SELECT pergu... pergunta" />
-                <marker date="1461463577000" expanded="true" signature="498:704" placeholder="SELECT * FRO... tweets" />
-                <marker date="1461463577000" expanded="true" signature="871:944" placeholder="INSERT INTO tweets... " />
-                <marker date="1461463577000" expanded="true" signature="1105:1211" placeholder="SELECT COUNT... " />
-                <marker date="1461463577000" expanded="true" signature="1394:1588" placeholder="SELECT * FRO... tweets" />
+                <marker date="1461464746000" expanded="true" signature="96:332" placeholder="SELECT pergu... pergunta" />
+                <marker date="1461464746000" expanded="true" signature="479:685" placeholder="SELECT * FRO... tweets" />
+                <marker date="1461464746000" expanded="true" signature="852:925" placeholder="INSERT INTO tweets... " />
+                <marker date="1461464746000" expanded="true" signature="1086:1192" placeholder="SELECT COUNT... " />
+                <marker date="1461464746000" expanded="true" signature="1375:1569" placeholder="SELECT * FRO... tweets" />
               </folding>
             </state>
           </provider>
@@ -115,9 +115,9 @@
         <option value="$PROJECT_DIR$/pages/home/home.php" />
         <option value="$PROJECT_DIR$/templates/tweets/list.tpl" />
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/database/perguntas.php" />
         <option value="$PROJECT_DIR$/javascript/home.js" />
         <option value="$PROJECT_DIR$/templates/home/home.tpl" />
+        <option value="$PROJECT_DIR$/database/perguntas.php" />
       </list>
     </option>
   </component>
@@ -844,7 +844,7 @@
       <workItem from="1461429017705" duration="2900000" />
       <workItem from="1461442985938" duration="237000" />
       <workItem from="1461443245265" duration="3801000" />
-      <workItem from="1461461439425" duration="2482000" />
+      <workItem from="1461461439425" duration="2521000" />
     </task>
     <task id="LOCAL-00001" summary="fixed filenames + query + more stuff">
       <created>1461445004423</created>
@@ -871,7 +871,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15580000" />
+    <option name="totallyTimeSpent" value="15619000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1088,20 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/perguntas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="114" selection-start-line="5" selection-start-column="114" selection-end-line="5" selection-end-column="114" />
-          <folding>
-            <marker date="1461463577000" expanded="true" signature="96:351" placeholder="SELECT pergu... pergunta" />
-            <marker date="1461463577000" expanded="true" signature="498:704" placeholder="SELECT * FRO... tweets" />
-            <marker date="1461463577000" expanded="true" signature="871:944" placeholder="INSERT INTO tweets... " />
-            <marker date="1461463577000" expanded="true" signature="1105:1211" placeholder="SELECT COUNT... " />
-            <marker date="1461463577000" expanded="true" signature="1394:1588" placeholder="SELECT * FRO... tweets" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1117,6 +1103,20 @@
         <state relative-caret-position="248">
           <caret line="18" column="108" selection-start-line="18" selection-start-column="108" selection-end-line="18" selection-end-column="108" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/perguntas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="95" selection-start-line="5" selection-start-column="95" selection-end-line="5" selection-end-column="95" />
+          <folding>
+            <marker date="1461464746000" expanded="true" signature="96:332" placeholder="SELECT pergu... pergunta" />
+            <marker date="1461464746000" expanded="true" signature="479:685" placeholder="SELECT * FRO... tweets" />
+            <marker date="1461464746000" expanded="true" signature="852:925" placeholder="INSERT INTO tweets... " />
+            <marker date="1461464746000" expanded="true" signature="1086:1192" placeholder="SELECT COUNT... " />
+            <marker date="1461464746000" expanded="true" signature="1375:1569" placeholder="SELECT * FRO... tweets" />
+          </folding>
         </state>
       </provider>
     </entry>
