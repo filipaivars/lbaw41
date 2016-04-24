@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-md-1" style="text-align: center">
                             <div class="row">
-                                <div style="background-color: #282827; color: white; height: 50px; width: 100%; text-align: center;">
+                                <div style="background-color: #282827; color: white; height: 50px; width: 100%; text-align: center; align-items: center;">
                                         Answers
                                 </div>
                                 <div style="background-color: white; color: #282827">
