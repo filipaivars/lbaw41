@@ -44,7 +44,7 @@
                             </div>
                             <div class="starsAvg" style="background-color: white; color: #282827">
                                 <script>
-                                    roundMe({$pergunta.average});
+                                    document.write(roundMe({$pergunta.average}));
                                 </script>
                             </div>
                         </div>
