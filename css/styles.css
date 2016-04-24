@@ -74,8 +74,17 @@ hr.style-two {
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+#questaoRecente{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .perg-titulo{
     font-weight: bold;
+    font-size: 20px;
+}
+
+.perg-user{
+    font-style: italic;
 }
 
 

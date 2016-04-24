@@ -32,8 +32,8 @@
       <file leaf-file-name="home.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/home/home.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+            <state relative-caret-position="255">
+              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#h4#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -70,8 +70,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+            <state relative-caret-position="68">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,11 +139,11 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pages/home/home.php" />
         <option value="$PROJECT_DIR$/templates/tweets/list.tpl" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/database/perguntas.php" />
         <option value="$PROJECT_DIR$/templates/common/footer.tpl" />
         <option value="$PROJECT_DIR$/javascript/home.js" />
         <option value="$PROJECT_DIR$/templates/home/home.tpl" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
       </list>
     </option>
   </component>
@@ -870,7 +870,7 @@
       <workItem from="1461429017705" duration="2900000" />
       <workItem from="1461442985938" duration="237000" />
       <workItem from="1461443245265" duration="3801000" />
-      <workItem from="1461461439425" duration="3178000" />
+      <workItem from="1461461439425" duration="3377000" />
     </task>
     <task id="LOCAL-00001" summary="fixed filenames + query + more stuff">
       <created>1461445004423</created>
@@ -897,7 +897,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16276000" />
+    <option name="totallyTimeSpent" value="16475000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1081,14 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -1139,10 +1131,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/home.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+        <state relative-caret-position="255">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#section#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
