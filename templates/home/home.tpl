@@ -23,14 +23,13 @@
                                         <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                             <div class="perg-titulo">{$pergunta.titulo}</div>
                                         </a>
-                                        <div class="tag-style">
+                                        <!--<div class="tag-style">-->
                                             <div class="col-md-1">
                                                 aqui1
                                             </div>
                                             <div class="col-md-1">
                                                 aqui2
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
