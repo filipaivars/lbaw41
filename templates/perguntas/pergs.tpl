@@ -10,6 +10,7 @@
                 {$pergunta.username}<br>
                 <div class="perg-data">{$pergunta.created_date}</div>
 
+
             </div>
             <div class="col-md-9">
                 <div class="perg-conteudo">
@@ -22,13 +23,6 @@
                     {/foreach}
 <br><br>
                 {foreach $respostas as $resposta}
-                    {foreach $respostas.comentarios as $rcomentario}
-                        <div style="background-color: green">
-                            {$rcomentario.conteudo}<br>
-                            {$rcomentario.username}<br>
-                            {$rcomentario.created_date}
-                        </div>
-                    {/foreach}
                     <div style="background-color: blue">
                         {$resposta.conteudo}<br>
                         {$resposta.username}<br>
