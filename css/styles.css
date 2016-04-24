@@ -130,3 +130,7 @@ a:hover{
 i{
     color: white;
 }
+
+i:hover {
+    color: #e94735;
+}
