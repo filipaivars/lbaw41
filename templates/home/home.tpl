@@ -37,7 +37,10 @@
                             </div>
                         </div>
                         <div class="col-md-1">
-                            STARS
+                            <div style="background-color: #282827; color: white; height: 50px; width: 100%">
+                                Stars
+                            </div>
+                            <div style="background-color: white; color: #282827">4</div>
                         </div>
                     </div>
                 </div>
