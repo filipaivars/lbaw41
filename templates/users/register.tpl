@@ -1,12 +1,12 @@
 {include file='common/header.tpl'}
-$username = $_POST['username'];
+<?php $username = $_POST['username']; ?>
 
 <section id="register">
   <h2>Register</h2>
 
   <form action="{$BASE_URL}actions/users/register.php" method="post" enctype="multipart/form-data">
     <label>Username:<br>
-      <input type="text" name="username" value="{$FORM_VALUES.username}">
+      <input type="text" name="username" value="{$username}">
     </label>
     <br>
   </form>
