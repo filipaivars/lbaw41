@@ -42,7 +42,10 @@
                             <div style="background-color: #282827; color: white; height: 50px; width: 100%">
                                 Stars
                             </div>
-                            <div class="starsAvg" style="background-color: white; color: #282827" onload="roundMe({$pergunta.average})">
+                            <div class="starsAvg" style="background-color: white; color: #282827">
+                                <script>
+                                    document.write(roundMe({$pergunta.average}));
+                                </script>
                             </div>
                         </div>
                     </div>

@@ -32,5 +32,5 @@ function myFunction() {
 
 function roundMe(num) {
     var n = num.toFixed(1);
-    document.write(n);
+    return n;
 }
