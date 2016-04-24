@@ -29,8 +29,8 @@
                             </div>
                         </div>
                         <div class="col-md-1">
-                            <div class="row">
-                                <div style="background-color: #282827; color: white; height: 50px; width: 100%; text-align: center">
+                            <div class="row" style="text-align: center">
+                                <div class="vcenter" style="background-color: #282827; color: white; height: 50px; width: 100%;">
                                         Answers
                                 </div>
                                 <div style="background-color: white; color: #282827">3</div>
