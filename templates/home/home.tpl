@@ -33,7 +33,7 @@
                                 <div class="caixaPerg">
                                         Answers
                                 </div>
-                                <div style="background-color: white; color: #282827">
+                                <div class="caixaPerg">
                                     {$pergunta.n_respostas}
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                             <div class="caixaPerg">
                                 Stars
                             </div>
-                            <div class="starsAvg" style="background-color: white; color: #282827">
+                            <div class="starsAvg caixaPerg">
                                 <script>
                                     document.write(roundMe({$pergunta.average}));
                                 </script>
