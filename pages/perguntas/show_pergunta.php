@@ -30,11 +30,6 @@
     }
 
 
-
-
-
-
-
     $smarty->assign('pergunta', $pergunta);
     $smarty->assign('tags', $tags);
     $smarty->assign('respostas', $respostas);
