@@ -61,7 +61,7 @@
                             </div>
                             <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
                                 <script>
-                                    document.write(checkNull(roundMe({$pergunta.average})));
+                                    document.write(roundMe(checkNull({$pergunta.average})));
                                 </script>
                             </div>
                         </div>
