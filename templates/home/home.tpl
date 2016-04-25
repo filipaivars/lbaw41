@@ -23,7 +23,7 @@
                                         <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                             <div class="perg-titulo">{$pergunta.titulo}</div>
                                         </a>
-                                        <div class="col-md-1">
+                                        <div class="col-md-1" style="display: flex">
                                             <div class="tag-style">
                                                 tag1
                                             </div>
