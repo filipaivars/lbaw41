@@ -23,17 +23,13 @@
                                         <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                             <div class="perg-titulo">{$pergunta.titulo}</div>
                                         </a>
-                                        <div class="col-md-1" style="display: flex">
-                                            <div class="tag-style">
-                                                tag1
+                                        {foreach $pergunta.tags as $tag}
+                                            <div class="col-md-1" style="display:flex">
+                                                <div class="tag-style">
+                                                    {$tag.nome}
+                                                </div>
                                             </div>
-
-                                        </div>
-                                        <div class="col-md-1" style="display: flex">
-                                            <div class="tag-style">
-                                                tag2
-                                            </div>
-                                        </div>
+                                        {/foreach}
                                     </div>
                                 </div>
                                 <div class="col-md-2">

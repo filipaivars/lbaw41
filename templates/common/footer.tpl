@@ -1,7 +1,7 @@
 
 
 <div class="footer">
-    <div class="row" style="padding-top: 50px;">
+    <div class="row" style="padding-top: 50px; padding-bottom: 20px">
         <div class="col-xs-0 col-md-2" style="color: #f44937">
             chat<br>
             about us<br>
