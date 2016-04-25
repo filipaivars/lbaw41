@@ -25,18 +25,24 @@
             </div>
 
         </div>
-        <br><hr class="style-one"><br>
-        {foreach $respostas as $resposta}
-            <div>
-                {$resposta.conteudo}<br>
-                -{$resposta.average}-<br>
-                <div id="user_section" align="right">
-                    answered {$resposta.created_date}<br>
-                    {$resposta.username}<br>
+
+        <h3>ANSWERS</h3>
+        <div>
+            <br><hr class="style-one"><br>
+            {foreach $respostas as $resposta}
+                <div>
+                    {$resposta.conteudo}<br>
+                    -{$resposta.average}-<br>
+                    <div id="user_section" align="right">
+                        answered {$resposta.created_date}<br>
+                        {$resposta.username}<br>
+                    </div>
                 </div>
-            </div>
-            <hr>
-        {/foreach}
+                <hr>
+            {/foreach}
+        </div>
+
+
     </div>
 </div>
 
