@@ -22,7 +22,9 @@
   <div class="container-fluid" id="header-container">
     <div class="row">
       <div class="col-xs-12 col-md-6">
-        <img src="../../images/assets/logo.png" style="height: 40px;">
+        <a href="../home/home.tpl">
+          <img src="../../images/assets/logo.png" style="height: 40px;">
+        </a>
       </div>
       <div class="col-xs-8 col-md-4">
         <div class="input-group stylish-input-group">
