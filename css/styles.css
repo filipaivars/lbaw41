@@ -112,6 +112,7 @@ a:hover.perg-comment{
     margin-top: 11px;
     padding-left: 5px;
     padding-right: 5px;
+    white-space: nowrap;
 }
 
 .avatar{
