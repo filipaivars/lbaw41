@@ -89,6 +89,11 @@ hr.style-two {
     font-size: 11px;
 }
 
+.perg-conteudo{
+    font-size: 13px;
+    font-family: 'Lato';
+}
+
 .tag-style{
     background-color: #282827;
     color: white;

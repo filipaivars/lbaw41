@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-9">
                 <div class="perg-conteudo">
-                    <h4>{$pergunta.conteudo}</h4>
+                    {$pergunta.conteudo}
                 </div>
                 <div class="tag-style">
                     {foreach $tags as $tag}
@@ -21,19 +21,20 @@
                         </div>
                     {/foreach}
                 </div>
-                <br><br>
-                {foreach $respostas as $resposta}
-                    <hr class="style-one">
-                    <div>
-                        {$resposta.conteudo}<br>
-                        -{$resposta.average}-<br>
-                        <div id="user_section" align="right">
-                            answered {$resposta.created_date}<br>
-                            {$resposta.username}<br>
-                        </div>
-                    </div>
-                {/foreach}
+
             </div>
+            <br><hr class="style-one"><br>
+            {foreach $respostas as $resposta}
+                <div>
+                    {$resposta.conteudo}<br>
+                    -{$resposta.average}-<br>
+                    <div id="user_section" align="right">
+                        answered {$resposta.created_date}<br>
+                        {$resposta.username}<br>
+                    </div>
+                </div>
+                <hr>
+            {/foreach}
         </div>
     </div>
 </div>
