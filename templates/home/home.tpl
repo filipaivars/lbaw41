@@ -83,7 +83,7 @@
                                 <div class="row">
                                     <div class="col-md-10">
                                         <div class="row">
-                                            <div class="perg-user">{$bestpergunta.username}</div>
+                                            <div class="perg-user"><a href="../../pages/users/users.php">{$bestpergunta.username}</a></div>
                                             <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$bestpergunta.pergunta_id}">
                                                 <div class="perg-titulo">{$bestpergunta.titulo}</div>
                                             </a>
