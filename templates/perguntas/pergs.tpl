@@ -25,10 +25,9 @@
             </div>
 
         </div>
-
+        <br><hr class="style-one"><br>
         <h3>ANSWERS</h3>
         <div>
-            <br><hr class="style-one"><br>
             {foreach $respostas as $resposta}
                 <div>
                     {$resposta.conteudo}<br>
