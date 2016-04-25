@@ -34,11 +34,11 @@
                         <input id="input-4" class="rating rating-loading" data-show-clear="false" data-show-caption="true">
 
                     <br><br>
-                    <div class="apareceComm">
+                    <div id="apareceComm1">
                         <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                         <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
                     </div>
-                    <a class="perg-comment" id="btn2">COMMENT</a>
+                    <a class="perg-comment" id="btn2_1">COMMENT</a>
                     {foreach $pergunta.comentarios as $comentario}
                         <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
                             <div >
@@ -88,7 +88,12 @@
                             document.write(checkNull({$resposta.average}));
                         </script>
                         <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
-                        <br><br><a class="perg-comment">COMMENT</a>
+                        <br><br>
+                        <div id="apareceComm2">
+                            <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
+                            <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
+                        </div>
+                        <a class="perg-comment" id="btn2_2">COMMENT</a>
                         {foreach $resposta.comentarios as $comentario}
                             <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
                                 <div >
