@@ -34,7 +34,7 @@
                         <input id="input-4" class="rating rating-loading" data-show-clear="false" data-show-caption="true">
 
                     <br><br>
-                    <div class="aparece" style="padding-left: 30%; padding-right: 30%">
+                    <div class="aparece">
                         <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                         <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
                     </div>
