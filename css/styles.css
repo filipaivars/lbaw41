@@ -119,6 +119,10 @@ a:hover.perg-comment{
     height: 75px;
 }
 
+#wrap-answers{
+    margin-top: 30px;
+}
+
 
 .stylish-input-group .input-group-addon{
     background: white !important;

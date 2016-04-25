@@ -25,8 +25,8 @@
                         </div>
                     {/foreach}
                 </div>
-                <br><br><a style="padding-top: 30px;">RATE ME</a>
-                <br><a class="perg-comment">COMMENT</a>
+                <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
+                <br><br><a class="perg-comment">COMMENT</a>
                 <div class="row" style="margin-top: 20px; margin-left: 3px; margin-right: 5px;">
                     <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
                     <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
@@ -41,18 +41,35 @@
         </div>
         <br><hr class="style-one"><br>
         <h3>ANSWERS</h3>
-        <div>
+        <div id="wrap-answers">
             {foreach $respostas as $resposta}
-                <div>
-                    {$resposta.conteudo}<br>
-                    -{$resposta.average}-<br>
-                    <div id="user_section" align="right">
-                        answered {$resposta.created_date}<br>
-                        {$resposta.username}<br>
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
+                    {$resposta.username}<br>
+                    <div class="perg-data">asked {$resposta.created_date}</div>
+                </div>
+                <div class="col-md-10">
+
+                    <div class="perg-conteudo">
+                        {$resposta.conteudo}
+                    </div>
+                    <br>-{$resposta.average}-<br>
+                    <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
+                    <br><br><a class="perg-comment">COMMENT</a>
+                    <div class="row" style="margin-top: 20px; margin-left: 3px; margin-right: 5px;">
+                        <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
+                        <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
                     </div>
                 </div>
-                <hr>
+            </div>
             {/foreach}
+
+§
+
+
+
+
         </div>
 
 
