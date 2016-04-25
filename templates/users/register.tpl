@@ -4,7 +4,7 @@
     <div class="wrap">
 
         <div id="register" align="center">
-            <h2>Register</h2>
+            <h4>Register</h4>
             <form action="{$BASE_URL}actions/users/register.php" method="post" enctype="multipart/form-data">
                 <label>Username:<br>
                     <input type="text" name="username" value="{$username}">
