@@ -12,12 +12,12 @@
 
                 <div id="questaoRecente">
                     <div class="row">
-                        <div class="col-md-1">
-                            <img class="avatar" src="" width="75" height="75">
+                        <div class="col-md-2">
+                            <img class="avatar" src="">
                         </div>
                         <div class="col-md-9">
                             <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-10">
                                     <div class="row">
                                         <div class="perg-user">{$pergunta.username}</div>
                                         <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
@@ -25,14 +25,19 @@
                                         </a>
                                         <!--<div class="tag-style">-->
                                             <div class="col-md-1">
-                                                aqui1
+                                                <div class="tag-style">
+                                                    tag1
+                                                </div>
+
                                             </div>
                                             <div class="col-md-1">
-                                                aqui2
+                                                <div class="tag-style">
+                                                    tag2
+                                                </div>
                                             </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-2">
                                     <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
                                 </div>
 
@@ -44,7 +49,7 @@
                                         Answers
                                 </div>
                                 <div style="background-color: white; color: #282827; text-align: center">
-                                    {$pergunta.n_respostas}
+                                    checkNull({$pergunta.n_respostas});
                                 </div>
                             </div>
                         </div>
@@ -54,7 +59,7 @@
                             </div>
                             <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
                                 <script>
-                                    document.write(roundMe({$pergunta.average}));
+                                    document.write(checkNull(roundMe({$pergunta.average})));
                                 </script>
                             </div>
                         </div>

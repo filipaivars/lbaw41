@@ -94,6 +94,11 @@ hr.style-two {
     color: white;
 }
 
+.avatar{
+    width: 75px;
+    height: 75px;
+}
+
 
 .stylish-input-group .input-group-addon{
     background: white !important;

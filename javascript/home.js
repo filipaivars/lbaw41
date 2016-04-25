@@ -34,3 +34,10 @@ function roundMe(num) {
     var n = num.toFixed(1);
     return n;
 }
+
+function checkNull(num) {
+    if(num==null)
+        return 0;
+    else
+        return num;
+}
