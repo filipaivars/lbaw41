@@ -29,7 +29,10 @@
                     <script>
                         document.write(checkNull({$pergunta.average}));
                     </script>
-                    <br><a style="margin-top: 10px;">RATE ME</a>
+                    <br>
+                        <label for="input-4" class="control-label">Rate This</label>
+                        <input id="input-4" class="rating rating-loading" data-show-clear="false" data-show-caption="true">
+
                     <br><br><a class="perg-comment">COMMENT</a>
                     {foreach $pergunta.comentarios as $comentario}
                         <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
