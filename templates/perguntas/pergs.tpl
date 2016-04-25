@@ -32,7 +32,7 @@
                     <br><a style="margin-top: 10px;">RATE ME</a>
                     <br><br><a class="perg-comment">COMMENT</a>
                     {foreach $pergunta.comentarios as $comentario}
-                        <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 80">
+                        <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 80px">
                             <div >
                                 <div class="col-md-1">
                                     <img class="avatar" src="">
