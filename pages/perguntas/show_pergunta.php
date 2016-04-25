@@ -29,7 +29,6 @@
         $respostas[$i]["comentarios"] = getRespostaComentarios($respostas[$i]["resposta_id"]);
     }
 
-    var_dump($respostas);
 
 
 
