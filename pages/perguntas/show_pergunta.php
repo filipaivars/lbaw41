@@ -15,9 +15,8 @@
     $perguntas = getPergunta($pergunta_id);
     $pergunta = $perguntas[0];
 
-    $pergunta[comentarios] = getPerguntaComentarios($pergunta[pergunta_id]);
+var_dump($pergunta->pergunta_id);
 
-    var_dump($pergunta);
 
 
 
