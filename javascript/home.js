@@ -19,10 +19,12 @@ $(document).ready(function(){
         $("#apareceComm1").slideDown();
         $("#btn2_1").hide();
     });
-    $(".btn2_2").each.click(function () {
-        $(".apareceComm2").slideDown();
-        $(".btn2_2").hide();
-    })
+    $(".btn2_2").each(function () {
+        $(this).on("click", function () {
+            $(".apareceComm2").slideDown();
+            $(".btn2_2").hide();
+        })
+    });
 });
 
 $(function(){
