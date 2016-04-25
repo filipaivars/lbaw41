@@ -12,31 +12,28 @@
             </div>
             <div class="col-md-10">
 
-                    <div class="perg-conteudo">
-                        {$pergunta.conteudo}
-                    </div>
+                <div class="perg-conteudo">
+                    {$pergunta.conteudo}
+                </div>
 
-                    <div class="tag-style">
-                        {foreach $tags as $tag}
-                            <div class="col-md-1">
-                                <div class="tag-style">
-                                    {$tag.nome}
-                                </div>
+                <div class="tag-style">
+                    {foreach $tags as $tag}
+                        <div class="col-md-1">
+                            <div class="tag-style">
+                                {$tag.nome}
                             </div>
-                        {/foreach}
-                    </div>
-                    <br><br><a style="padding-top: 30px;">"<"RATE ME">"</a>
-                    <br><a class="perg-comment">COMMENT</a>
-                    <div style="padding-top: 30px; background-color: #ecf0f1">
-                        "<"LIST OF COMMENTS">"
-                    </div>
-                    <div>
-                        <div >
-                            <input type="text" name="myAnswer" placeholder="my answer" style="width: 70%; margin-top: 10px; border-style: none; height: 75px">
-                            <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post question</button>
                         </div>
-
-                    </div>
+                    {/foreach}
+                </div>
+                <br><br><a style="padding-top: 30px;">"<"RATE ME">"</a>
+                <br><a class="perg-comment">COMMENT</a>
+                <div style="margin-top: 30px; background-color: #ecf0f1">
+                    "<"LIST OF COMMENTS">"
+                </div>
+                <div style="margin-top: 30px;">
+                    <input type="text" name="myAnswer" placeholder="my answer" style="width: 100%; margin-top: 10px; border-style: none; height: 75px">
+                    <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post question</button>
+                </div>
 
             </div>
 
