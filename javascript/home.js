@@ -19,9 +19,9 @@ $(document).ready(function(){
         $("#apareceComm1").slideDown();
         $("#btn2_1").hide();
     });
-    $("#btn2_2").click(function () {
-        $("#apareceComm2").slideDown();
-        $("#btn2_2").hide();
+    $(".btn2_2").click(function () {
+        $(".apareceComm2").slideDown();
+        $(".btn2_2").hide();
     })
 });
 
