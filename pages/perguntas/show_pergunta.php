@@ -25,15 +25,9 @@
 
     $respostas = getPerguntaRespostas($pergunta_id);
 
-    foreach ($respostas as $resposta) {
-        $resposta["comentarios"] = getRespostaComentarios($resposta["resposta_id"]);
+    for ($i = 0; $i < count($respostas); $i++) {
+        $respostas[$i]["comentarios"] = getRespostaComentarios($respostas[$i]["resposta_id"]);
     }
-
-    var_dump($respostas);
-
-
-
-
 
 
     $smarty->assign('pergunta', $pergunta);

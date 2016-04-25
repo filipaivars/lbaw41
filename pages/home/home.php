@@ -4,7 +4,17 @@ include_once($BASE_DIR .'database/perguntas.php');
 
 $perguntas = getLastPerguntas();
 
+for ($i = 0; $i < count($perguntas); $i++) {
+    $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
+}
+
 $bestperguntas = getBestPerguntas();
+
+for ($i = 0; $i < count($bestperguntas); $i++) {
+    $bestperguntas[$i]["tags"] = getPerguntaTags($bestperguntas[$i]["pergunta_id"]);
+}
+
+
 
 /*foreach ($tweets as $key => $tweet) {
   unset($photo);
