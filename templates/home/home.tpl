@@ -87,7 +87,7 @@
                                             <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$bestpergunta.pergunta_id}">
                                                 <div class="perg-titulo">{$bestpergunta.titulo}</div>
                                             </a>
-                                            {foreach $bestperguntas.tags as $tag}
+                                            {foreach $bestpergunta.tags as $tag}
                                                 <div class="col-md-1" style="display:flex">
                                                     <div class="tag-style">
                                                         {$tag.nome}
