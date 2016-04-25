@@ -27,12 +27,12 @@
                     </div>
                     <br><br><a style="padding-top: 30px;">"<"RATE ME">"</a>
                     <br><a class="perg-comment">COMMENT</a>
-                    <div style="padding-top: 30px">
+                    <div style="padding-top: 30px; background-color: #ecf0f1">
                         "<"LIST OF COMMENTS">"
                     </div>
                     <div>
                         <div >
-                            <input type="text" name="myAnswer" placeholder="my answer" style="width: 100%; margin-top: 10px; border-style: none; height: 50px">
+                            <input type="text" name="myAnswer" placeholder="my answer" style="width: 70%; margin-top: 10px; border-style: none; height: 75px">
                             <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post question</button>
                         </div>
 
