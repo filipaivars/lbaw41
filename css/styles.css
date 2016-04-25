@@ -18,6 +18,9 @@
 .aparece{
     display:none;
 }
+.apareceComm{
+    display:none;
+}
 .btn2{
     padding-top: 15px;
     padding-bottom: 15px;
