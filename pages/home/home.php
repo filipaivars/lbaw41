@@ -14,7 +14,7 @@ for ($i = 0; $i < count($bestperguntas); $i++) {
     $bestperguntas[$i]["tags"] = getPerguntaTags($bestperguntas[$i]["pergunta_id"]);
 }
 
-var_dump($perguntas);
+
 
 /*foreach ($tweets as $key => $tweet) {
   unset($photo);
