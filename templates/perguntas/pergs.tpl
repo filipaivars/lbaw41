@@ -17,7 +17,7 @@
                 </div>
                 <div style="margin-top: 10px; margin-bottom: 10px">
                 {foreach $tags as $tag}
-                    <div class="col-md" style="display:flex">
+                    <div class="col-md-1" style="display:flex">
                         <div class="tag-style">
                             {$tag.nome}
                         </div>
