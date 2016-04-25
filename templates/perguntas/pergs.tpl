@@ -14,10 +14,25 @@
                 <div class="perg-conteudo">
                     {$pergunta.conteudo}
                 </div>
+
+                <div class="col-md-1">
+                    <div class="tag-style">
+                        tag1
+                    </div>
+
+                </div>
+                <div class="col-md-1">
+                    <div class="tag-style">
+                        tag2
+                    </div>
+                </div>
+
                 <div class="tag-style">
                     {foreach $tags as $tag}
-                        <div style="background-color: grey; margin-left: 2px; margin-top: 2px; margin-bottom: 2px; padding: 5px; color: white">
-                            {$tag.nome}
+                        <div class="col-md-1">
+                            <div class="tag-style">
+                                {$tag.nome}
+                            </div>
                         </div>
                     {/foreach}
                 </div>
