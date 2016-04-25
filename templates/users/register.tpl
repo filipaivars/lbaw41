@@ -1,7 +1,7 @@
 {include file='common/header.tpl'}
 
-<div class="wrap">
-    <div class="wrap_0">
+<div class="wrap_0">
+    <div class="wrap">
 
         <div id="register" align="center">
             <h2>Register</h2>
