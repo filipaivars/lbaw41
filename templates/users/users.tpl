@@ -31,7 +31,7 @@
             </div>
         </div>
         <div>
-            <img src="images/rate_fav.png" style="width: 160px">
+            <img src="../../images/users/rate_fav.png" style="width: 160px">
         </div>
         <span style="display:block; height: 50px;"></span>
         <div>
