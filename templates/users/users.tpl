@@ -5,7 +5,7 @@
         <div>
             <div layout="row">
                 <div flex>
-                    <img src="images/perfil_foto.png" style="width: 160px">
+                    <img src="../../images/assets/users/perfil_foto.png" style="width: 160px">
                 </div>
                 <div flex="80">
                     <div layout="column">
@@ -16,7 +16,7 @@
                         <div flex style="margin-top: 65px">
                             <div layout="row">
                                 <div flex="65">
-                                    <img src="images/medalha.png">
+                                    <img src="../../images/assets/users/medalha.png">
                                 </div>
                                 <div>
                                     <b>4</b> questions<br>
@@ -36,8 +36,8 @@
         <span style="display:block; height: 50px;"></span>
         <div>
             <h2>QUESTIONS<h2><hr>
-                    <a ng-href="#/question"><img src="images/question.png" style="width: 90%; padding-left:5%"></a>
-                    <a ng-href="#/question"><img src="images/question.png" style="width: 90%; padding-left:5%"></a>
+                    <a ng-href="#/question"><img src="../../images/assets/users/question.png" style="width: 90%; padding-left:5%"></a>
+                    <a ng-href="#/question"><img src="../../images/assets/users/question.png" style="width: 90%; padding-left:5%"></a>
         </div>
     </div>
 </div>
