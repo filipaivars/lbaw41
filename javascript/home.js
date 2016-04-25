@@ -15,6 +15,10 @@ $(document).ready(function(){
             flag = false;
         }
     });
+    $("#btn2").click(function () {
+        $(".aparece").slideDown();
+        $("#btn2").hide();
+    })
 });
 
 $(function(){

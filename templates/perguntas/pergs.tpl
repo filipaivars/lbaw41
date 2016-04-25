@@ -33,7 +33,15 @@
                         <label for="input-4" class="control-label">Rate This</label>
                         <input id="input-4" class="rating rating-loading" data-show-clear="false" data-show-caption="true">
 
-                    <br><br><a class="perg-comment">COMMENT</a>
+                    <br><br>
+                    <div class="aparece" style="padding-left: 30%; padding-right: 30%">
+                        <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
+                        <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
+                    </div>
+                    <div class="btn2" id="btn2">
+                        COMMENT THIS
+                    </div>
+                    <a class="perg-comment">COMMENT</a>
                     {foreach $pergunta.comentarios as $comentario}
                         <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
                             <div >
