@@ -16,16 +16,14 @@
                     {$pergunta.conteudo}
                 </div>
 
-                <div class="tag-style">
-                    {foreach $tags as $tag}
-                        <div class="col-md-1">
-                            <div class="tag-style">
-                                {$tag.nome}
-                            </div>
+                {foreach $tags as $tag}
+                    <div class="col-md-1">
+                        <div class="tag-style">
+                            {$tag.nome}
                         </div>
-                    {/foreach}
-                </div>
-                <br>
+                    </div>
+                {/foreach}
+                <br/>
                 <div>
                     <a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
                     <br><br><a class="perg-comment">COMMENT</a>
