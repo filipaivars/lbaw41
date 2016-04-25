@@ -15,18 +15,6 @@
                     {$pergunta.conteudo}
                 </div>
 
-                <div class="col-md-1">
-                    <div class="tag-style">
-                        tag1
-                    </div>
-
-                </div>
-                <div class="col-md-1">
-                    <div class="tag-style">
-                        tag2
-                    </div>
-                </div>
-
                 <div class="tag-style">
                     {foreach $tags as $tag}
                         <div class="col-md-1">
