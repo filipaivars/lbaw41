@@ -15,6 +15,10 @@
     $perguntas = getPergunta($pergunta_id);
     $pergunta = $perguntas[0];
 
+    $pergunta[comentarios] = getPerguntaComentarios($pergunta[pergunta_id]);
+
+    var_dump($pergunta);
+
 
 
     $tags = getPerguntaTags($pergunta_id);
