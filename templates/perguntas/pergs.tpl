@@ -17,8 +17,10 @@
                 </div>
                 <div style="margin-top: 10px; margin-bottom: 10px">
                 {foreach $tags as $tag}
-                    <div class="col-md">
-                        <div class="box">auto</div>
+                    <div class="col-md" style="display:flex">
+                        <div class="tag-style">
+                            {$tag.nome}
+                        </div>
                     </div>
                 {/foreach}
                 </div>
