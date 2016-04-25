@@ -12,7 +12,7 @@
 
                 <div id="questaoRecente">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-1">
                             <img class="avatar" src="">
                         </div>
                         <div class="col-md-9">
@@ -49,7 +49,7 @@
                                         Answers
                                 </div>
                                 <div style="background-color: white; color: #282827; text-align: center">
-                                    checkNull({$pergunta.n_respostas});
+                                    document.write(checkNull({$pergunta.n_respostas}));
                                 </div>
                             </div>
                         </div>
