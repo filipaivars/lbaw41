@@ -22,7 +22,7 @@
   <div class="container-fluid" id="header-container">
     <div class="row">
       <div class="col-xs-12 col-md-6">
-        <a href="../home/home.tpl">
+        <a href="../home/home.php">
           <img src="../../images/assets/logo.png" style="height: 40px;">
         </a>
       </div>

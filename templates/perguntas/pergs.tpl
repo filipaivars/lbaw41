@@ -19,19 +19,19 @@
                         {$tag.nome}
                     </div>
                 {/foreach}
-                <br><hr><br>
-                {foreach $respostas as $resposta}
-                    <hr>
-                    <div>
-                        {$resposta.conteudo}<br>
-                        -{$resposta.average}-<br>
-                        <div id="user_section" align="right">
-                            Answered {$resposta.created_date}<br>
-                            {$resposta.username}<br>
-                        </div>
-                    </div>
-                {/foreach}
             </div>
+            <br><hr class="style-one"><br>
+            {foreach $respostas as $resposta}
+                <hr>
+                <div>
+                    {$resposta.conteudo}<br>
+                    -{$resposta.average}-<br>
+                    <div id="user_section" align="right">
+                        Answered {$resposta.created_date}<br>
+                        {$resposta.username}<br>
+                    </div>
+                </div>
+            {/foreach}
         </div>
     </div>
 </div>
