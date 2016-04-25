@@ -15,7 +15,7 @@
     $perguntas = getPergunta($pergunta_id);
     $pergunta = $perguntas[0];
 
-var_dump($perguntas[0]->pergunta_id);
+    var_dump($pergunta["pergunta_id"]);
 
 
 
