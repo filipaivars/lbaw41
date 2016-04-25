@@ -2,7 +2,7 @@
 
 <div class="wrap_0">
     <div class="wrap">
-        <h3>{$pergunta.titulo}</h3>
+        <h4>{$pergunta.titulo}</h4>
         <hr class="style-one">
         <div class="row">
             <div class="col-md-3">
@@ -12,14 +12,14 @@
             </div>
             <div class="col-md-9">
                 <div class="perg-conteudo">
-                    <h4>{$pergunta.conteudo}</h4>
+                    <h5>{$pergunta.conteudo}</h5>
                 </div>
                 {foreach $tags as $tag}
-                    <div style="background-color: grey; border-width 1px; margin-left: 2px; margin-top: 2px; margin-bottom: 2px">
-                        {$tag.nome}
+                    <div style="background-color: grey; border-width: 1px; margin-left: 2px; margin-top: 2px; margin-bottom: 2px; text-align: center; padding: 5px">
+                        <div style="color: white">{$tag.nome}</div>
                     </div>
                 {/foreach}
-                <br><hr><br>
+                <br><br>
                 {foreach $respostas as $resposta}
                     <hr>
                     <div>
