@@ -16,7 +16,7 @@ $(document).ready(function(){
         }
     });
     $("#btn2").click(function () {
-        $(".aparece").slideDown();
+        $(".apareceComm").slideDown();
         $("#btn2").hide();
     })
 });
