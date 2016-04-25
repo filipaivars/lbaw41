@@ -25,7 +25,7 @@
                 {/foreach}
                 </div>
                 <div>
-                    <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
+                    <br><a style="margin-top: 20px">RATE ME</a>
                     <br><br><a class="perg-comment">COMMENT</a>
                     <div class="row" style="margin-top: 20px; margin-left: 3px; margin-right: 5px;">
                         <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
