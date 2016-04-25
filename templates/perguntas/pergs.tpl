@@ -8,7 +8,7 @@
             <div class="col-md-2">
                 <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
                 {$pergunta.username}<br>
-                <div class="perg-data">asked {$pergunta.created_date}</div>
+                <div class="perg-data">{$pergunta.created_date}</div>
             </div>
             <div class="col-md-10">
 
@@ -49,7 +49,7 @@
                     <div class="col-md-2">
                         <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
                         {$resposta.username}<br>
-                        <div class="perg-data">asked {$resposta.created_date}</div>
+                        <div class="perg-data">{$resposta.created_date}</div>
                     </div>
                     <div class="col-md-10">
 
