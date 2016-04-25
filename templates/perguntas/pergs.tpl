@@ -25,7 +25,7 @@
                     {/foreach}
                 </div>
                 <br><a>"<"RATE ME">"</a>
-                <br><a style="color: #e94735; font-family: 'Montserrat', sans-serif;">COMMENT</a>
+                <br><a class="perg-comment">COMMENT</a>
             </div>
 
         </div>

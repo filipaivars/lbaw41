@@ -97,7 +97,14 @@ hr.style-two {
     font-family: 'Lato';
     font-weight: 700;
 }
+a .perg-comment{
+    color: #e94735;
+    font-family: 'Montserrat', sans-serif;
+}
 
+a:hover .perg-comment{
+    color: #282827;
+}
 
 .tag-style{
     background-color: #282827;
