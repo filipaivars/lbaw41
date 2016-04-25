@@ -29,11 +29,7 @@
                     <script>
                         document.write(checkNull({$pergunta.average}));
                     </script>
-                    <br>
-                        <label for="input-4" class="control-label">Rate This</label>
-                        <input id="input-4" class="rating rating-loading" data-show-clear="false" data-show-caption="true">
-
-                    <br><br>
+                    <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br><br>
                     <div id="apareceComm1">
                         <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                         <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>

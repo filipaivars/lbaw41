@@ -22,7 +22,6 @@ $(document).ready(function(){
     $(".btn2_2").each(function () {
         $(this).on("click", function () {
             $(".apareceComm2").slideDown();
-            $(".btn2_2").hide();
         })
     });
 });
