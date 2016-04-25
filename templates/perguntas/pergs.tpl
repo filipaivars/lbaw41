@@ -24,8 +24,8 @@
                         </div>
                     {/foreach}
                 </div>
-                <a>"<"RATE ME">"</a>
-                <a>COMMENT</a>
+                <br><a>"<"RATE ME">"</a>
+                <br><a style="color: #e94735; font-family: 'Montserrat', sans-serif;">COMMENT</a>
             </div>
 
         </div>
