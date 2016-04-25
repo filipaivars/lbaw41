@@ -15,7 +15,7 @@
                 <div class="perg-conteudo">
                     {$pergunta.conteudo}
                 </div>
-
+                <div style="margin-top: 10px; margin-bottom: 10px">
                 {foreach $tags as $tag}
                     <div class="col-md-1">
                         <div class="tag-style">
@@ -23,6 +23,7 @@
                         </div>
                     </div>
                 {/foreach}
+                </div>
                 <div>
                     <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
                     <br><br><a class="perg-comment">COMMENT</a>
