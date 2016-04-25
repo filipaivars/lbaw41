@@ -97,12 +97,12 @@ hr.style-two {
     font-family: 'Lato';
     font-weight: 700;
 }
-a .perg-comment{
+a.perg-comment{
     color: #e94735;
     font-family: 'Montserrat', sans-serif;
 }
 
-a:hover .perg-comment{
+a:hover.perg-comment{
     color: #282827;
 }
 
