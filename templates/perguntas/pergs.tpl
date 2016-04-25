@@ -11,21 +11,23 @@
                 <div class="perg-data">asked {$pergunta.created_date}</div>
             </div>
             <div class="col-md-10">
-                <div class="perg-conteudo">
-                    {$pergunta.conteudo}
-                </div>
+                <div class="row">
+                    <div class="perg-conteudo">
+                        {$pergunta.conteudo}
+                    </div>
 
-                <div class="tag-style">
-                    {foreach $tags as $tag}
-                        <div class="col-md-1">
-                            <div class="tag-style">
-                                {$tag.nome}
+                    <div class="tag-style">
+                        {foreach $tags as $tag}
+                            <div class="col-md-1">
+                                <div class="tag-style">
+                                    {$tag.nome}
+                                </div>
                             </div>
-                        </div>
-                    {/foreach}
+                        {/foreach}
+                    </div>
+                    <a>"<"RATE ME">"</a>
+                    <a class="perg-comment">COMMENT</a>
                 </div>
-                <br><a>"<"RATE ME">"</a>
-                <br><a class="perg-comment">COMMENT</a>
             </div>
 
         </div>
