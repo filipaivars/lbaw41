@@ -81,10 +81,26 @@
                         </script>
                         <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
                         <br><br><a class="perg-comment">COMMENT</a>
-                        <div class="row" style="margin-top: 20px; margin-left: 3px; margin-right: 5px;">
-                            <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
-                            <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
-                        </div>
+                        {foreach $resposta.comentarios as $comentario}
+                            <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
+                                <div >
+                                    <div class="col-md-1">
+                                        <img class="avatar" src="">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <b>{$comentario.username}</b><br>
+                                        {$comentario.conteudo}
+                                    </div>
+                                    <div class="col-md-2">
+                                        {$comentario.created_date}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                myFunction();
+                            </script>
+                        {/foreach}
                     </div>
                 </div>
                 <hr>
