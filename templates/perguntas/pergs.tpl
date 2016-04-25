@@ -17,7 +17,7 @@
                 </div>
                 <div style="margin-top: 10px; margin-bottom: 10px">
                 {foreach $tags as $tag}
-                    <div class="col-md-1">
+                    <div class="col-md-2">
                         <div class="tag-style">
                             {$tag.nome}
                         </div>
@@ -25,7 +25,7 @@
                 {/foreach}
                 </div>
                 <div>
-                    <br><br><a>RATE ME</a>
+                    <br><br><a style="margin-top: 10px;">RATE ME</a>
                     <br><br><a class="perg-comment">COMMENT</a>
                     <div class="row" style="margin-top: 20px; margin-left: 3px; margin-right: 5px;">
                         <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
