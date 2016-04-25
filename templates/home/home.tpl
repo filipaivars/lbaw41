@@ -87,17 +87,13 @@
                                             <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$bestpergunta.pergunta_id}">
                                                 <div class="perg-titulo">{$bestpergunta.titulo}</div>
                                             </a>
-                                            <div class="col-md-1" style="display: flex">
-                                                <div class="tag-style">
-                                                    tag1
+                                            {foreach $bestperguntas.tags as $tag}
+                                                <div class="col-md-1" style="display:flex">
+                                                    <div class="tag-style">
+                                                        {$tag.nome}
+                                                    </div>
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-1" style="display: flex">
-                                                <div class="tag-style">
-                                                    tag2
-                                                </div>
-                                            </div>
+                                            {/foreach}
                                         </div>
                                     </div>
                                     <div class="col-md-2">
