@@ -33,7 +33,7 @@
                     <br><br><a class="perg-comment">COMMENT</a>
                     {foreach $pergunta.comentarios as $comentario}
                         <div class="row" style="margin-top: 20px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1">
-                            <div style="margin-top: 10px; ">
+                            <div >
                                 <div class="col-md-1">
                                     <img class="avatar" src="">
                                 </div>
