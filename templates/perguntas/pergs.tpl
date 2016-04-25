@@ -11,7 +11,7 @@
                 <div class="perg-data">asked {$pergunta.created_date}</div>
             </div>
             <div class="col-md-10">
-                <div class="row">
+
                     <div class="perg-conteudo">
                         {$pergunta.conteudo}
                     </div>
@@ -25,9 +25,9 @@
                             </div>
                         {/foreach}
                     </div>
-                    <a>"<"RATE ME">"</a>
-                    <a class="perg-comment">COMMENT</a>
-                </div>
+                    <br><br><a>"<"RATE ME">"</a>
+                    <br><a class="perg-comment">COMMENT</a>
+
             </div>
 
         </div>
