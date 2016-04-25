@@ -49,7 +49,9 @@
                                         Answers
                                 </div>
                                 <div style="background-color: white; color: #282827; text-align: center">
+                                    <script>
                                     document.write(checkNull({$pergunta.n_respostas}));
+                                    </script>
                                 </div>
                             </div>
                         </div>
