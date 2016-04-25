@@ -25,11 +25,11 @@
                         </div>
                     {/foreach}
                 </div>
-                <br><br><a style="padding-top: 30px;">"<"RATE ME">"</a>
+                <br><br><a style="padding-top: 30px;">RATE ME</a>
                 <br><a class="perg-comment">COMMENT</a>
-                <div class="row" style="margin-top: 20px; margin-left: 3px;">
-                    <div style="margin-top: 10px; background-color: #ecf0f1">"<"LIST OF COMMENTS">"</div>
-                    <div style="margin-top: 10px; background-color: #ecf0f1">"<"LIST OF COMMENTS">"</div>
+                <div class="row" style="margin-top: 20px; margin-left: 3px; margin-right: 5px;">
+                    <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
+                    <div style="margin-top: 10px; background-color: #ecf0f1">LIST OF COMMENTS</div>
                 </div>
                 <div style="margin-top: 30px;">
                     <input type="text" name="myAnswer" placeholder="my answer" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
