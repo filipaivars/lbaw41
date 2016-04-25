@@ -4,6 +4,8 @@ include_once($BASE_DIR .'database/perguntas.php');
 
 $perguntas = getLastPerguntas();
 
+$bestperguntas = getBestPerguntas();
+
 /*foreach ($tweets as $key => $tweet) {
   unset($photo);
   if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.png'))
@@ -16,5 +18,6 @@ $perguntas = getLastPerguntas();
 
 
 $smarty->assign('perguntas', $perguntas);
+$smarty->assign('bestperguntas', $bestperguntas);
 $smarty->display('home/home.tpl');
 ?>

@@ -16,6 +16,23 @@ function getLastPerguntas() {
     return $stmt->fetchAll();
   }
 
+
+function getBestPerguntas() {
+    global $conn;
+    $stmt = $conn->prepare("
+        SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
+        FROM pergunta 
+        JOIN utilizador ON (pergunta.criar_id = utilizador.user_id) 
+        LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id) 
+        LEFT OUTER JOIN votoutilizadorpergunta ON (pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id)
+        GROUP BY pergunta.pergunta_id,utilizador.user_id
+        ORDER BY average DESC NULLS LAST 
+        LIMIT 10
+    ");
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
 function getPergunta($pergunta_id) {
   global $conn;
   $stmt = $conn->prepare("
