@@ -23,18 +23,17 @@
                                         <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                             <div class="perg-titulo">{$pergunta.titulo}</div>
                                         </a>
-                                        <!--<div class="tag-style">-->
-                                            <div class="col-md-1">
-                                                <div class="tag-style">
-                                                    tag1
-                                                </div>
+                                        <div class="col-md-1">
+                                            <div class="tag-style">
+                                                tag1
+                                            </div>
 
+                                        </div>
+                                        <div class="col-md-1">
+                                            <div class="tag-style">
+                                                tag2
                                             </div>
-                                            <div class="col-md-1">
-                                                <div class="tag-style">
-                                                    tag2
-                                                </div>
-                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
@@ -46,11 +45,11 @@
                         <div class="col-md-1">
                             <div class="row">
                                 <div class="caixaPerg">
-                                        Answers
+                                    Answers
                                 </div>
                                 <div style="background-color: white; color: #282827; text-align: center">
                                     <script>
-                                    document.write(checkNull({$pergunta.n_respostas}));
+                                        document.write(checkNull({$pergunta.n_respostas}));
                                     </script>
                                 </div>
                             </div>
