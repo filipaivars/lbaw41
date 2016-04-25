@@ -29,7 +29,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="col-md-1">
+                                        <div class="col-md-1" style="display: flex">
                                             <div class="tag-style">
                                                 tag2
                                             </div>
@@ -74,7 +74,71 @@
 
             <hr class="style-two">
             <h4>Top Questions</h4>
-            o mundo é lindo!!<br>
+            <div>
+                {foreach $bestperguntas as $bestpergunta}
+                    <hr class="style-one">
+
+                    <div id="questaoRecente">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img class="avatar" src="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="row">
+                                            <div class="perg-user">{$bestpergunta.username}</div>
+                                            <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$bestpergunta.pergunta_id}">
+                                                <div class="perg-titulo">{$bestpergunta.titulo}</div>
+                                            </a>
+                                            <div class="col-md-1" style="display: flex">
+                                                <div class="tag-style">
+                                                    tag1
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-1" style="display: flex">
+                                                <div class="tag-style">
+                                                    tag2
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <span class="perg-data" style="text-align: right">{$bestpergunta.created_date}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="row">
+                                    <div class="caixaPerg">
+                                        Answers
+                                    </div>
+                                    <div style="background-color: white; color: #282827; text-align: center">
+                                        <script>
+                                            document.write(checkNull({$bestpergunta.n_respostas}));
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="caixaPerg">
+                                    Stars
+                                </div>
+                                <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
+                                    <script>
+                                        document.write(roundMe(checkNull({$bestpergunta.average})));
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        myFunction();
+                    </script>
+                {/foreach}
+            </div>
             <hr class="style-two">
 
         </section>
