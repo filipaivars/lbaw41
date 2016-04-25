@@ -2,7 +2,7 @@
 
 <div class="wrap_0">
     <div class="wrap">
-        <h3>{$pergunta.titulo}</h3>
+        <h4>{$pergunta.titulo}</h4>
         <hr class="style-one">
         <div class="row">
             <div class="col-md-3">
