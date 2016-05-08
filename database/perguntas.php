@@ -108,16 +108,20 @@ function getRespostaComentarios($resposta_id) {
 function getSearchResults($search) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT pergunta.pergunta_id,pergunta.titulo, utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor)
-        FROM pergunta
-        JOIN utilizador ON pergunta.criar_id = utilizador.user_id
-        JOIN votoutilizadorpergunta ON pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id
-        WHERE  pergunta.searchtext @@ plainto_tsquery('english', ?)
-        GROUP BY pergunta.pergunta_id, utilizador.user_id
+            SELECT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor), ts_rank_cd(pergunta.searchtext,plainto_tsquery('english', ?)) AS rank
+            FROM pergunta
+            JOIN utilizador ON pergunta.criar_id = utilizador.user_id
+            JOIN votoutilizadorpergunta ON pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id
+            WHERE  pergunta.searchtext @@ plainto_tsquery('english', ?)
+            GROUP BY pergunta.pergunta_id, utilizador.user_id
+            ORDER BY rank ASC , pergunta.created_date DESC
                             ");
-    $stmt->execute(array($search));
+    $stmt->execute(array($search,$search));
     return $stmt->fetchAll();
 }
+
+
+
 
 
   
