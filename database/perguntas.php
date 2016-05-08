@@ -120,6 +120,24 @@ function getSearchResults($search) {
     return $stmt->fetchAll();
 }
 
+function getSearchByTag($tag) {
+    global $conn;
+    $stmt = $conn->prepare("
+            SELECT DISTINCT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor) as average
+            FROM pergunta
+            JOIN utilizador ON pergunta.criar_id = utilizador.user_id
+            JOIN votoutilizadorpergunta ON pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id
+            JOIN perguntatag ON pergunta.pergunta_id = perguntatag.pergunta_id
+            JOIN tag ON perguntatag.tag_id = tag.tag_id
+            WHERE tag.nome = ?
+            GROUP BY pergunta.pergunta_id, utilizador.user_id
+            ORDER BY average DESC , pergunta.created_date DESC
+                            ");
+    $stmt->execute(array($tag));
+    return $stmt->fetchAll();
+
+}
+
 
 
 
