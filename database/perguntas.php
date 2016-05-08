@@ -103,6 +103,22 @@ function getRespostaComentarios($resposta_id) {
 }
 
 
+/*SEARCH*/
+
+function getSearchResults($search) {
+    global $conn;
+    $stmt = $conn->prepare("
+        SELECT pergunta.pergunta_id,pergunta.titulo, utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor)
+        FROM pergunta
+        JOIN utilizador ON pergunta.criar_id = utilizador.user_id
+        JOIN votoutilizadorpergunta ON pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id
+        WHERE  pergunta.searchtext @@ plainto_tsquery('english', ?)
+        GROUP BY pergunta.pergunta_id, utilizador.user_id
+                            ");
+    $stmt->execute(array($search));
+    return $stmt->fetchAll();
+}
+
 
   
   function getUserTweets($username) {

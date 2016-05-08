@@ -1,9 +1,15 @@
 <?php
 include_once('../../config/init.php');
-//include_once($BASE_DIR .'database/perguntas.php');
+include_once($BASE_DIR .'database/perguntas.php');
 
-//$perguntas = getLastPerguntas();
+$search = $_GET['search'];
+$perguntas = getSearchResults($search);
 
+for ($i = 0; $i < count($perguntas); $i++) {
+    $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
+}
+
+    
 /*foreach ($tweets as $key => $tweet) {
   unset($photo);
   if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.png'))
@@ -15,6 +21,6 @@ include_once('../../config/init.php');
 }*/
 
 
-//$smarty->assign('perguntas', $perguntas);
+$smarty->assign('perguntas', $perguntas);
 $smarty->display('home/searchResults.tpl');
 ?>
