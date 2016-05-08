@@ -9,6 +9,8 @@ for ($i = 0; $i < count($perguntas); $i++) {
     $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
 }
 
+var_dump($perguntas);
+
     
 /*foreach ($tweets as $key => $tweet) {
   unset($photo);
