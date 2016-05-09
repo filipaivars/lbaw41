@@ -9,6 +9,7 @@
                 <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
                 {$pergunta.username}<br>
                 <div class="perg-data">{$pergunta.created_date}</div>
+                <br><br>
                 {if $USERNAME eq $pergunta.username}
                     É MEU<br>
                 <form action="">
