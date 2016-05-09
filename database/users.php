@@ -14,4 +14,15 @@
     $stmt->execute(array($username, sha1($username.$password)));
     return $stmt->fetch() == true;
   }
+
+function getUserId($username) {
+  global $conn;
+  $stmt = $conn->prepare("SELECT user_id
+                            FROM Utilizador 
+                            WHERE username = ?");
+  $stmt->execute(array($username));
+  return $stmt->fetchAll();
+}
+
+  
 ?>

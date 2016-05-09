@@ -9,6 +9,13 @@
                 <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
                 {$pergunta.username}<br>
                 <div class="perg-data">{$pergunta.created_date}</div>
+                {if $USERNAME eq $pergunta.username}
+                    É MEU<br>
+                <form action="">
+                    <input type="checkbox" name="fechar" value="">fechar pergunta<br>
+                    <input type="submit">
+                </form>
+                {/if}
             </div>
             <div class="col-md-10">
 
