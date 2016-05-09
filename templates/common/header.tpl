@@ -83,7 +83,7 @@
                         <label>username</label>
                         <input type="text" name="username">
                         <label>password</label>
-                        <input type="password" name="password">
+                        <input type="password" name="password" value="">
                         <input type="submit" value="Login">
                     </form>
                 </div>
