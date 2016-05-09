@@ -8,6 +8,7 @@
         </a>
       </div>
       <div class="col-xs-12 col-md-3">
+        <!--
         <form class="navbar-form" action="../../pages/home/searchResults.php">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search" name="search" id="srch-term">
@@ -16,6 +17,8 @@
             </div>
           </div>
         </form>
+        -->
+        ola
       </div>
       <div class="col-xs-8 col-md-5">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
