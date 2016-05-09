@@ -36,6 +36,10 @@
     padding-left: 25%;
 }
 
+#search-form{
+    color: #282827;
+}
+
 #header-container{
     display: flex;
     align-items: center;

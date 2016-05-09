@@ -15,7 +15,7 @@
 
 
       <div class="col-xs-8 col-md-2">
-        <form  action="../../pages/home/searchResults.php">
+        <form id="search-form" action="../../pages/home/searchResults.php">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search" name="search" id="srch-term">
             <div class="input-group-btn">
