@@ -102,6 +102,28 @@ function getRespostaComentarios($resposta_id) {
     return $stmt->fetchAll();
 }
 
+/*TAGS MANAGEMENT*/
+function addTagToQuestion($nome) {
+    global $conn;
+    $queryInsert = "INSERT INTO Tag(nome) VALUES(:nome)";
+    $stmt = $conn->prepare($queryInsert);
+    $stmt->bindParam( ':nome', $nome, PDO::PARAM_STR );
+    if(!$stmt->execute()) {
+        //Tag already exists
+        $querySelect = "SELECT tag_id FROM tag WHERE nome =:nome";
+        $stmt2 = $conn->prepare($querySelect);
+        $stmt2->bindParam( ':nome', $nome, PDO::PARAM_STR );
+        $stmt2->execute();
+        return $stmt2->fetchAll()[0];
+    } else {
+        //New Tag
+        return true;
+    }
+}
+
+function getPopularTags() {
+
+}
 
 /*SEARCH*/
 
