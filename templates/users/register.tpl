@@ -16,6 +16,18 @@
             <br>
             <br>
         </div>
+
+        <div id="register_sFB">
+            <h4>Register without Facebook</h4>
+            <form action="{$BASE_URL}actions/users/register.php" method="post" enctype="multipart/form-data">
+                <label>Username:<br></label>
+                <input type="text" name="username" value="{$FORM_VALUES.username}">
+                <label>Password:<br></label>
+                <input type="password" name="password" value="">
+                <br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
     </div>
 </div>
 
