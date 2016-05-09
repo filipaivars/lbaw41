@@ -7,7 +7,6 @@
         </a>
       </div>
       <div class="col-md-6">
-        <h2>Custom search field</h2>
         <div id="custom-search-input">
           <div class="input-group col-md-12">
             <input type="text" class="form-control input-lg" placeholder="Buscar" />
