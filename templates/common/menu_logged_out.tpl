@@ -7,6 +7,19 @@
         </a>
       </div>
       <div class="col-md-6">
+        <h2>Custom search field</h2>
+        <div id="custom-search-input">
+          <div class="input-group col-md-12">
+            <input type="text" class="form-control input-lg" placeholder="Buscar" />
+            <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+          </div>
+        </div>
+
+        <!--
         <div class="span12">
           <form id="custom-search-form" class="form-search form-horizontal pull-right" action="../../pages/home/searchResults.php">
             <div class="input-append span12">
@@ -15,6 +28,7 @@
             </div>
           </form>
           </div>
+          -->
       </div>
       <div class="col-xs-8 col-md-2">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
