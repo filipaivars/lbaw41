@@ -9,7 +9,7 @@ for ($i = 0; $i < count($perguntas); $i++) {
     $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
 }
 
-var_dump($perguntas);
+
 
 $smarty->assign('perguntas', $perguntas);
 $smarty->display('home/searchResults.tpl');

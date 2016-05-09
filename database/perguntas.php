@@ -108,7 +108,7 @@ function getRespostaComentarios($resposta_id) {
 function getSearchResults($search) {
     global $conn;
     $stmt = $conn->prepare("
-            SELECT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor), ts_rank_cd(pergunta.searchtext,plainto_tsquery('english', ?)) AS rank
+            SELECT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor) as average, ts_rank_cd(pergunta.searchtext,plainto_tsquery('english', ?)) AS rank
             FROM pergunta
             JOIN utilizador ON pergunta.criar_id = utilizador.user_id
             JOIN votoutilizadorpergunta ON pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id
