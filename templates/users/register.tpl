@@ -28,17 +28,6 @@
                 <input type="submit" value="Register">
             </form>
         </div>
-
-        <form method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
-            <label>username</label>
-            <input type="text" name="username">
-            <label>password</label>
-            <input type="password" name="password" value="">
-            <input type="submit" value="Login">
-        </form>
-        <br><br>
-
-        <a href="{$BASE_URL}actions/users/logout.php">Logout</a>
     </div>
 </div>
 

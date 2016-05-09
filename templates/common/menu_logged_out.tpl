@@ -1,12 +1,12 @@
 <div class="header">
   <div class="container-fluid" id="header-container">
     <div class="row">
-      <div class="col-xs-12 col-md-1">
+      <div class="col-xs-12 col-md-2">
         <a href="../../pages/home/home.php">
           <img src="../../images/assets/logo.png" style="height: 40px;">
         </a>
       </div>
-      <div class="col-xs-8 col-md-3">
+      <div class="col-xs-8 col-md-1">
         <form method="get" action="../../pages/home/searchResults.php">
           <div class="input-group stylish-input-group">
             <input type="text" class="form-control"  placeholder="Search" name="search">
