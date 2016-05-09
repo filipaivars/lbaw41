@@ -9,7 +9,7 @@
       <div class="col-md-4">
         <form action="../../pages/home/searchResults.php" id="search">
           <input type="text" style="background: none; color: white" name="search">
-          <input type="image" src="../../images/assets/search_icon.png">
+          <input type="image" src="../../images/assets/search_icon.png" width="50" height="50">
         </form>
 
         <!--
