@@ -88,9 +88,10 @@
                         <script>
                             document.write(checkNull({$resposta.average}));
                         </script>
+                        {if $USERNAME}
                         <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
                         <br><br>
-                        {if $USERNAME}
+
                         <div class="apareceComm2">
                             <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                             <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
