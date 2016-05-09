@@ -43,6 +43,7 @@
                 </div>
                 <div class="col-xs-8 col-md-2">
                     <b>{$USERNAME}</b>
+                    <button formaction="{$BASE_URL}actions/users/logout.php" value="Logout"></button>
                 </div>
                 <div class="col-xs-2 col-md-1" style="text-align: right   ">
                     <i class="material-icons" style="font-size: 35px">email</i>
@@ -81,9 +82,9 @@
                 <div class="col-xs-8 col-md-5">
                     <form class="form-inline" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
                         <label>username</label>
-                        <input type="text" name="username">
+                        <input type="text" name="username" style="color: black;">
                         <label>password</label>
-                        <input type="password" name="password" value="">
+                        <input type="password" name="password" value="" style="color: black;">
                         <input type="submit" value="Login">
                     </form>
                 </div>
