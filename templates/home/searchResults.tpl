@@ -3,6 +3,7 @@
 <div class="wrap_0">
     <div class="wrap">
         <div>
+            <h4 style="margin-top: 0; padding-top: 20px">Search Results</h4>
             {foreach $perguntas as $pergunta}
                 <hr class="style-one">
 
@@ -40,7 +41,9 @@
                                     Answers
                                 </div>
                                 <div style="background-color: white; color: #282827; text-align: center">
-                                    234567
+                                    <script>
+                                        document.write(checkNull({$pergunta.n_respostas}));
+                                    </script>
                                 </div>
                             </div>
                         </div>

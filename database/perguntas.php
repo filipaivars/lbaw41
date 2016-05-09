@@ -108,10 +108,11 @@ function getRespostaComentarios($resposta_id) {
 function getSearchResults($search) {
     global $conn;
     $stmt = $conn->prepare("
-            SELECT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor) as average, ts_rank_cd(pergunta.searchtext,plainto_tsquery('english', ?)) AS rank
+            SELECT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor) as average,count(DISTINCT resposta.resposta_id) as n_respostas, ts_rank_cd(pergunta.searchtext,plainto_tsquery('english', ?)) AS rank
             FROM pergunta
             JOIN utilizador ON pergunta.criar_id = utilizador.user_id
-            JOIN votoutilizadorpergunta ON pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id
+            LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id) 
+            LEFT OUTER JOIN votoutilizadorpergunta ON (pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id)
             WHERE  pergunta.searchtext @@ plainto_tsquery('english', ?)
             GROUP BY pergunta.pergunta_id, utilizador.user_id
             ORDER BY rank ASC , pergunta.created_date DESC
@@ -123,12 +124,13 @@ function getSearchResults($search) {
 function getSearchByTag($tag) {
     global $conn;
     $stmt = $conn->prepare("
-            SELECT DISTINCT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor) as average
+            SELECT DISTINCT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor) as average,count(DISTINCT resposta.resposta_id) as n_respostas
             FROM pergunta
             JOIN utilizador ON pergunta.criar_id = utilizador.user_id
-            JOIN votoutilizadorpergunta ON pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id
             JOIN perguntatag ON pergunta.pergunta_id = perguntatag.pergunta_id
             JOIN tag ON perguntatag.tag_id = tag.tag_id
+            LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id) 
+            LEFT OUTER JOIN votoutilizadorpergunta ON (pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id)
             WHERE tag.nome = ?
             GROUP BY pergunta.pergunta_id, utilizador.user_id
             ORDER BY average DESC , pergunta.created_date DESC

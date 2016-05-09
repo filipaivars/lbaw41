@@ -5,8 +5,6 @@
 
         <section id="perguntas">
             <h4 style="margin-top: 0; padding-top: 20px">Recent Questions</h4>
-
-            <div id="new_perguntas"></div>
             {foreach $perguntas as $pergunta}
                 <hr class="style-one">
 
