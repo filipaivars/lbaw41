@@ -28,14 +28,17 @@
                 </a>
             </div>
             <div class="col-xs-8 col-md-4">
+                <form method="get" action="../../pages/home/searchResults.php">
                 <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Search" >
+                    <input type="text" class="form-control"  placeholder="Search" name="search">
                         <span class="input-group-addon">
                             <button type="submit">
                                 <span class="glyphicon glyphicon-search"></span>
+
                             </button>
                         </span>
                 </div>
+                </form>
             </div>
             <div class="col-xs-2 col-md-1" style="text-align: right   ">
                 <i class="material-icons" style="font-size: 35px">email</i>
