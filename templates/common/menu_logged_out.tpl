@@ -6,10 +6,14 @@
           <img src="../../images/assets/logo.png" style="height: 40px;">
         </a>
       </div>
-      <div class="col-md-4">
-        <form action="../../pages/home/searchResults.php" id="search">
-          <input type="text" style="background: none; color: white" name="search">
-          <input type="image" src="../../images/assets/search_icon.png" width="50" height="50" value="submit" name="submit">
+      <div class="col-md-3 pull-right">
+        <form class="navbar-form" role="search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
         </form>
 
         <!--
@@ -23,7 +27,7 @@
           </div>
           -->
       </div>
-      <div class="col-xs-8 col-md-4">
+      <div class="col-xs-8 col-md-5">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" style="color: black;">
