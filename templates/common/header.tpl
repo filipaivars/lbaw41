@@ -78,7 +78,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-xs-8 col-md-5">
+                <div class="col-xs-8 col-md-5" style="color: black">
                     <form method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
                         <label>username</label>
                         <input type="text" name="username">
