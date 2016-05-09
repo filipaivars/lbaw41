@@ -9,7 +9,7 @@
       <div class="col-xs-8 col-md-2">
         <form method="get" action="../../pages/home/searchResults.php">
           <div class="row">
-            <input type="text" class="form-control col-md-8"  placeholder="Search" name="search">
+            <input type="text" class="col-md-8"  placeholder="Search" name="search">
             <button type="submit" class="col-md-4"><img src="../../images/assets/search_icon.png" width="50"></button>
           </div>
         </form>
