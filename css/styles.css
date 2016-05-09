@@ -128,6 +128,7 @@ a:hover.perg-comment{
 }
 
 #form-login{
+    text-align: right;
     background-color: yellow;
     font-weight: 100;
     font-size: 80%;
@@ -138,6 +139,7 @@ a:hover.perg-comment{
 
 #form-login input{
     color: #282827;
+    text-align: left;
 }
 
 .avatar{
