@@ -128,7 +128,7 @@ a:hover.perg-comment{
 }
 
 #form-login{
-    text-align: right;
+    align-items: flex-end;
     background-color: yellow;
     font-weight: 100;
     font-size: 80%;
