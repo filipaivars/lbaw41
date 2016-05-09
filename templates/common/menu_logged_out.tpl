@@ -6,7 +6,7 @@
           <img src="../../images/assets/logo.png" style="height: 40px;">
         </a>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div id="custom-search-input">
           <div class="input-group col-md-12">
             <input type="text" class="form-control input-lg" placeholder="Buscar" />
@@ -29,7 +29,7 @@
           </div>
           -->
       </div>
-      <div class="col-xs-8 col-md-2">
+      <div class="col-xs-8 col-md-4">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" style="color: black;">
