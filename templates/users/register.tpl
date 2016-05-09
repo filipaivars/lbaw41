@@ -36,6 +36,9 @@
             <input type="password" name="password" value="">
             <input type="submit" value="Login">
         </form>
+        <br><br>
+
+        <a href="{$BASE_URL}actions/users/logout.php">Logout</a>
     </div>
 </div>
 
