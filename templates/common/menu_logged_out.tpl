@@ -6,7 +6,7 @@
           <img src="../../images/assets/logo.png" style="height: 40px;">
         </a>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="span12">
           <form id="custom-search-form" class="form-search form-horizontal pull-right" action="../../pages/home/searchResults.php">
             <div class="input-append span12">
@@ -16,7 +16,7 @@
           </form>
           </div>
       </div>
-      <div class="col-xs-8 col-md-4">
+      <div class="col-xs-8 col-md-2">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" style="color: black;">
