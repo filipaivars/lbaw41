@@ -6,8 +6,8 @@
           <img src="../../images/assets/logo.png" style="height: 40px;">
         </a>
       </div>
-      <div class="col-md-3 pull-right">
-        <form class="navbar-form" role="search">
+      <div class="col-md-3 ">
+        <form class="navbar-form" action="../../pages/home/searchResults.php">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
             <div class="input-group-btn">
