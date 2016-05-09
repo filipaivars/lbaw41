@@ -7,13 +7,14 @@
         </a>
       </div>
       <div class="col-md-4">
-
+        <div class="span12">
           <form id="custom-search-form" class="form-search form-horizontal pull-right" action="../../pages/home/searchResults.php">
             <div class="input-append span12">
               <input type="text" class="search-query" placeholder="Search">
               <button type="submit" class="btn"><i class="icon-search"></i></button>
             </div>
           </form>
+          </div>
       </div>
       <div class="col-xs-8 col-md-4">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
