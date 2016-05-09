@@ -140,8 +140,16 @@ function getSearchByTag($tag) {
 
 }
 
-
-
+/*UPDATES*/
+function updateQuestion($pergunta_id, $titulo, $conteudo) {
+    global $conn;
+    $query = "UPDATE Pergunta SET titulo= :titulo, conteudo= :conteudo WHERE pergunta_id= :pergunta_id;";
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam( ':titulo', $titulo, PDO::PARAM_STR );
+    $stmt->bindParam( ':conteudo', $conteudo, PDO::PARAM_STR );
+    $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
+    return $stmt->execute();
+}
 
 
   
