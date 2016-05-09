@@ -7,9 +7,9 @@
     <div class="row" style="display: flex; align-items: center; text-align: right">
 
 
-      <div class="col-xs-12 col-md-2">
+      <div class="col-xs-12 col-md-2" style="text-align: left">
         <a href="../../pages/home/home.php">
-          <img src="../../images/assets/logo.png" style="height: 40px;">
+          <img src="../../images/assets/logo.png" style="height: 40px">
         </a>
       </div>
 
