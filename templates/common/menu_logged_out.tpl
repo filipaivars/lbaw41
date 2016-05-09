@@ -6,15 +6,16 @@
           <img src="../../images/assets/logo.png" style="height: 40px;">
         </a>
       </div>
-      <div class="col-xs-8 col-md-2">
-        <form method="get" action="../../pages/home/searchResults.php">
-          <div class="row">
-            <input type="text" class="col-md-8"  placeholder="Search" name="search">
-            <button type="submit" class="col-md-4"><img src="../../images/assets/search_icon.png" width="50" height="50"></button>
+      <div class="col-md-4 col-md-offset-3">
+        <form action="../../pages/home/searchResults.php" class="search-form">
+          <div class="form-group has-feedback">
+            <label for="search" class="sr-only">Search</label>
+            <input type="text" class="form-control" name="search" id="search" placeholder="search">
+            <span class="glyphicon glyphicon-search form-control-feedback"></span>
           </div>
         </form>
       </div>
-      <div class="col-xs-8 col-md-6">
+      <div class="col-xs-8 col-md-4">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" style="color: black;">
