@@ -8,9 +8,9 @@
       </div>
       <div class="col-xs-8 col-md-2">
         <form method="get" action="../../pages/home/searchResults.php">
-          <div class="input-group stylish-input-group">
-            <input type="text" class="form-control"  placeholder="Search" name="search">
-            <button type="submit"><img src="../../images/assets/search_icon.png" width="50"></button>
+          <div class="row">
+            <input type="text" class="form-control col-md-8"  placeholder="Search" name="search">
+            <button type="submit" class="col-md-4"><img src="../../images/assets/search_icon.png" width="50"></button>
           </div>
         </form>
       </div>
