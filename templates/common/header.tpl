@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-xs-8 col-md-2">
                     <b>{$USERNAME}</b>
-                    <button formaction="{$BASE_URL}actions/users/logout.php" value="Logout"></button>
+                    <button value="Logout"><a href="{$BASE_URL}actions/users/logout.php">Logout</a></button>
                 </div>
                 <div class="col-xs-2 col-md-1" style="text-align: right   ">
                     <i class="material-icons" style="font-size: 35px">email</i>
