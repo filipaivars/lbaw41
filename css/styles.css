@@ -123,6 +123,11 @@ a:hover.perg-comment{
     white-space: nowrap;
 }
 
+#form-login{
+    font-weight: 100;
+    font-size: 11;
+}
+
 .avatar{
     width: 75px;
     height: 75px;

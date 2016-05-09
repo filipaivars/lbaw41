@@ -20,7 +20,7 @@
         </form>
       </div>
       <div class="col-xs-8 col-md-6">
-        <form class="form-inline" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
+        <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" style="color: black;">
           <label>password</label>
