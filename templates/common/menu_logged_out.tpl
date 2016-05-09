@@ -4,7 +4,7 @@
 
 
 
-    <div class="row">
+    <div class="row" style="display: flex; align-items: center;">
 
 
       <div class="col-xs-12 col-md-2">
@@ -26,7 +26,7 @@
       </div>
 
 
-      <div class="col-xs-8 col-md-6" style="display: flex; align-items: center;">
+      <div class="col-xs-8 col-md-6">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" style="color: black;">
