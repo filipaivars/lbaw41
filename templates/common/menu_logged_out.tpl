@@ -10,7 +10,7 @@
         <form method="get" action="../../pages/home/searchResults.php">
           <div class="row">
             <input type="text" class="col-md-8"  placeholder="Search" name="search">
-            <button type="submit" class="col-md-4" style="background: url(../../images/assets/search_icon.png)"></button>
+            <button type="submit" class="col-md-4"><img src="../../images/assets/search_icon.png" width="50" height="50"></button>
           </div>
         </form>
       </div>
