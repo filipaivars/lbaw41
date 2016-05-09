@@ -6,7 +6,7 @@
           <img src="../../images/assets/logo.png" style="height: 40px;">
         </a>
       </div>
-      <div class="col-xs-8 col-md-1">
+      <div class="col-xs-8 col-md-2">
         <form method="get" action="../../pages/home/searchResults.php">
           <div class="input-group stylish-input-group">
             <input type="text" class="form-control"  placeholder="Search" name="search">
@@ -19,7 +19,7 @@
           </div>
         </form>
       </div>
-      <div class="col-xs-8 col-md-5">
+      <div class="col-xs-8 col-md-6">
         <form class="form-inline" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" style="color: black;">
