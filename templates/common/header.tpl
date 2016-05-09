@@ -78,8 +78,8 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-xs-8 col-md-5" style="color: black">
-                    <form method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
+                <div class="col-xs-8 col-md-5">
+                    <form class="form-inline" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
                         <label>username</label>
                         <input type="text" name="username">
                         <label>password</label>
