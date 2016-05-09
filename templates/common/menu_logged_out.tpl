@@ -10,12 +10,7 @@
         <form method="get" action="../../pages/home/searchResults.php">
           <div class="input-group stylish-input-group">
             <input type="text" class="form-control"  placeholder="Search" name="search">
-            <button type="submit"><img src="../../images/assets/search_icon.png"></button>
-            <span class="input-group-addon">
-                <button type="submit">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-            </span>
+            <button type="submit"><img src="../../images/assets/search_icon.png" width="50"></button>
           </div>
         </form>
       </div>
