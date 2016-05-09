@@ -60,7 +60,7 @@
     <div class="header">
         <div class="container-fluid" id="header-container">
             <div class="row">
-                <div class="col-xs-12 col-md-3">
+                <div class="col-xs-12 col-md-2">
                     <a href="../../pages/home/home.php">
                         <img src="../../images/assets/logo.png" style="height: 40px;">
                     </a>
@@ -78,7 +78,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-xs-8 col-md-4">
+                <div class="col-xs-8 col-md-5">
                     <form method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
                         <label>username</label>
                         <input type="text" name="username">
