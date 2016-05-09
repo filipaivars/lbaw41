@@ -26,8 +26,8 @@
       </div>
 
 
-      <div class="col-xs-8 col-md-6" id="form-login">
-        <form method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
+      <div class="col-xs-8 col-md-6" style="display: flex; align-items: center;">
+        <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" style="color: black;">
           <label>password</label>
