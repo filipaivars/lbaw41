@@ -4,7 +4,7 @@
 
 
 
-    <div class="row" style="display: flex; align-items: center;">
+    <div class="row" style="display: flex; align-items: center; text-align: right">
 
 
       <div class="col-xs-12 col-md-2">
@@ -29,9 +29,9 @@
       <div class="col-xs-8 col-md-6">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
-          <input type="text" name="username" style="color: black;">
+          <input type="text" name="username" style="color: black; text-align: left">
           <label>password</label>
-          <input type="password" name="password" value="" style="color: black;">
+          <input type="password" name="password" value="" style="color: black; text-align: left">
           <input type="submit" value="Login">
         </form>
       </div>
