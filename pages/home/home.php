@@ -3,7 +3,10 @@ include_once('../../config/init.php');
 include_once($BASE_DIR .'database/perguntas.php');
 
 $perguntas = getLastPerguntas();
-
+$tag1 = addTagToQuestion('Carlos');
+$tag2 = addTagToQuestion('MMO');
+var_dump($tag1);
+var_dump($tag2);
 for ($i = 0; $i < count($perguntas); $i++) {
     $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
 }
