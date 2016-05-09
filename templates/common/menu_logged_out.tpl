@@ -35,9 +35,11 @@
           <input type="submit" value="Login">
         </form>
       </div>
+
       <div class="col-xs-2 col-md-1" style="text-align: right   ">
         <i class="material-icons" style="font-size: 35px">email</i>
       </div>
+
       <div class="col-xs-2 col-md-1" style="text-align: right ">
         <a href="../../pages/users/register.php">
           <i class="material-icons" style="font-size: 35px">person</i>
