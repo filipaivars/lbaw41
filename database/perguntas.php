@@ -102,6 +102,21 @@ function getRespostaComentarios($resposta_id) {
     return $stmt->fetchAll();
 }
 
+function addQuestion($titulo, $conteudo, $criar_id, $tags) {
+    global $conn;
+    $final = 'BEGIN transaction;
+    INSERT INTO Pergunta(titulo,conteudo,criar_id) VALUES (:titulo,:conteudo,:criar_id);';
+    foreach ($tags as $tag) {
+        $final .= 'INSERT INTO PerguntaTag VALUES (lastval(),?);';
+    }
+    $final .= 'COMMIT transaction;';
+    $stmt = $conn->prepare($final);
+    $stmt->bindParam(':titulo',$titulo, PDO::PARAM_STR);
+    $stmt->bindParam(':conteudo',$conteudo, PDO::PARAM_STR);
+    $stmt->bindParam(':criar_id',$criar_id, PDO::PARAM_INT);
+    return $stmt->execute(array($tags));
+}
+
 /*TAGS MANAGEMENT*/
 function addTagToQuestion($nome) {
     global $conn;
@@ -120,6 +135,8 @@ function addTagToQuestion($nome) {
     $stmt2->execute();
     return $stmt2->fetchAll()[0];
 }
+
+
 
 function getPopularTags() {
 
