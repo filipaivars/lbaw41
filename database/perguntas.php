@@ -139,7 +139,19 @@ function addTagToQuestion($nome) {
 
 
 function getPopularTags() {
+    global $conn;
+    $query = "SELECT nome FROM Tag WHERE tag_id IN (SELECT tag_id FROM PerguntaTag GROUP BY tag_id ORDER BY COUNT(tag_id) DESC LIMIT 5)";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
 
+function getRecentTags() {
+    global $conn;
+    $query = "SELECT nome FROM Tag WHERE tag_id IN (SELECT tag_id FROM PerguntaTag ORDER BY pergunta_id DESC LIMIT 5);";
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    return $stmt->fetchAll();
 }
 
 /*SEARCH*/
