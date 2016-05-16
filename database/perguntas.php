@@ -112,9 +112,6 @@ function addQuestion($titulo, $conteudo, $criar_id, $tags) {
     $final .= 'COMMIT transaction;';
     $final .= "SELECT currval('pergunta_pergunta_id_seq');";
     $stmt = $conn->prepare($final);
-    $stmt->bindParam(':titulo',$titulo, PDO::PARAM_STR);
-    $stmt->bindParam(':conteudo',$conteudo, PDO::PARAM_STR);
-    $stmt->bindParam(':criar_id',$criar_id, PDO::PARAM_INT);
     $stmt->execute(array($titulo,$conteudo,$criar_id) + $tags);
     return $stmt->fetchAll()[0];
 }
