@@ -3,26 +3,21 @@
   include_once($BASE_DIR .'database/users.php');
   include_once($BASE_DIR .'database/perguntas.php');
 
-
+/*
   if(!$_SESSION['username']) {
     $_SESSION['error_messages'][] = 'User needs to login in order to make a question';
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
   }
-/*
-  if (!$_POST['username'] || !$_POST['password']) {
-    $_SESSION['error_messages'][] = 'Invalid login';
-    $_SESSION['form_values'] = $_POST;
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-    exit;
-  }
-*/
 
    if(!$_POST['titulo'] || !$_POST['conteudo'] || !$_POST['tags']) {
      $_SESSION['error_messages'][] = 'Missing form values';
      header('Location: ' . $_SERVER['HTTP_REFERER']);
      exit;
    }
+*/
+
+var_dump($_POST);
 
   $titulo = $_POST['titulo'];
   $conteudo = $_POST['conteudo'];
