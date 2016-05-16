@@ -35,13 +35,13 @@
         <form id="askForm">
             <div class="row">
                 <div class="col-xs-12 col-md-12">
-                    <input type="text" name="questionTitle" placeholder="Title" style="width: 100%; margin-top: 10px; border-style: none; height: 33px;">
+                    <input type="text" name="titulo" placeholder="Title" style="width: 100%; margin-top: 10px; border-style: none; height: 33px;">
                 </div>
                 <div class="col-xs-12 col-md-12">
-                    <input type="text" name="questionDescription" placeholder="Description" style="width: 100%; height: 100px; margin-top: 10px; border-style: none;">
+                    <input type="text" name="conteudo" placeholder="Description" style="width: 100%; height: 100px; margin-top: 10px; border-style: none;">
                 </div>
                 <div class="col-xs-12 col-md-8">
-                    <input type="text" name="questionTag" placeholder="tags" style="width: 100%; margin-top: 10px; border-style: none; height: 33px">
+                    <input type="text" name="tags" placeholder="tags" style="width: 100%; margin-top: 10px; border-style: none; height: 33px">
                 </div>
                 <div class="col-xs-12 col-md-4" style="text-align: right; border-style: none;">
                     <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post question</button>
