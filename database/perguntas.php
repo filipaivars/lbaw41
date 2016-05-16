@@ -105,7 +105,7 @@ function getRespostaComentarios($resposta_id) {
 function addQuestion($titulo, $conteudo, $criar_id, $tags) {
     global $conn;
     $final = 'BEGIN transaction;
-    INSERT INTO Pergunta(titulo,conteudo,criar_id) VALUES (:titulo,:conteudo,:criar_id);';
+    INSERT INTO Pergunta(titulo,conteudo,criar_id) VALUES ( :titulo , :conteudo , :criar_id );';
     foreach ($tags as $tag) {
         $final .= 'INSERT INTO PerguntaTag VALUES (lastval(),?);';
     }
