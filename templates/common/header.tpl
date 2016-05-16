@@ -32,7 +32,7 @@
 <div class="header_2">
 
     <div class="aparece" style="padding-left: 30%; padding-right: 30%">
-        <form id="askForm">
+        <form id="askForm" action="{$BASE_URL}actions/perguntas/create_pergunta.php" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-xs-12 col-md-12">
                     <input type="text" name="titulo" placeholder="Title" style="width: 100%; margin-top: 10px; border-style: none; height: 33px;">
