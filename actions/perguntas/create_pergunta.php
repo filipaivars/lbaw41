@@ -3,7 +3,7 @@
   include_once($BASE_DIR .'database/users.php');
   include_once($BASE_DIR .'database/perguntas.php');
 
-/*
+
   if(!$_SESSION['username']) {
     $_SESSION['error_messages'][] = 'User needs to login in order to make a question';
     header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -15,7 +15,7 @@
      header('Location: ' . $_SERVER['HTTP_REFERER']);
      exit;
    }
-*/
+
 
 
 
@@ -27,12 +27,10 @@
   $tags_id = [];
 
   foreach ($tags_split as $tag) {
-      $tags_id[] = addTag($tag);
+      $tags_id[] = addTag($tag)['tag_id'];
   }
 
   $user_id = getUserId($_SESSION['username'])['user_id'];
-var_dump($user_id);
-var_dump($tags_id);
   $pergunta_id = addQuestion($titulo, $conteudo, getUserId($_SESSION['username']), $tags_id);
 
   var_dump($pergunta_id);
