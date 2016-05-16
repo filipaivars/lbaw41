@@ -17,7 +17,8 @@
    }
 */
 
-var_dump($_POST);
+//var_dump($_POST);
+var_dump(getUserId($_SESSION['username']));
 
   $titulo = $_POST['titulo'];
   $conteudo = $_POST['conteudo'];
