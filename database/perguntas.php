@@ -105,7 +105,7 @@ function getRespostaComentarios($resposta_id) {
 function addQuestion($titulo, $conteudo, $criar_id, $tags) {
     global $conn;
     $final = 'BEGIN transaction;
-    INSERT INTO Pergunta(titulo,conteudo,criar_id) VALUES ( :titulo , :conteudo , :criar_id );';
+    INSERT INTO Pergunta(titulo,conteudo,criar_id) VALUES ( ? , ? , ? );';
     foreach ($tags as $tag) {
         $final .= 'INSERT INTO PerguntaTag VALUES (lastval(),?);';
     }
@@ -115,7 +115,7 @@ function addQuestion($titulo, $conteudo, $criar_id, $tags) {
     $stmt->bindParam(':titulo',$titulo, PDO::PARAM_STR);
     $stmt->bindParam(':conteudo',$conteudo, PDO::PARAM_STR);
     $stmt->bindParam(':criar_id',$criar_id, PDO::PARAM_INT);
-    $stmt->execute($tags);
+    $stmt->execute(array($titulo,$conteudo,$criar_id) + $tags);
     return $stmt->fetchAll()[0];
 }
 
