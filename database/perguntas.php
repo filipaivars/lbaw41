@@ -110,9 +110,11 @@ function addQuestion($titulo, $conteudo, $criar_id, $tags) {
         $final .= 'INSERT INTO PerguntaTag VALUES (lastval(),?);';
     }
     $final .= 'COMMIT transaction;';
-    $final .= "SELECT currval('pergunta_pergunta_id_seq');";
+    $final2 = "SELECT currval('pergunta_pergunta_id_seq');";
     $stmt = $conn->prepare($final);
     $stmt->execute(array($titulo,$conteudo,$criar_id) + $tags);
+    $stmt = $conn->prepare($final2);
+    $stmt->execute();
     return $stmt->fetchAll()[0];
 }
 
