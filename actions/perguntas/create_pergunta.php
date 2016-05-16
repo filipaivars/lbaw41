@@ -31,7 +31,7 @@
   }
 
   $user_id = getUserId($_SESSION['username'])['user_id'];
-  $pergunta_id = addQuestion($titulo, $conteudo, getUserId($_SESSION['username']), $tags_id);
+  $pergunta_id = addQuestion($titulo, $conteudo, $user_id, $tags_id);
 
   var_dump($pergunta_id);
 
