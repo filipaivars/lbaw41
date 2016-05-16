@@ -4,6 +4,10 @@
   include_once($BASE_DIR .'database/perguntas.php');
 
 
+$pergunta_id = addQuestion('lala123', 'lala123', 1, [1,2])['currval'];
+
+var_dump($pergunta_id);
+/*
   if(!$_SESSION['username']) {
     $_SESSION['error_messages'][] = 'User needs to login in order to make a question';
     header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -33,10 +37,10 @@
 var_dump($tags_id);
 
   $user_id = getUserId($_SESSION['username'])['user_id'];
-  $pergunta_id = addQuestion($titulo, $conteudo, $user_id, $tags_id);
+  $pergunta_id = addQuestion($titulo, $conteudo, $user_id, $tags_id)['currval'];
 
   var_dump($pergunta_id);
-
+*/
   /*header('Location: ' . $BASE_URL . 'pages/perguntas/show_pergunta.php?pergunta_id='. $pergunta_id);*/
 
 ?>
