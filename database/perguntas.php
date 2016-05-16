@@ -115,7 +115,7 @@ function addQuestion($titulo, $conteudo, $criar_id, $tags) {
     $stmt->bindParam(':titulo',$titulo, PDO::PARAM_STR);
     $stmt->bindParam(':conteudo',$conteudo, PDO::PARAM_STR);
     $stmt->bindParam(':criar_id',$criar_id, PDO::PARAM_INT);
-    $stmt->execute(array($tags));
+    $stmt->execute($tags);
     return $stmt->fetchAll()[0];
 }
 
