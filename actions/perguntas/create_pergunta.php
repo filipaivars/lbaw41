@@ -30,6 +30,8 @@
       $tags_id[] = addTag($tag)['tag_id'];
   }
 
+var_dump($tags_id);
+
   $user_id = getUserId($_SESSION['username'])['user_id'];
   $pergunta_id = addQuestion($titulo, $conteudo, $user_id, $tags_id);
 
