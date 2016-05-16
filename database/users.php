@@ -21,8 +21,18 @@ function getUserId($username) {
                             FROM Utilizador 
                             WHERE username = ?");
   $stmt->execute(array($username));
+  return $stmt->fetchAll()[0];
+}
+
+function getUser($username) {
+  global $conn;
+  $stmt = $conn->prepare("SELECT user_id
+                            FROM Utilizador
+                            WHERE username = ?");
+  $stmt->execute(array($username));
   return $stmt->fetchAll();
 }
+
 
   
 ?>

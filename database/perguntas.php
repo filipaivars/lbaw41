@@ -110,15 +110,17 @@ function addQuestion($titulo, $conteudo, $criar_id, $tags) {
         $final .= 'INSERT INTO PerguntaTag VALUES (lastval(),?);';
     }
     $final .= 'COMMIT transaction;';
+    $final .= "SELECT currval('pergunta_pergunta_id_seq');";
     $stmt = $conn->prepare($final);
     $stmt->bindParam(':titulo',$titulo, PDO::PARAM_STR);
     $stmt->bindParam(':conteudo',$conteudo, PDO::PARAM_STR);
     $stmt->bindParam(':criar_id',$criar_id, PDO::PARAM_INT);
-    return $stmt->execute(array($tags));
+    $stmt->execute(array($tags));
+    return $stmt->fetchAll()[0];
 }
 
 /*TAGS MANAGEMENT*/
-function addTagToQuestion($nome) {
+function addTag($nome) {
     global $conn;
     $queryInsert = "INSERT INTO Tag(nome) VALUES(:nome)";
     $stmt = $conn->prepare($queryInsert);
