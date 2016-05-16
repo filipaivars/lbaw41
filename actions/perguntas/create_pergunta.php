@@ -17,8 +17,7 @@
    }
 */
 
-//var_dump($_POST);
-var_dump(getUserId($_SESSION['username']));
+
 
   $titulo = $_POST['titulo'];
   $conteudo = $_POST['conteudo'];
@@ -31,6 +30,9 @@ var_dump(getUserId($_SESSION['username']));
       $tags_id[] = addTag($tag);
   }
 
+  $user_id = getUserId($_SESSION['username'])['user_id'];
+var_dump($user_id);
+var_dump($tags_id);
   $pergunta_id = addQuestion($titulo, $conteudo, getUserId($_SESSION['username']), $tags_id);
 
   var_dump($pergunta_id);
