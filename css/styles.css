@@ -119,12 +119,15 @@ a:hover.perg-comment{
 }
 
 .input-text-w-bb{
-    color: #d6dad4;
     text-align: left;
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 2px solid #e94735;
+    border-bottom: 1px solid #e94735;
+}
+
+.input-text-w-bb textarea{
+    color: #d6dad4;
 }
 
 .tag-style{
