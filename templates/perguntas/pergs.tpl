@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-2">
                 <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
-                {$pergunta.username}<br>
+                <a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a><br>
                 <div class="perg-data">{$pergunta.created_date}</div>
                 <br><br>
                 {if $USERNAME eq $pergunta.username}
@@ -135,7 +135,7 @@
                                 myFunction();
                             </script>
                         {/foreach}
-                    </div>
+                    </div>$('input.rating[type=number]').rating()
                 </div>
                 <hr>
 
@@ -143,7 +143,6 @@
 
 
         </div>
-
 
     </div>
 
