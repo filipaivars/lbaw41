@@ -19,8 +19,8 @@
                     </div>
                 </form>
             </div>
-            <div class="col-xs-8 col-md-6" style="text-align: right; font-weight: 200; font-size: 80%; margin-right: 20px">
-                <b>{$USERNAME}</b>
+            <div class="col-xs-8 col-md-6" style="text-align: right; font-weight: 200; font-size: 80%;">
+                <b style="margin-right: 20px">{$USERNAME}</b>
                 <button value="logout"><a href="{$BASE_URL}actions/users/logout.php">Logout</a></button>
             </div>
             <div class="col-xs-2 col-md-1" style="text-align: right   ">
