@@ -6,7 +6,7 @@
 
 
   if(!$_SESSION['username']) {
-    $_SESSION['error_messages'][] = 'User needs to login in order to make a answer';
+    $_SESSION['error_messages'][] = 'User needs to login in order to make a comment';
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
   }
@@ -22,11 +22,9 @@
   $pergunta_id = $_POST['pergunta_id'];
   $conteudo = $_POST['conteudo'];
 
-
-
   $user_id = getUserId($_SESSION['username'])['user_id'];
 
-  createAnswer($conteudo,$user_id,$pergunta_id);
+  createCommentQuestion($conteudo,$user_id,$pergunta_id);
 
   header('Location: ' . $_SERVER['HTTP_REFERER']);
 
