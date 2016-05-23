@@ -48,7 +48,9 @@
                                                             <h3>{$pergunta.titulo}<h3>
                                                         </div>
                                                     </a>
-                                                    {$pergunta.conteudo}
+                                                    <div class="col-md-2">
+                                                        {$pergunta.conteudo}
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-2">
