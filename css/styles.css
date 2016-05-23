@@ -118,6 +118,15 @@ a:hover.perg-comment{
     color: #282827;
 }
 
+.input-text-w-bb{
+    color: black;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid red;
+}
+
 .tag-style{
     background-color: #282827;
     color: white;
