@@ -95,6 +95,10 @@ hr.style-two {
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
+.perg-teaser{
+    font-size: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
 
 .perg-user{
     font-style: italic;

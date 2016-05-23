@@ -48,7 +48,7 @@
                                                             <h3>{$pergunta.titulo}<h3>
                                                         </div>
                                                     </a>
-                                                    <div class="starsAvg">
+                                                    <div class="perg-teaser">
                                                         {$pergunta.conteudo}
                                                     </div>
                                                 </div>
