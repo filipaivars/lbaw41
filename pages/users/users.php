@@ -2,7 +2,7 @@
 include_once('../../config/init.php');
 include_once($BASE_DIR .'database/users.php');
 
-if (!$_GET['user_name']) {
+if (!$_GET['username']) {
     $_SESSION['error_messages'][] = 'Undefined username';
     header("Location: $BASE_URL");
     exit;
