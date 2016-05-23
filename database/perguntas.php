@@ -193,6 +193,30 @@ function getSearchByTag($tag) {
 
 }
 
+/*RESPOSTAS*/
+
+function createAnswer($conteudo,$criar_id,$pergunta_id) {
+     global $conn;
+      $stmt = $conn->prepare("INSERT INTO Resposta (conteudo,criar_id,pergunta_id) VALUES (:conteudo,:criar_id,:pergunta_id)");
+      $stmt->bindParam( ':criar_id', $criar_id, PDO::PARAM_STR );
+      $stmt->bindParam( ':conteudo', $conteudo, PDO::PARAM_STR );
+      $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
+      return $stmt->execute();
+
+}
+
+/*COMENTARIOS*/
+
+function createComment($conteudo, $criar_id, $pergunta_id){
+
+   global $conn;
+   $stmt = $conn->prepare("INSERT INTO Comentario (conteudo,criar_id,pergunta_id) VALUES (:conteudo,:criar_id,:pergunta_id)");
+   $stmt->bindParam( ':criar_id', $criar_id, PDO::PARAM_STR );
+   $stmt->bindParam( ':conteudo', $conteudo, PDO::PARAM_STR );
+   $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
+   return $stmt->execute();
+}
+
 /*UPDATES*/
 function updateQuestion($pergunta_id, $titulo, $conteudo) {
     global $conn;
@@ -203,6 +227,7 @@ function updateQuestion($pergunta_id, $titulo, $conteudo) {
     $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
     return $stmt->execute();
 }
+
 
 
   
