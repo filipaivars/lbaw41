@@ -77,7 +77,6 @@
                             <input type="text" style="display: none" name="pergunta_id" value="{$pergunta.pergunta_id}">
                             <input type="text" name="conteudo" placeholder="my answer" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                             <button type="submit" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post answer</button>
-
                         </form>
                     </div>
 
@@ -122,7 +121,7 @@
                                     <div class="col-md-1">
                                         <img class="avatar" src="">
                                     </div>
-                                    <div class="col-md-9">
+                                    <div class="col-md-9" style="padding-left: 20px">
                                         <b>{$comentario.username}</b><br>
                                         {$comentario.conteudo}
                                     </div>
