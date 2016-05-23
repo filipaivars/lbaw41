@@ -40,7 +40,7 @@
 
 
                         {if not ($USERNAME eq $pergunta.username)}
-                            <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
+                            <input onclick="submit" type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
                         {/if}
                         <br>
                     <div id="apareceComm1">
@@ -135,7 +135,7 @@
                                 myFunction();
                             </script>
                         {/foreach}
-                    </div>$('input.rating[type=number]').rating()
+                    </div>
                 </div>
                 <hr>
 
