@@ -105,10 +105,10 @@
                             {/if}
                             <br>
 
-                        <div class="apareceComm2">
+                        <!--<div class="apareceComm2">
                             <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                             <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
-                        </div>
+                        </div> -->
 
                         <a class="perg-comment" class="btn2_2">COMMENT</a>
                         {/if}
