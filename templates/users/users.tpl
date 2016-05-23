@@ -11,7 +11,7 @@
                     <div layout="column">
                         <div flex>
                             <h2>$username</h2><br>
-                            Apparently, this user prefers to keep an air of mystery about them.
+                            $about
                         </div>
                         <div flex style="margin-top: 65px">
                             <div layout="row">
