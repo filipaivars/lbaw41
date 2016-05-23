@@ -44,7 +44,7 @@
                                             <div class="col-md-10">
                                                 <div class="row">
                                                     <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
-                                                        <div class="perg-titulo">
+                                                        <div class="perg-titulo-user">
                                                             <h3>{$pergunta.titulo}<h3>
                                                         </div>
                                                     </a>
