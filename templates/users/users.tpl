@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <span style="display:block; height: 20px;"></span>
+        <span style="display:block; height: 10px;"></span>
         <div>
             <h2>RECENT QUESTIONS<h2><hr>
                     <section id="perguntas">
@@ -45,7 +45,7 @@
                                                 <div class="row">
                                                     <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                                         <div class="perg-titulo">
-                                                            <h3>{$pergunta.titulo}<h3>
+                                                            <h4>{$pergunta.titulo}<h3>
                                                         </div>
                                                     </a>
                                                 </div>
