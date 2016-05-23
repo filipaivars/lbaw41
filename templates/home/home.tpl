@@ -17,7 +17,7 @@
                             <div class="row">
                                 <div class="col-md-10">
                                     <div class="row">
-                                        <div class="perg-user"><a href="../../pages/users/users.php">{$pergunta.username}</a></div>
+                                        <div class="perg-user"><a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a></div>
                                         <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                             <div class="perg-titulo">{$pergunta.titulo}</div>
                                         </a>
