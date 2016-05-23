@@ -9,10 +9,7 @@ if (!$_GET['user_id']) {
 }
 
 $user_id = $_GET['user_id'];
-$username = getUserInfo($user_id)[0];
-$avatar = getUserInfo($user_id)[1];
-$created_date = getUserInfo($user_id)[2];
-$about = getUserInfo($user_id)[3];
+$user = getUserInfo($user_id);
 
 
 /*foreach ($tweets as $key => $tweet) {
