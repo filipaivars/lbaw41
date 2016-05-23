@@ -38,8 +38,11 @@
                         document.write(checkNull({$pergunta.average}));
                     </script>
 
-                    {if $USERNAME}
-                    <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br><br>
+
+                        {if not ($USERNAME eq $pergunta.username)}
+                        <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
+                        {/if}
+                        <br>
                     <div id="apareceComm1">
                         <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                         <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
@@ -67,11 +70,14 @@
                     {/foreach}
 
                     <div style="margin-top: 30px;">
-                        <input type="text" name="myAnswer" placeholder="my answer" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
-                        <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post question</button>
+                        <form method="post" action="{$BASE_URL}actions/perguntas/create_resposta.php" enctype="multipart/form-data">
+                            <input type="text" style="display: none" name="pergunta_id" value="{$pergunta.pergunta_id}">
+                            <input type="text" name="conteudo" placeholder="my answer" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
+                            <button type="submit" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post answer</button>
+
+                        </form>
                     </div>
 
-                    {/if}
 
                 </div>
             </div>
@@ -96,17 +102,20 @@
                         <script>
                             document.write(checkNull({$resposta.average}));
                         </script>
-                        {if $USERNAME}
-                        <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
-                        <br><br>
 
-                        <div class="apareceComm2">
+                            {if not ($USERNAME eq $resposta.username)}
+                            <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
+                            {/if}
+                            <br>
                             <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                             <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
-                        </div>
+                        <!--<div class="apareceComm2">
+                            <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
+                            <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
+                        </div> -->
+                            <button type="submit" class="perg-comment btn2_2"
+                        <a class="perg-comment btn2_2">COMMENT</a>
 
-                        <a class="perg-comment" class="btn2_2">COMMENT</a>
-                        {/if}
                         {foreach $resposta.comentarios as $comentario}
                             <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
                                 <div >

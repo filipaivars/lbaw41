@@ -1,12 +1,12 @@
 <div class="header">
     <div class="container-fluid" id="header-container">
-        <div class="row">
-            <div class="col-xs-12 col-md-5">
+        <div class="row" style="display: flex; align-items: center; text-align: right">
+            <div class="col-xs-12 col-md-2">
                 <a href="../../pages/home/home.php">
                     <img src="../../images/assets/logo.png" style="height: 40px;">
                 </a>
             </div>
-            <div class="col-xs-8 col-md-3">
+            <div class="col-xs-8 col-md-2">
                 <form method="get" action="../../pages/home/searchResults.php">
                     <div class="input-group stylish-input-group">
                         <input type="text" class="form-control"  placeholder="Search" name="search">
@@ -19,9 +19,9 @@
                     </div>
                 </form>
             </div>
-            <div class="col-xs-8 col-md-2">
-                <b>{$USERNAME}</b>
-                <button value="Logout"><a href="{$BASE_URL}actions/users/logout.php">Logout</a></button>
+            <div class="col-xs-8 col-md-6" style="text-align: right; font-weight: 200; font-size: 80%;">
+                <b style="margin-right: 20px">{$USERNAME}</b>
+                <button value="logout"><a href="{$BASE_URL}actions/users/logout.php">Logout</a></button>
             </div>
             <div class="col-xs-2 col-md-1" style="text-align: right   ">
                 <i class="material-icons" style="font-size: 35px">email</i>
