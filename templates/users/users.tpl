@@ -45,7 +45,10 @@
                                                 <div class="row">
                                                     <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                                         <div class="perg-titulo">
-                                                            <h4>{$pergunta.titulo}<h3>
+                                                            <h3>{$pergunta.titulo}<h3>
+                                                        </div>
+                                                        <div class="perg-conteudo">
+                                                            <h3>{$pergunta.conteudo}<h3>
                                                         </div>
                                                     </a>
                                                 </div>

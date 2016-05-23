@@ -15,7 +15,9 @@ $user = getUserInfo($user_id)[0];
 $perguntas = getUserLastQuestions($user_id);
 for ($i = 0; $i < count($perguntas); $i++) {
     $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
+    $perguntas["conteudo"] = $perguntas[$i]["conteudo"];
 }
+
 
 $user["favourites"] = getUserFavourites($user_id);
 $user["questions"] = getUserQuestions($user_id);
