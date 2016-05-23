@@ -3,7 +3,7 @@
 function getLastPerguntas() {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
+        SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, pergunta.criar_id, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
         FROM pergunta 
         JOIN utilizador ON (pergunta.criar_id = utilizador.user_id) 
         LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id) 
@@ -20,7 +20,7 @@ function getLastPerguntas() {
 function getBestPerguntas() {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
+        SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, pergunta.criar_id, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
         FROM pergunta 
         JOIN utilizador ON (pergunta.criar_id = utilizador.user_id) 
         LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id) 
@@ -36,7 +36,7 @@ function getBestPerguntas() {
 function getPergunta($pergunta_id) {
   global $conn;
   $stmt = $conn->prepare("
-        SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date, utilizador.username, utilizador.user_id, avg(votoutilizadorpergunta.valor) as average
+        SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date, utilizador.username, pergunta.criar_id, avg(votoutilizadorpergunta.valor) as average
         FROM pergunta
         JOIN utilizador ON (pergunta.criar_id = utilizador.user_id)
         LEFT OUTER JOIN votoutilizadorpergunta ON (votoutilizadorpergunta.pergunta_id = pergunta.pergunta_id)
