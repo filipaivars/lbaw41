@@ -57,7 +57,7 @@ function getPerguntaRespostas($pergunta_id) {
         LEFT OUTER JOIN votoutilizadorresposta ON (resposta.resposta_id = votoutilizadorresposta.resposta_id)
         WHERE pergunta.pergunta_id = ?
         GROUP BY resposta.resposta_id,pergunta.pergunta_id, utilizador.user_id
-        ORDER BY average DESC NULLS LAST
+        ORDER BY average DESC NULLS LAST, resposta.created_date ASC
                             ");
     $stmt->execute(array($pergunta_id));
     return $stmt->fetchAll();
@@ -206,7 +206,12 @@ function createAnswer($conteudo,$criar_id,$pergunta_id) {
 }
 
 function getRespostaUtil($criar_id,$pergunta_id) {
-
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO Resposta (conteudo,criar_id,pergunta_id) VALUES (:conteudo,:criar_id,:pergunta_id)");
+    $stmt->bindParam( ':criar_id', $criar_id, PDO::PARAM_STR );
+    $stmt->bindParam( ':conteudo', $conteudo, PDO::PARAM_STR );
+    $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
+    return $stmt->execute();
 
 }
 
