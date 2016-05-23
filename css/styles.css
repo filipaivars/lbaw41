@@ -96,8 +96,9 @@ hr.style-two {
     font-family: 'Montserrat', sans-serif;
 }
 .perg-teaser{
-    font-size: 5px;
+    font-size: 10px;
     font-family: 'Montserrat', sans-serif;
+    color: dimgrey;
 }
 
 .perg-user{
