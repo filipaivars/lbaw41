@@ -30,9 +30,8 @@
                 </div>
             </div>
         </div>
-        <div class="wrap_0">
-            <div class="wrap">
-                <span style="display:block; height: 50px;"></span>
+
+        <span style="display:block; height: 50px;"></span>
         <div>
             <h2>RECENT QUESTIONS<h2><hr>
                     <section id="perguntas">
@@ -47,17 +46,9 @@
                                         <div class="row">
                                             <div class="col-md-10">
                                                 <div class="row">
-                                                    <div class="perg-user"><a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a></div>
-                                                    <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
+                                                    <a> href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                                         <div class="perg-titulo">{$pergunta.titulo}</div>
                                                     </a>
-                                                    {foreach $pergunta.tags as $tag}
-                                                        <div class="col-md-1" style="display:flex">
-                                                            <div class="tag-style">
-                                                                {$tag.nome}
-                                                            </div>
-                                                        </div>
-                                                    {/foreach}
                                                 </div>
                                             </div>
                                             <div class="col-md-2">
