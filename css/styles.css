@@ -119,6 +119,7 @@ a:hover.perg-comment{
 }
 
 .input-text-w-bb{
+    color: #d6dad4;
     text-align: left;
     border: 0;
     outline: 0;
@@ -126,9 +127,6 @@ a:hover.perg-comment{
     border-bottom: 1px solid #e94735;
 }
 
-.input-text-w-bb textarea{
-
-}
 
 .tag-style{
     background-color: #282827;
@@ -145,7 +143,6 @@ a:hover.perg-comment{
 }
 
 #form-login input{
-    color: #282827;
     text-align: left;
 }
 
