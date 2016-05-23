@@ -214,7 +214,7 @@ function canUserAnswer($criar_id,$pergunta_id) {
                             ");
     $stmt->bindParam( ':criar_id', $criar_id, PDO::PARAM_STR );
     $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
-    return $stmt->fetch() == false;
+    return $stmt->fetch() == NULL;
 }
 
 /*COMENTARIOS*/
