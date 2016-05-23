@@ -6,8 +6,10 @@ if (!$_GET['user_id']) {
     $_SESSION['error_messages'][] = 'Undefined user_id';
     header("Location: $BASE_URL");
     exit;
+} else {
+    $user_id = $_GET['user_id'];
 }
-$perguntas = getLastPerguntas();
+$perguntas = getUserLastQuestions($user_id);
 
 /*foreach ($tweets as $key => $tweet) {
   unset($photo);
