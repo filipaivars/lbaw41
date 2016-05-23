@@ -205,14 +205,16 @@ function createAnswer($conteudo,$criar_id,$pergunta_id) {
 
 }
 
-function getRespostaUtil($criar_id,$pergunta_id) {
+function canUserAnswer($criar_id,$pergunta_id) {
     global $conn;
-    $stmt = $conn->prepare("INSERT INTO Resposta (conteudo,criar_id,pergunta_id) VALUES (:conteudo,:criar_id,:pergunta_id)");
+    $stmt = $conn->prepare("
+            SELECT *
+            FROM resposta
+            WHERE resposta.criar_id = :criar_id AND resposta.pergunta_id = :pergunta_id
+                            ");
     $stmt->bindParam( ':criar_id', $criar_id, PDO::PARAM_STR );
-    $stmt->bindParam( ':conteudo', $conteudo, PDO::PARAM_STR );
     $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
-    return $stmt->execute();
-
+    return $stmt->fetch() == false;
 }
 
 /*COMENTARIOS*/

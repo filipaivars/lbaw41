@@ -22,9 +22,14 @@
   $pergunta_id = $_POST['pergunta_id'];
   $conteudo = $_POST['conteudo'];
 
-
-
   $user_id = getUserId($_SESSION['username'])['user_id'];
+
+
+  if(!canUserAnswer($user_id,$pergunta_id)) {
+       $_SESSION['error_messages'][] = 'User already answered';
+       header('Location: ' . $_SERVER['HTTP_REFERER']);
+       exit;
+  }
 
   createAnswer($conteudo,$user_id,$pergunta_id);
 
