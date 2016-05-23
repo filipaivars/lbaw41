@@ -31,12 +31,12 @@
             </div>
         </div>
 
-        <span style="display:block; height: 50px;"></span>
+        <span style="display:block; height: 20px;"></span>
         <div>
             <h2>RECENT QUESTIONS<h2><hr>
                     <section id="perguntas">
                         {foreach $perguntas as $pergunta}
-                            <hr class="style-one">
+                            <hr>
                             <div id="questaoRecente">
                                 <div class="row">
                                     <div class="col-md-9">
