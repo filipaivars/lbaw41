@@ -33,7 +33,7 @@
 
         <span style="display:block; height: 10px;"></span>
         <div>
-            <h2>RECENT QUESTIONS<h2><hr>
+            <h2>RECENT QUESTIONS<h2>
                     <section id="perguntas">
                         {foreach $perguntas as $pergunta}
                             <hr>
@@ -47,9 +47,7 @@
                                                         <div class="perg-titulo">
                                                             <h3>{$pergunta.titulo}<h3>
                                                         </div>
-                                                        <div class="perg-conteudo">
-                                                            {$pergunta.conteudo}
-                                                        </div>
+                                                        {$pergunta.conteudo}
                                                     </a>
                                                 </div>
                                             </div>
@@ -85,6 +83,7 @@
                             <script>
                                 myFunction();
                             </script>
+                            <br>
                         {/foreach}
                     </section>
         </div>
