@@ -9,18 +9,7 @@ if (!$_GET['user_id']) {
 }
 
 $user_id = $_GET['user_id'];
-$user = getUserInfo($user_id);
-
-
-/*foreach ($tweets as $key => $tweet) {
-  unset($photo);
-  if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.png'))
-    $photo = 'images/users/'.$tweet['username'].'.png';
-  if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.jpg'))
-    $photo = 'images/users/'.$tweet['username'].'.jpg';
-  if (!$photo) $photo = 'images/assets/default.png';
-  $tweets[$key]['photo'] = $photo;
-}*/
+$user = getUserInfo($user_id)[0];
 
 
 $smarty->assign('user', $user);
