@@ -102,7 +102,7 @@
                         <script>
                             document.write(checkNull({$resposta.average}));
                         </script>
-                        {if $USERNAME}
+
                             {if not ($USERNAME eq $resposta.username)}
                             <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
                             {/if}
@@ -115,7 +115,7 @@
                         </div> -->
                             <button type="submit" class="perg-comment btn2_2"
                         <a class="perg-comment btn2_2">COMMENT</a>
-                        {/if}
+
                         {foreach $resposta.comentarios as $comentario}
                             <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
                                 <div >
