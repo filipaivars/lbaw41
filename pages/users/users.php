@@ -10,9 +10,14 @@ if (!$_GET['user_id']) {
 
 $user_id = $_GET['user_id'];
 $user = getUserInfo($user_id)[0];
-$user_questions = getUserLastQuestions($user_id);
-$user["favourites"] = getUserFavourites($user_id)[0];
-$user["questions"] = getUserQuestions($user_id)[0];
+
+$perguntas = getUserLastQuestions($user_id);
+for ($i = 0; $i < count($perguntas); $i++) {
+    $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
+}
+
+$user["favourites"] = getUserFavourites($user_id);
+$user["questions"] = getUserQuestions($user_id);
 $user["answers"] = getUserAnswers($user_id);
 
 $smarty->assign('user', $user);

@@ -4,35 +4,35 @@
     <div class="wrap">
 
         <section id="perguntas">
-            <h4 style="margin-top: 0; padding-top: 20px">Recent Questions</h4>
-            {foreach $perguntas as $pergunta}
-                <hr class="style-one">
+                                    <h4 style="margin-top: 0; padding-top: 20px">Recent Questions</h4>
+                                    {foreach $perguntas as $pergunta}
+                                        <hr class="style-one">
 
-                <div id="questaoRecente">
-                    <div class="row">
-                        <div class="col-md-1">
-                            <img class="avatar" src="">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="row">
-                                <div class="col-md-10">
-                                    <div class="row">
-                                        <div class="perg-user"><a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a></div>
-                                        <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
-                                            <div class="perg-titulo">{$pergunta.titulo}</div>
-                                        </a>
-                                        {foreach $pergunta.tags as $tag}
-                                            <div class="col-md-1" style="display:flex">
-                                                <div class="tag-style">
-                                                    {$tag.nome}
+                                        <div id="questaoRecente">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <img class="avatar" src="">
                                                 </div>
-                                            </div>
-                                        {/foreach}
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
-                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="row">
+                                                        <div class="col-md-10">
+                                                            <div class="row">
+                                                                <div class="perg-user"><a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a></div>
+                                                                <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
+                                                                    <div class="perg-titulo">{$pergunta.titulo}</div>
+                                                                </a>
+                                                                {foreach $pergunta.tags as $tag}
+                                                                    <div class="col-md-1" style="display:flex">
+                                                                        <div class="tag-style">
+                                                                            {$tag.nome}
+                                                                        </div>
+                                                                    </div>
+                                                                {/foreach}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
+                                                        </div>
 
                             </div>
                         </div>

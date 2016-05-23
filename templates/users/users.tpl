@@ -4,6 +4,7 @@
     <div layout="column">
         <div>
             <div layout="row">
+                <br>
                 <div flex>
                     <img src="../../images/users/perfil_foto.png" style="width: 160px">
                 </div>
@@ -35,8 +36,135 @@
         <span style="display:block; height: 50px;"></span>
         <div>
             <h2>QUESTIONS<h2><hr>
-                    <a ng-href="#/question"><img src="../../images/users/question.png" style="width: 90%; padding-left:5%"></a>
-                    <a ng-href="#/question"><img src="../../images/users/question.png" style="width: 90%; padding-left:5%"></a>
+                    <section id="perguntas">
+                        <h4 style="margin-top: 0; padding-top: 20px">Recent Questions</h4>
+                        {foreach $perguntas as $pergunta}
+                            <hr class="style-one">
+
+                            <div id="questaoRecente">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                        <img class="avatar" src="">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <div class="row">
+                                                    <div class="perg-user"><a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a></div>
+                                                    <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
+                                                        <div class="perg-titulo">{$pergunta.titulo}</div>
+                                                    </a>
+                                                    {foreach $pergunta.tags as $tag}
+                                                        <div class="col-md-1" style="display:flex">
+                                                            <div class="tag-style">
+                                                                {$tag.nome}
+                                                            </div>
+                                                        </div>
+                                                    {/foreach}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="row">
+                                            <div class="caixaPerg">
+                                                Answers
+                                            </div>
+                                            <div style="background-color: white; color: #282827; text-align: center">
+                                                <script>
+                                                    document.write(checkNull({$pergunta.n_respostas}));
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <div class="caixaPerg">
+                                            Stars
+                                        </div>
+                                        <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
+                                            <script>
+                                                document.write(roundMe(checkNull({$pergunta.average})));
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                myFunction();
+                            </script>
+                        {/foreach}
+
+
+                        <hr class="style-two">
+                        <h4>Top Questions</h4>
+                        <div>
+                            {foreach $bestperguntas as $bestpergunta}
+                                <hr class="style-one">
+
+                                <div id="questaoRecente">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            <img class="avatar" src="">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="row">
+                                                        <div class="perg-user"><a href="../../pages/users/users.php">{$bestpergunta.username}</a></div>
+                                                        <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$bestpergunta.pergunta_id}">
+                                                            <div class="perg-titulo">{$bestpergunta.titulo}</div>
+                                                        </a>
+                                                        {foreach $bestpergunta.tags as $tag}
+                                                            <div class="col-md-1" style="display:flex">
+                                                                <div class="tag-style">
+                                                                    {$tag.nome}
+                                                                </div>
+                                                            </div>
+                                                        {/foreach}
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <span class="perg-data" style="text-align: right">{$bestpergunta.created_date}</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <div class="row">
+                                                <div class="caixaPerg">
+                                                    Answers
+                                                </div>
+                                                <div style="background-color: white; color: #282827; text-align: center">
+                                                    <script>
+                                                        document.write(checkNull({$bestpergunta.n_respostas}));
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <div class="caixaPerg">
+                                                Stars
+                                            </div>
+                                            <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
+                                                <script>
+                                                    document.write(roundMe(checkNull({$bestpergunta.average})));
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    myFunction();
+                                </script>
+                            {/foreach}
+                        </div>
+                        <hr class="style-two">
+
+                    </section>
         </div>
     </div>
 </div>
