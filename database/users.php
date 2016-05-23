@@ -71,12 +71,12 @@ function editUserInfo($user_id, $about, $password, $avatar) {
 
 function getUserLastQuestions($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
+    $stmt = $conn->prepare("SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, pergunta.criar_id, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
         FROM pergunta
         JOIN utilizador ON (pergunta.criar_id = utilizador.user_id)
         LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id)
         LEFT OUTER JOIN votoutilizadorpergunta ON (pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id)
-        WHERE pergunta.criar_id = 1
+        WHERE pergunta.criar_id = ?
         GROUP BY pergunta.pergunta_id,utilizador.user_id
         ORDER BY pergunta.created_date DESC
         LIMIT 5");
