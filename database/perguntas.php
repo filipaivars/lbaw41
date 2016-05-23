@@ -104,23 +104,18 @@ function getRespostaComentarios($resposta_id) {
 
 function addQuestion($titulo, $conteudo, $criar_id, $tags) {
     global $conn;
-    $final = 'BEGIN transaction';
-    $stmt = $conn->prepare($final);
-    $stmt->execute();
-    $final = 'INSERT INTO Pergunta(titulo,conteudo,criar_id) VALUES ( ? , ? , ? )';
-    $stmt = $conn->prepare($final);
-    $stmt->execute(array($titulo,$conteudo,$criar_id));
+    $final = 'BEGIN transaction;
+    INSERT INTO Pergunta(titulo,conteudo,criar_id) VALUES (:titulo,:conteudo,:criar_id);';
     foreach ($tags as $tag) {
-        $final = 'INSERT INTO PerguntaTag VALUES (lastval(),?)';
-        $stmt = $conn->prepare($final);
-        $stmt->execute(array($tag));
+        $final .= 'INSERT INTO PerguntaTag VALUES (lastval(),?);';
     }
-    $final = 'COMMIT transaction';
+    $final .= 'COMMIT transaction;';
+    $final .= 'SELECT currval("pergunta_pergunta_id_seq");';
     $stmt = $conn->prepare($final);
-    $stmt->execute();
-    $final = "SELECT currval('pergunta_pergunta_id_seq')";
-    $stmt = $conn->prepare($final);
-    $stmt->execute();
+    $stmt->bindParam(':titulo',$titulo, PDO::PARAM_STR);
+    $stmt->bindParam(':conteudo',$conteudo, PDO::PARAM_STR);
+    $stmt->bindParam(':criar_id',$criar_id, PDO::PARAM_INT);
+    $stmt->execute(array($tags));
     return $stmt->fetchAll()[0];
 }
 
