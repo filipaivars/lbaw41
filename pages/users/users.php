@@ -1,8 +1,13 @@
 <?php
 include_once('../../config/init.php');
-//include_once($BASE_DIR .'database/perguntas.php');
+include_once($BASE_DIR .'database/users.php');
 
-//$perguntas = getLastPerguntas();
+if (!$_GET['user_id']) {
+    $_SESSION['error_messages'][] = 'Undefined user_id';
+    header("Location: $BASE_URL");
+    exit;
+}
+$perguntas = getLastPerguntas();
 
 /*foreach ($tweets as $key => $tweet) {
   unset($photo);
