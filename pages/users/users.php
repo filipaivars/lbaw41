@@ -23,6 +23,6 @@ $user = getUserInfo($user_id);
 }*/
 
 
-//$smarty->assign('perguntas', $perguntas);
+$smarty->assign('user', $user);
 $smarty->display('users/users.tpl');
 ?>
