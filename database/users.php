@@ -107,8 +107,7 @@ function getUserAnswers($user_id) {
     $stmt = $conn->prepare("SELECT COUNT(resposta_id)
                               FROM Resposta
                                 WHERE criar_id = ?");
-    $stmt->execute(array($user_id));
-    return $stmt->fetchAll();
+    return $stmt->execute(array($user_id));
 }
 
 
