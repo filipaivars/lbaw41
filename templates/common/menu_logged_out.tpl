@@ -29,7 +29,7 @@
       <div class="col-xs-8 col-md-6">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
-          <input type="text" name="username" style="color: black; text-align: left; text-decoration: underline; text-decoration-color: #f0c040>
+          <input type="text" name="username" style="color: black; text-align: left; text-decoration: underline; text-decoration-color: #f0c040">
           <label>password</label>
           <input type="password" name="password" value="" style="color: black; text-align: left">
           <input type="submit" value="Login">
