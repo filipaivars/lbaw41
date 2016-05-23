@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="../../css/styles.css">
     <script src="../../javascript/home.js"></script>
+    <script src="../../javascript/stars.js"></script>
 
 </head>
 <body>
