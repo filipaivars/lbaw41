@@ -38,7 +38,7 @@
                         document.write(checkNull({$pergunta.average}));
                     </script>
 
-                    {if $USERNAME}
+
                         {if not ($USERNAME eq $pergunta.username)}
                         <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
                         {/if}
@@ -78,7 +78,6 @@
                         </form>
                     </div>
 
-                    {/if}
 
                 </div>
             </div>
