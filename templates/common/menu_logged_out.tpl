@@ -32,7 +32,7 @@
           <input type="text" name="username" class="input-text-w-bb">
           <label>password</label>
           <input type="password" name="password" value="" class="input-text-w-bb">
-          <input type="submit" value="Login">
+          <input type="submit" value="login"  class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">
         </form>
       </div>
 
