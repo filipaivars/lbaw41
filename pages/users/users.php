@@ -21,6 +21,7 @@ $user["favourites"] = getUserFavourites($user_id);
 $user["questions"] = getUserQuestions($user_id);
 $user["answers"] = getUserAnswers($user_id);
 
+$smarty->assign('perguntas', $perguntas);
 $smarty->assign('user', $user);
 $smarty->display('users/users.tpl');
 ?>
