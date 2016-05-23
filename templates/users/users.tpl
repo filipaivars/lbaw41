@@ -30,12 +30,12 @@
                 </div>
             </div>
         </div>
-
-        <span style="display:block; height: 50px;"></span>
+        <div class="wrap_0">
+            <div class="wrap">
+                <span style="display:block; height: 50px;"></span>
         <div>
-            <h2>QUESTIONS<h2><hr>
+            <h2>RECENT QUESTIONS<h2><hr>
                     <section id="perguntas">
-                        <h4 style="margin-top: 0; padding-top: 20px">Recent Questions</h4>
                         {foreach $perguntas as $pergunta}
                             <hr class="style-one">
                             <div id="questaoRecente">
