@@ -100,8 +100,10 @@
                             document.write(checkNull({$resposta.average}));
                         </script>
                         {if $USERNAME}
-                        <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a>
-                        <br><br>
+                            {if not ($USERNAME eq $pergunta.username)}
+                            <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
+                            {/if}
+                            <br>
 
                         <div class="apareceComm2">
                             <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
