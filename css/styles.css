@@ -95,6 +95,13 @@ hr.style-two {
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.perg-titulo-user{
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .perg-teaser{
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
