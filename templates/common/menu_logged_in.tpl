@@ -1,6 +1,6 @@
 <div class="header">
     <div class="container-fluid" id="header-container">
-        <div class="row">
+        <div class="row" style="display: flex; align-items: center; text-align: right">
             <div class="col-xs-12 col-md-2">
                 <a href="../../pages/home/home.php">
                     <img src="../../images/assets/logo.png" style="height: 40px;">
