@@ -147,9 +147,6 @@
 
     </div>
 
-    <script>
-        function ($)
-    </script>
 </div>
 
 
