@@ -30,9 +30,7 @@
                 </div>
             </div>
         </div>
-        <div>
 
-        </div>
         <span style="display:block; height: 50px;"></span>
         <div>
             <h2>QUESTIONS<h2><hr>
