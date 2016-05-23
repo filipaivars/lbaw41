@@ -70,8 +70,12 @@
                     {/foreach}
 
                     <div style="margin-top: 30px;">
-                        <input type="text" name="myAnswer" placeholder="my answer" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
-                        <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post answer</button>
+                        <form method="post" action="{$BASE_URL}actions/perguntas/create_resposta.php" enctype="multipart/form-data">
+                            <input type="text" style="display: none" name="pergunta_id" value="{$pergunta.pergunta_id}">
+                            <input type="text" name="conteudo" placeholder="my answer" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
+                            <button type="submit" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">post answer</button>
+
+                        </form>
                     </div>
 
                     {/if}
@@ -110,8 +114,8 @@
                             <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
                             <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
                         </div> -->
-
-                        <a class="perg-comment" class="btn2_2">COMMENT</a>
+                            <button type="submit" class="perg-comment btn2_2"
+                        <a class="perg-comment btn2_2">COMMENT</a>
                         {/if}
                         {foreach $resposta.comentarios as $comentario}
                             <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
