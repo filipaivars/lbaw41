@@ -30,8 +30,6 @@
                 </div>
             </div>
         </div>
-
-        <span style="display:block; height: 10px;"></span>
         <div>
             <h2>RECENT QUESTIONS<h2>
                     <section id="perguntas">
@@ -61,7 +59,9 @@
                                     <div class="col-md-1">
                                         <div class="row">
                                             <div class="caixaPerg">
-                                                Answers
+                                                <div class="perg-teaser">
+                                                    Answers
+                                                </div>
                                             </div>
                                             <div style="background-color: white; color: #282827; text-align: center">
                                                 <script>
@@ -71,7 +71,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-1">
-                                        <div class="caixaPerg">
+                                        <div class="perg-teaser">
                                             Stars
                                         </div>
                                         <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
