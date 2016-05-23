@@ -1,6 +1,7 @@
 <?php
 include_once('../../config/init.php');
 include_once('../../database/users.php');
+include_once('../../database/perguntas.php');
 
 if (!$_GET['user_id']) {
     $_SESSION['error_messages'][] = 'Undefined id';
