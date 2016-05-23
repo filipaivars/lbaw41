@@ -24,21 +24,21 @@ function getUserId($username) {
   return $stmt->fetchAll()[0];
 }
 
-function getUser($username) {
+function getUser($user_id) {
   global $conn;
-  $stmt = $conn->prepare("SELECT user_id
+  $stmt = $conn->prepare("SELECT username
                             FROM Utilizador
                             WHERE username = ?");
-  $stmt->execute(array($username));
+  $stmt->execute(array($user_id));
   return $stmt->fetchAll();
 }
 
-function getUserInfo($username) {
+function getUserInfo($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT user_id, avatar,created_date,about
+    $stmt = $conn->prepare("SELECT username, avatar,created_date,about
                               FROM Utilizador
-                                WHERE username = ?");
-    $stmt->execute(array($username));
+                                WHERE user_id = ?");
+    $stmt->execute(array($user_id));
     return $stmt->fetchAll();
 }
 

@@ -40,7 +40,7 @@
 
 
                         {if not ($USERNAME eq $pergunta.username)}
-                        <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
+                            <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
                         {/if}
                         <br>
                     <div id="apareceComm1">
@@ -146,6 +146,7 @@
 
 
     </div>
+
 </div>
 
 

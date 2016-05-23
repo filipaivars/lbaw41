@@ -1,18 +1,18 @@
 <?php
 include_once('../../config/init.php');
-include_once($BASE_DIR .'database/users.php');
+include_once('../../database/users.php');
 
-if (!$_GET['username']) {
-    $_SESSION['error_messages'][] = 'Undefined username';
+if (!$_GET['user_id']) {
+    $_SESSION['error_messages'][] = 'Undefined id';
     header("Location: $BASE_URL");
     exit;
 }
 
-$username = $_GET['username'];
-$user_id = getUserInfo($username)[0];
-$avatar = getUserInfo($username)[1];
-$created_date = getUserInfo($username)[2];
-$about = getUserInfo($username)[3];
+$user_id = $_GET['user_id'];
+$username = getUserInfo($user_id)[0];
+$avatar = getUserInfo($user_id)[1];
+$created_date = getUserInfo($user_id)[2];
+$about = getUserInfo($user_id)[3];
 
 
 /*foreach ($tweets as $key => $tweet) {
