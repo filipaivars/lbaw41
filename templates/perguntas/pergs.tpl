@@ -45,7 +45,7 @@
                         <br>
                     <div id="apareceComm1">
                         <form method="POST" action="">
-                            <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
+                            <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
                             <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">COMMENT</button>
                         </form>
                     </div>
