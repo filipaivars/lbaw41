@@ -6,12 +6,12 @@
 
 
   if(!$_SESSION['username']) {
-    $_SESSION['error_messages'][] = 'User needs to login in order to make a answer';
+    $_SESSION['error_messages'][] = 'User needs to login in order to make a comment';
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
   }
 
-   if(!$_POST['conteudo'] || !$_POST['pergunta_id']) {
+   if(!$_POST['conteudo'] || !$_POST['resposta_id']) {
      $_SESSION['error_messages'][] = 'Missing form values';
      header('Location: ' . $_SERVER['HTTP_REFERER']);
      exit;
@@ -19,14 +19,12 @@
 
 
 
-  $pergunta_id = $_POST['pergunta_id'];
+  $resposta_id = $_POST['resposta_id'];
   $conteudo = $_POST['conteudo'];
-
-
 
   $user_id = getUserId($_SESSION['username'])['user_id'];
 
-  createAnswer($conteudo,$user_id,$pergunta_id);
+  createCommentAnswer($conteudo,$user_id,$resposta_id);
 
   header('Location: ' . $_SERVER['HTTP_REFERER']);
 
