@@ -146,6 +146,10 @@ a:hover.perg-comment{
     text-align: left;
 }
 
+input:focus {
+    outline: none;
+}
+
 .avatar{
     width: 75px;
     height: 75px;
