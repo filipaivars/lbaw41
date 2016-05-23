@@ -10,7 +10,7 @@
                 <div flex="80">
                     <div layout="column">
                         <div flex>
-                            <h2>FILIPAIVARS</h2><br>
+                            <h2>$username</h2><br>
                             Apparently, this user prefers to keep an air of mystery about them.
                         </div>
                         <div flex style="margin-top: 65px">
