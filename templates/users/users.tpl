@@ -10,8 +10,8 @@
                 <div flex="80">
                     <div layout="column">
                         <div flex>
-                            <h2>$username</h2><br>
-                            $about
+                            <h2>{$username}</h2><br>
+                            {$about}
                         </div>
                         <div flex style="margin-top: 65px">
                             <div layout="row">
