@@ -48,7 +48,7 @@
                                                             <h3>{$pergunta.titulo}<h3>
                                                         </div>
                                                         <div class="perg-conteudo">
-                                                            <h3>{$pergunta.conteudo}<h3>
+                                                            {$pergunta.conteudo}
                                                         </div>
                                                     </a>
                                                 </div>
