@@ -33,9 +33,20 @@ function getUser($user_id) {
   return $stmt->fetchAll();
 }
 
+function deleteUser($user_id) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM Utilizador
+                              WHERE user_id= ?;");
+    try{
+        return $stmt->execute(array($user_id));
+    } catch(PDOException $e) {
+
+    }
+}
+
 function getUserInfo($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT username, avatar,created_date, about
+    $stmt = $conn->prepare("SELECT username, avatar,created_date, about,
                               FROM Utilizador
                                 WHERE user_id = ?");
     $stmt->execute(array($user_id));
@@ -58,17 +69,6 @@ function editUserInfo($user_id, $about, $password, $avatar) {
     }
 }
 
-function deleteUser($user_id) {
-    global $conn;
-    $stmt = $conn->prepare("DELETE FROM Utilizador
-                              WHERE user_id= ?;");
-    try{
-        return $stmt->execute(array($user_id));
-    } catch(PDOException $e) {
-
-    }
-}
-
 function getUserLastQuestions($user_id) {
     global $conn;
     $stmt = $conn->prepare("SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
@@ -83,5 +83,33 @@ function getUserLastQuestions($user_id) {
     $stmt->execute(array($user_id));
     return $stmt->fetchAll();
 }
+
+function getUserFavourites($user_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(user_id)
+                              FROM Favorito
+                                WHERE user_id = ?");
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
+}
+
+function getUserQuestions($user_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(pergunta_id)
+                              FROM Pergunta
+                                WHERE criar_id = ?");
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
+}
+
+function getUserAnswers($user_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(resposta_id)
+                              FROM Resposta
+                                WHERE criar_id = ?");
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
+}
+
 
 ?>

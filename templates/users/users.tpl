@@ -16,22 +16,21 @@
                         <div flex style="margin-top: 65px">
                             <div layout="row">
                                 <div flex="65">
-                                    <img src="../../images/users/medalha.png">
+                                    Medals
                                 </div>
                                 <div>
-                                    <b>4</b> questions<br>
-                                    <b>2</b> answers<br>
-                                    <b>2</b> favorites for
+                                    <b>{$user.questions}</b> questions<br>
+                                    <b>{$user.answers}</b> answers<br>
+                                    <b>{$user.favourites}</b> favourites<br>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div>
-            <img src="../../images/users/rate_fav.png" style="width: 160px">
+
         </div>
         <span style="display:block; height: 50px;"></span>
         <div>
