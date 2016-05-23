@@ -31,6 +31,7 @@
             </div>
         </div>
         <div>
+            <br>
             <h2>RECENT QUESTIONS<h2>
                     <section id="perguntas">
                         {foreach $perguntas as $pergunta}
@@ -59,9 +60,7 @@
                                     <div class="col-md-1">
                                         <div class="row">
                                             <div class="caixaPerg">
-                                                <div class="perg-teaser">
-                                                    Answers
-                                                </div>
+                                                Answers
                                             </div>
                                             <div style="background-color: white; color: #282827; text-align: center">
                                                 <script>
@@ -71,7 +70,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-1">
-                                        <div class="perg-teaser">
+                                        <div class="caixaPerg">
                                             Stars
                                         </div>
                                         <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
