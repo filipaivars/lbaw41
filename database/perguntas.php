@@ -36,7 +36,7 @@ function getBestPerguntas() {
 function getPergunta($pergunta_id) {
   global $conn;
   $stmt = $conn->prepare("
-        SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date, utilizador.username, avg(votoutilizadorpergunta.valor) as average
+        SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date, utilizador.username, utilizador.user_id, avg(votoutilizadorpergunta.valor) as average
         FROM pergunta
         JOIN utilizador ON (pergunta.criar_id = utilizador.user_id)
         LEFT OUTER JOIN votoutilizadorpergunta ON (votoutilizadorpergunta.pergunta_id = pergunta.pergunta_id)
