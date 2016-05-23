@@ -44,7 +44,7 @@
                         {/if}
                         <br>
                     <div id="apareceComm1">
-                        <form method="POST" action="">
+                        <form method="post" action="{$BASE_URL}actions/perguntas/create_comentario_pergunta.php" enctype="multipart/form-data">
                             <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
                             <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">COMMENT</button>
                         </form>
@@ -109,7 +109,7 @@
                             <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
                             {/if}
                             <br>
-                            <form method="POST" action="">
+                            <form method="POST" action="{$BASE_URL}actions/perguntas/create_comentario_resposta.php" enctype="multipart/form-data">
                                 <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
                                 <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">COMMENT</button>
                             </form>
