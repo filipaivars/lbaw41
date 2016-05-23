@@ -44,8 +44,10 @@
                         {/if}
                         <br>
                     <div id="apareceComm1">
-                        <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
-                        <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
+                        <form method="POST" action="">
+                            <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
+                            <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">COMMENT</button>
+                        </form>
                     </div>
                     <a class="perg-comment" id="btn2_1">COMMENT</a>
                     {foreach $pergunta.comentarios as $comentario}
@@ -107,14 +109,10 @@
                             <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
                             {/if}
                             <br>
-                            <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
-                            <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
-                        <!--<div class="apareceComm2">
-                            <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 75px;">
-                            <button type="button" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">comment</button>
-                        </div> -->
-                            <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735">comment</button>
-                        <!--<a class="perg-comment btn2_2">COMMENT</a>-->
+                            <form method="POST" action="">
+                                <input type="text" name="myComm" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
+                                <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">COMMENT</button>
+                            </form>
 
                         {foreach $resposta.comentarios as $comentario}
                             <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
