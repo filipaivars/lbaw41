@@ -86,29 +86,26 @@ function getUserLastQuestions($user_id) {
 
 function getUserFavourites($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(user_id)
+    $stmt = $conn->prepare("SELECT COUNT(user_id) as total
                               FROM Favorito
                                 WHERE user_id = ?");
-    $stmt->execute(array($user_id));
-    return $stmt->fetchAll();
+    return $stmt->execute(array($user_id));
 }
 
 function getUserQuestions($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT *
+    $stmt = $conn->prepare("SELECT COUNT(pergunta_id) as total
                               FROM Pergunta
                                 WHERE criar_id = ?");
-    $stmt->execute(array($user_id));
-    return $stmt->rowCount();
+    return $stmt->execute(array($user_id));
 }
 
 function getUserAnswers($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(resposta_id)
+    $stmt = $conn->prepare("SELECT COUNT(resposta_id) as total
                               FROM Resposta
                                 WHERE criar_id = ?");
-    $stmt->execute(array($user_id));
-    return $stmt->fetchAll();
+    return $stmt->execute(array($user_id));
 }
 
 
