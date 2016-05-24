@@ -95,11 +95,11 @@ function getUserFavourites($user_id) {
 
 function getUserQuestions($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(pergunta_id)
+    $stmt = $conn->prepare("SELECT *
                               FROM Pergunta
                                 WHERE criar_id = ?");
     $stmt->execute(array($user_id));
-    return $stmt->fetchAll();
+    return $stmt->rowCount();
 }
 
 function getUserAnswers($user_id) {
