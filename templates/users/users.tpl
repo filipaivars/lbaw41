@@ -6,7 +6,7 @@
             <div layout="row">
                 <br>
                 <div flex>
-                    <img class="avatar" src="">
+                    <img class="avatar"   src="" style="width: 160px" style="height: 160px">
                 </div>
                 <div flex="80">
                     <div layout="column">
@@ -17,12 +17,12 @@
                         <div flex style="margin-top: 65px">
                             <div layout="row">
                                 <div flex="65">
-                                   <h3>[Medals]</h3>
+                                   <h4>[Medal1] [Medal2]</h4>
                                 </div>
                                 <div>
-                                    <h3>{$user.questions}</h3> questions<br>
-                                    <h3>{$user.answers}</h3> answers<br>
-                                    <h3>{$user.favourites}</h3> favourites<br>
+                                    <h4>{$user.questions} questions</h4> <br>
+                                    <h4>{$user.answers} answers</h4> <br>
+                                    <h4>{$user.favourites} favourites</h4> <br>
                                 </div>
                             </div>
                         </div>
