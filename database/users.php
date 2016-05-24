@@ -89,7 +89,8 @@ function getUserFavourites($user_id) {
     $stmt = $conn->prepare("SELECT COUNT(user_id) as total
                               FROM Favorito
                                 WHERE user_id = ?");
-    return $stmt->execute(array($user_id));
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
 }
 
 function getUserQuestions($user_id) {
@@ -97,7 +98,8 @@ function getUserQuestions($user_id) {
     $stmt = $conn->prepare("SELECT COUNT(pergunta_id) as total
                               FROM Pergunta
                                 WHERE criar_id = ?");
-    return $stmt->execute(array($user_id));
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
 }
 
 function getUserAnswers($user_id) {
@@ -105,7 +107,8 @@ function getUserAnswers($user_id) {
     $stmt = $conn->prepare("SELECT COUNT(resposta_id) as total
                               FROM Resposta
                                 WHERE criar_id = ?");
-    return $stmt->execute(array($user_id));
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
 }
 
 

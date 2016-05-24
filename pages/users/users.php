@@ -27,9 +27,9 @@ for ($i = 0; $i < count($perguntas); $i++) {
 }
 
 
-$user["favourites"] = getUserFavourites($user_id)["total"];
-$user["questions"] = getUserQuestions($user_id)["total"];
-$user["answers"] = getUserAnswers($user_id)["total"];
+$user["favourites"] = getUserFavourites($user_id)[0]["total"];
+$user["questions"] = getUserQuestions($user_id)[0]["total"];
+$user["answers"] = getUserAnswers($user_id)[0]["total"];
 
 $smarty->assign('perguntas', $perguntas);
 $smarty->assign('user', $user);
