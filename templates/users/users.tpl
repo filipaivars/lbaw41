@@ -14,10 +14,10 @@
                             <h2>{$user.username}</h2><br>
                             {$user.about}
                         </div>
-                        <div flex style="margin-top: 65px">
+                        <div flex style="margin-top: 5px">
                             <div layout="row">
                                 <div flex="65">
-                                Medals
+                                    [M0] [M1] [M2]
                                 </div>
                                 <div>
                                     <b>{$user.questions}</b> questions<br>
