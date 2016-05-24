@@ -6,23 +6,23 @@
             <div layout="row">
                 <br>
                 <div flex>
-                    <img class="avatar"   src="" style="width: 160px" style="height: 160px">
+                    <img src="../../images/users/perfil_foto.png" style="width: 160px">
                 </div>
                 <div flex="80">
                     <div layout="column">
                         <div flex>
-                            <h1>{$user.username}</h1><br>
+                            <h2>{$user.username}</h2><br>
                             {$user.about}
                         </div>
                         <div flex style="margin-top: 65px">
                             <div layout="row">
                                 <div flex="65">
-                                   <h4>[Medal1] [Medal2]</h4>
+                                Medals
                                 </div>
                                 <div>
-                                    <h4>{$user.questions} questions</h4> <br>
-                                    <h4>{$user.answers} answers</h4> <br>
-                                    <h4>{$user.favourites} favourites</h4> <br>
+                                    <b>{$user.questions}</b> questions<br>
+                                    <b>{$user.answers}</b> answers<br>
+                                    <b>{$user.favourites}</b> favourites<br>
                                 </div>
                             </div>
                         </div>
