@@ -2,7 +2,7 @@
   
   function createUser( $username, $password) {
     global $conn;
-    $stmt = $conn->prepare("INSERT INTO Utilizador(username,password) VALUES (?, ?,'https://gnomo.fe.up.pt/~lbaw1541/lbaw41/images/assets/default.png');");
+    $stmt = $conn->prepare("INSERT INTO Utilizador(username,password, avatar) VALUES (?, ?,'https://gnomo.fe.up.pt/~lbaw1541/lbaw41/images/assets/default.png');");
     $stmt->execute(array($username, sha1($username.$password)));
   }
 
