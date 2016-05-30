@@ -17,25 +17,35 @@
 <body>
 <div class="wrap">
     <br><br>
+    <h1>Welcome</h1>
+    <hr>
+    <br><br>
     <div layout="column">
         <div layout="row">
-            <div flex="20">
-                DENUNCIAS:
+            <div>
+                <h2>DENUNCIAS</h2>
+                <table>
+                    <tr>
+                        <th>Report Number</th>
+                        <th>User ID</th>
+                        <th>Username</th>
+                    </tr>
+                    {foreach $denuncias as $row }
+                        <tr>
+                            <td> {$row.denuncia_id} </td>
+                            <td> {$row.user_id} </td>
+                            <td> {$row.username} </td>
+                        </tr>
+                    {/foreach}
+                </table>
             </div>
-            <div flex="5">
-                <a>3</a>
+            <div>
+
             </div>
         </div>
-        <br><br>
-        <form flex>
-            <input type="text" placeholder="search user by username or by email" style="outline: none; width: 40%">
-            <button>search</button>
-        </form>
-        <br><br>
         <h2>USERS</h2>
         <br><br>
-        <ul flex>
-            <table class="table table-striped table-bordered">
+            <table>
                 <tr>
                     <th>User ID</th>
                     <th>Username</th>
@@ -49,7 +59,6 @@
                     </tr>
                 {/foreach}
             </table>
-        </ul>
     </div>
 </div>
 </body>
