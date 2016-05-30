@@ -24,14 +24,14 @@
                 <button value="logout"><a href="{$BASE_URL}actions/users/logout.php">Logout</a></button>
             </div>
             <div class="col-xs-2 col-md-1 dropdown" style="text-align: right " >
-                <a class="dropbtn" href="../../pages/users/register.php">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="../../pages/users/register.php">
                     <i class="material-icons" style="font-size: 35px">person</i>
                 </a>
-                <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
             </div>
         </div>
     </div>
