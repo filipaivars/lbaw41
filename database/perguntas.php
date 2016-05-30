@@ -19,7 +19,7 @@ function getLastPerguntas() {
 function getBestPerguntas() {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, pergunta.criar_id, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
+        SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, utilizador.avatar, pergunta.criar_id, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
         FROM pergunta 
         JOIN utilizador ON (pergunta.criar_id = utilizador.user_id) 
         LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id) 
