@@ -1,5 +1,6 @@
-{include file='common/header.tpl'}
+
 <title>Perfil</title>
+{include file='common/header.tpl'}
 <div class="wrap">
 
     <!--
