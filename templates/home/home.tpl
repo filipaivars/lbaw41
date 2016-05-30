@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-md-1">
                             <img class="avatar" src=""><br>
-                            {$USERID}<br>
+                            <div style="background-color: #f0c040">{$USERID}<br></div>
                         </div>
                         <div class="col-md-9">
                             <div class="row">
