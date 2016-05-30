@@ -1,9 +1,9 @@
 {include file='common/header.tpl'}
-<html>
-<head>
-    <title> $pergunta.titulo - WalkMeThrough</title>
-</head>
-</html>
+<script>
+    function changeTitle() {
+        document.title = {$pergunta.titulo};
+    }
+</script>
 <div class="wrap_0">
     <div class="wrap">
         <h4>{$pergunta.titulo}</h4>
@@ -73,6 +73,7 @@
 
                         <script>
                             myFunction();
+                            changeTitle();
                         </script>
                     {/foreach}
 
