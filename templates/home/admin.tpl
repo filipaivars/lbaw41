@@ -19,7 +19,6 @@
     <br><br>
     <h1>Welcome</h1>
     <hr>
-    <br><br>
     <div layout="column">
         <div layout="row">
             <div>
@@ -34,7 +33,7 @@
                         <tr>
                             <td> {$row.denuncia_id} </td>
                             <td> {$row.user_id} </td>
-                            <td> {$row.username} </td>
+                            <td> <a href="../../pages/users/users.php?user_id={$row.criar_id}> {$row.username} </a></td>
                         </tr>
                     {/foreach}
                 </table>
@@ -44,7 +43,6 @@
             </div>
         </div>
         <h2>USERS</h2>
-        <br><br>
             <table>
                 <tr>
                     <th>User ID</th>
