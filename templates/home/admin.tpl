@@ -33,7 +33,7 @@
                         <tr>
                             <td> {$row.denuncia_id} </td>
                             <td> {$row.user_id} </td>
-                            <td> <a href="../../pages/users/users.php?user_id={$row.criar_id}> {$row.username} </a></td>
+                            <td> <a href="../../pages/users/users.php?user_id={$row.criar_id}"> {$row.username} </a></td>
                         </tr>
                     {/foreach}
                 </table>
