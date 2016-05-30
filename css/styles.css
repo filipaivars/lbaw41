@@ -236,6 +236,7 @@ i:hover {
     display: block;
     text-align: left;
     z-index: 2;
+    right: 0;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
