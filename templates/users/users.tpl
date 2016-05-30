@@ -1,5 +1,5 @@
 {include file='common/header.tpl'}
-<title>WalkMeThrough | Perfil</title>
+<title>Perfil</title>
 <div class="wrap">
 
     <!--
