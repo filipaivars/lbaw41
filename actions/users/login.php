@@ -14,7 +14,7 @@
   
   if (isLoginCorrect($username, $password)) {
     $_SESSION['username'] = $username;
-    $_SESSION['user_id'] = getUserId($username);
+    $_SESSION['user_id'] = getUserId($username)['user_id'];
     $_SESSION['success_messages'][] = 'Login successful';  
   } else {
     $_SESSION['error_messages'][] = 'Login failed';  
