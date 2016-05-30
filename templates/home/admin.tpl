@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="wrap">
-    <br><br>
+    <br>
     <h1>Welcome</h1>
     <hr>
     <div layout="column">
