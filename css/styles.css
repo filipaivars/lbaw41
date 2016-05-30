@@ -231,7 +231,7 @@ i:hover {
 
 .dropdown-content a {
     color: blue;
-    padding: 12px 16px;
+    padding: inherit;
     text-decoration: none;
     display: block;
     text-align: left;
