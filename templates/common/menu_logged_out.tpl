@@ -26,7 +26,7 @@
       </div>
 
 
-      <div class="col-xs-8 col-md-6">
+      <div class="col-xs-8 col-md-7">
         <form id="form-login" method="post" action="{$BASE_URL}actions/users/login.php" enctype="multipart/form-data">
           <label>username</label>
           <input type="text" name="username" class="input-text-w-bb">
@@ -34,10 +34,6 @@
           <input type="password" name="password" value="" class="input-text-w-bb">
           <input type="submit" value="login" style="color: #282827">
         </form>
-      </div>
-
-      <div class="col-xs-2 col-md-1" style="text-align: right   ">
-        <i class="material-icons" style="font-size: 35px">email</i>
       </div>
 
       <div class="col-xs-2 col-md-1" style="text-align: right ">
