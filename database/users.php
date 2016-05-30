@@ -110,6 +110,19 @@ function getUserAnswers($user_id) {
     $stmt->execute(array($user_id));
     return $stmt->fetchAll();
 }
-
+function getAllUsers() {
+    global $conn;
+    $stmt = $conn->prepare("SELECT user_id, username, created_date FROM Utilizador");
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+function getReportedUsers() {
+    global $conn;
+    $stmt = $conn->prepare("SELECT denuncia.denuncia_id, utilizador.username, utilizador.user_id FROM Utilizador
+         JOIN denuncia on (denuncia.denuncia_id = utilizador.user_id)
+        ");
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
 
 ?>
