@@ -69,7 +69,7 @@
 
                         <script>
                             myFunction();
-                            changeTitle({$pergunta.titulo});
+                            changeTitle({$pergunta.titulo}.concat("- WalkMeThrough"););
                         </script>
                     {/foreach}
 
