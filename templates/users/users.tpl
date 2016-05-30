@@ -1,9 +1,9 @@
 
-<title>Perfil</title>
+<title>WalkMeThrough | Perfil</title>
 {include file='common/header.tpl'}
 <div class="wrap">
 
-    <!--
+
     <div layout="column">
         <div>
             <div layout="row">
@@ -92,7 +92,7 @@
                     </section>
         </div>
     </div>
-    -->
+
 </div>
 
 
