@@ -1,7 +1,7 @@
 {include file='common/header.tpl'}
 <html>
 <head>
-    <title>{$pergunta.titulo} - WalkMeThrough</title>
+    <title> $pergunta.titulo - WalkMeThrough</title>
 </head>
 </html>
 <div class="wrap_0">
