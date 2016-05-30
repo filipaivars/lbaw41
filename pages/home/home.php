@@ -24,7 +24,7 @@ for ($i = 0; $i < count($bestperguntas); $i++) {
   if (!$photo) $photo = 'images/assets/default.png';
   $tweets[$key]['photo'] = $photo;
 }*/
-
+var_dump($_SESSION);
 
 $smarty->assign('perguntas', $perguntas);
 $smarty->assign('bestperguntas', $bestperguntas);
