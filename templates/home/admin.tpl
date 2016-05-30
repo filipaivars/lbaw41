@@ -22,19 +22,24 @@
             <button>search</button>
         </form>
         <br><br>
-        USERS:
+        <h2>USERS</h2>
         <br><br>
         <ul flex>
-            <a><li>aachen</li></a>
-            <a><li>aalborg</li></a>
-            <a><li>aalesund</li></a>
-            <a><li>aalii</li></a>
-            <a><li>aalst</li></a>
-            <a><li>aalto</li></a>
-            <a><li>aam</li></a>
-            <a><li>aara</li></a>
-            <a><li>aarau</li></a>
-            <a><li>aardvark</li></a>
+            <table style="width:100%">
+                <tr>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>50</th>
+                </tr>
+                {foreach $users as $row }
+                    <tr>
+                        <th> $user.user_id </th>
+                        <th> $user.username </th>
+                        <th> $user.creation_date </th>
+                    </tr>
+                {/foreach}
+
+            </table>
         </ul>
     </div>
 </div>

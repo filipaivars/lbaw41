@@ -1,20 +1,13 @@
 <?php
 include_once('../../config/init.php');
-//include_once($BASE_DIR .'database/perguntas.php');
+include_once('../../database/users.php');
+include_once('../../database/perguntas.php');
 
-//$perguntas = getLastPerguntas();
-
-/*foreach ($tweets as $key => $tweet) {
-  unset($photo);
-  if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.png'))
-    $photo = 'images/users/'.$tweet['username'].'.png';
-  if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.jpg'))
-    $photo = 'images/users/'.$tweet['username'].'.jpg';
-  if (!$photo) $photo = 'images/assets/default.png';
-  $tweets[$key]['photo'] = $photo;
-}*/
-
+$users = getAllUsers();
+$reports = getReportedUsers();
 
 //$smarty->assign('perguntas', $perguntas);
+$smarty->assign('users', $users);
+$smarty->assign('reports', $reports);
 $smarty->display('home/admin.tpl');
 ?>
