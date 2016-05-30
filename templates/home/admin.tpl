@@ -33,9 +33,9 @@
                 </tr>
                 {foreach $users as $row }
                     <tr>
-                        <th> $user.user_id </th>
-                        <th> $user.username </th>
-                        <th> $user.creation_date </th>
+                        <td> {$user.user_id} </td>
+                        <td> {$user.username} </td>
+                        <td> {$user.creation_date} </td>
                     </tr>
                 {/foreach}
 
