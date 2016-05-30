@@ -30,7 +30,7 @@
                         <th>User ID</th>
                         <th>Username</th>
                     </tr>
-                    {foreach $denuncias as $row }
+                    {foreach $reports as $row }
                         <tr>
                             <td> {$row.denuncia_id} </td>
                             <td> {$row.user_id} </td>
