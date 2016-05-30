@@ -19,17 +19,19 @@
                     </div>
                 </form>
             </div>
-            <div class="col-xs-8 col-md-6" style="text-align: right; font-weight: 200; font-size: 80%;">
+            <div class="col-xs-8 col-md-7" style="text-align: right; font-weight: 200; font-size: 80%;">
                 <b style="margin-right: 20px">{$USERNAME}</b>
                 <button value="logout"><a href="{$BASE_URL}actions/users/logout.php">Logout</a></button>
             </div>
-            <div class="col-xs-2 col-md-1" style="text-align: right   ">
-                <i class="material-icons" style="font-size: 35px">email</i>
-            </div>
-            <div class="col-xs-2 col-md-1" style="text-align: right ">
-                <a href="../../pages/users/register.php">
+            <div class="col-xs-2 col-md-1 dropdown" style="text-align: right " >
+                <a class="dropbtn" href="../../pages/users/register.php">
                     <i class="material-icons" style="font-size: 35px">person</i>
                 </a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </div>
         </div>
     </div>
