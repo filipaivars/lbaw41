@@ -39,6 +39,10 @@ function myFunction() {
 
 }
 
+function changeTitle(title) {
+    document.title = title;
+}
+
 function roundMe(num) {
     var n = num.toFixed(1);
     return n;
