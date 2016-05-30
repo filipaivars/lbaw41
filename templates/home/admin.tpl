@@ -3,6 +3,16 @@
 <head>
     <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
     <link rel="stylesheet" href="styles/main.css">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
 <div class="wrap">
@@ -35,10 +45,9 @@
                     <tr>
                         <td> {$row.user_id} </td>
                         <td> {$row.username} </td>
-                        <td> {$row.creation_date} </td>
+                        <td> {$row.created_date} </td>
                     </tr>
                 {/foreach}
-
             </table>
         </ul>
     </div>
