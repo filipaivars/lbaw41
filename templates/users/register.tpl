@@ -6,7 +6,7 @@
         <div id="register">
             <h4>Register using Facebook</h4>
             <SCRIPT TYPE="text/javascript" src="../../fbapp/fb.js"></SCRIPT>
-            <div class="fb-login-button" width="300px" data-scope="public_profile,email" onlogin="checkLoginState();"></div>
+            <div class="fb-login-button" data-scope="public_profile,email" onlogin="checkLoginState();"></div>
             <br>
             <br>
         </div>

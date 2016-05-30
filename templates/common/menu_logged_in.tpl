@@ -27,7 +27,7 @@
                     <i class="material-icons" style="font-size: 35px">person</i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="drop"><a href="../../pages/users/users.php?user_id={$}">perfil</a></li>
+                    <li class="drop"><a href="#">perfil</a></li>
                     <li class="drop"><a href="#">mensagens</a></li>
                     <li class="drop"><a href="{$BASE_URL}actions/users/logout.php">logout</a></li>
                 </ul>
