@@ -29,13 +29,13 @@
                 <tr>
                     <th>User ID</th>
                     <th>Username</th>
-                    <th>50</th>
+                    <th>User Creation Date</th>
                 </tr>
                 {foreach $users as $row }
                     <tr>
-                        <td> {$user.user_id} </td>
-                        <td> {$user.username} </td>
-                        <td> {$user.creation_date} </td>
+                        <td> {$row.user_id} </td>
+                        <td> {$row.username} </td>
+                        <td> {$row.creation_date} </td>
                     </tr>
                 {/foreach}
 
