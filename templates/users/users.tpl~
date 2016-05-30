@@ -6,7 +6,7 @@
             <div layout="row">
                 <br>
                 <div flex>
-                    <img src="{$user.avatar}" style="width: 160px">
+                    <img src="../../images/users/perfil_foto.png" style="width: 160px">
                 </div>
                 <div flex="80">
                     <div layout="column">
