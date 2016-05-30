@@ -1,5 +1,7 @@
 {include file='common/header.tpl'}
-
+<head>
+    <title>{$pergunta.titulo} - WalkMeThrough</title>
+</head>
 <div class="wrap_0">
     <div class="wrap">
         <h4>{$pergunta.titulo}</h4>
