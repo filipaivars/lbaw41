@@ -21,16 +21,15 @@
             </div>
             <div class="col-xs-8 col-md-7" style="text-align: right; font-weight: 200; font-size: 80%;">
                 <b style="margin-right: 20px">{$USERNAME}</b>
-                <button value="logout"><a href="{$BASE_URL}actions/users/logout.php">Logout</a></button>
             </div>
             <div class="col-xs-2 col-md-1 dropdown" style="text-align: right " >
                 <a class="dropdown-toggle" data-toggle="dropdown" href="../../pages/users/register.php">
                     <i class="material-icons" style="font-size: 35px">person</i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
+                    <li class="drop"><a href="../../pages/users/users.php?user_id={$}">perfil</a></li>
+                    <li class="drop"><a href="#">mensagens</a></li>
+                    <li class="drop"><a href="{$BASE_URL}actions/users/logout.php">logout</a></li>
                 </ul>
             </div>
         </div>
