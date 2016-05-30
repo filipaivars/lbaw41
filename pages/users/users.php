@@ -1,6 +1,7 @@
 <?php
 include_once('../../config/init.php');
 include_once('../../database/users.php');
+include_once('../../database/perguntas.php');
 
 if (!$_GET['user_id']) {
     $_SESSION['error_messages'][] = 'Undefined id';
@@ -9,20 +10,28 @@ if (!$_GET['user_id']) {
 }
 
 $user_id = $_GET['user_id'];
-$user = getUserInfo($user_id);
+$user = getUserInfo($user_id)[0];
+
+$perguntas = getUserLastQuestions($user_id);
+for ($i = 0; $i < count($perguntas); $i++) {
+    $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
+    if(strlen($perguntas[$i]["conteudo"]) > 50) {
+
+        //this finds the position of the first period after 50 characters
+        $period= strpos($perguntas[$i]["conteudo"], '.', 50);
+
+        //this gets the characters 0 to the period and stores it in $teaser
+        $perguntas[$i]["conteudo"] = substr($perguntas[$i]["conteudo"], 0, $period);
+
+    }
+}
 
 
-/*foreach ($tweets as $key => $tweet) {
-  unset($photo);
-  if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.png'))
-    $photo = 'images/users/'.$tweet['username'].'.png';
-  if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.jpg'))
-    $photo = 'images/users/'.$tweet['username'].'.jpg';
-  if (!$photo) $photo = 'images/assets/default.png';
-  $tweets[$key]['photo'] = $photo;
-}*/
+$user["favourites"] = getUserFavourites($user_id)[0]["total"];
+$user["questions"] = getUserQuestions($user_id)[0]["total"];
+$user["answers"] = getUserAnswers($user_id)[0]["total"];
 
-
+$smarty->assign('perguntas', $perguntas);
 $smarty->assign('user', $user);
 $smarty->display('users/users.tpl');
 ?>

@@ -16,7 +16,6 @@ function getLastPerguntas() {
     return $stmt->fetchAll();
   }
 
-
 function getBestPerguntas() {
     global $conn;
     $stmt = $conn->prepare("

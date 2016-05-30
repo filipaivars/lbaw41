@@ -33,9 +33,20 @@ function getUser($user_id) {
   return $stmt->fetchAll();
 }
 
+function deleteUser($user_id) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM Utilizador
+                              WHERE user_id= ?;");
+    try{
+        return $stmt->execute(array($user_id));
+    } catch(PDOException $e) {
+
+    }
+}
+
 function getUserInfo($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT username, avatar,created_date,about
+    $stmt = $conn->prepare("SELECT username, avatar,created_date, about
                               FROM Utilizador
                                 WHERE user_id = ?");
     $stmt->execute(array($user_id));
@@ -58,30 +69,47 @@ function editUserInfo($user_id, $about, $password, $avatar) {
     }
 }
 
-function deleteUser($user_id) {
-    global $conn;
-    $stmt = $conn->prepare("DELETE FROM Utilizador
-                              WHERE user_id= ?;");
-    try{
-        return $stmt->execute(array($user_id));
-    } catch(PDOException $e) {
-
-    }
-}
-
 function getUserLastQuestions($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
+    $stmt = $conn->prepare("SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, pergunta.criar_id, pergunta.conteudo, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
         FROM pergunta
         JOIN utilizador ON (pergunta.criar_id = utilizador.user_id)
         LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id)
         LEFT OUTER JOIN votoutilizadorpergunta ON (pergunta.pergunta_id = votoutilizadorpergunta.pergunta_id)
-        WHERE pergunta.criar_id = 1
+        WHERE pergunta.criar_id = ?
         GROUP BY pergunta.pergunta_id,utilizador.user_id
         ORDER BY pergunta.created_date DESC
         LIMIT 5");
     $stmt->execute(array($user_id));
     return $stmt->fetchAll();
 }
+
+function getUserFavourites($user_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(user_id) as total
+                              FROM Favorito
+                                WHERE user_id = ?");
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
+}
+
+function getUserQuestions($user_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(pergunta_id) as total
+                              FROM Pergunta
+                                WHERE criar_id = ?");
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
+}
+
+function getUserAnswers($user_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT COUNT(resposta_id) as total
+                              FROM Resposta
+                                WHERE criar_id = ?");
+    $stmt->execute(array($user_id));
+    return $stmt->fetchAll();
+}
+
 
 ?>
