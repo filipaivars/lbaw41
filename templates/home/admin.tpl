@@ -25,7 +25,7 @@
         <h2>USERS</h2>
         <br><br>
         <ul flex>
-            <table style="width:100%">
+            <table class="table table-striped table-bordered">
                 <tr>
                     <th>User ID</th>
                     <th>Username</th>
