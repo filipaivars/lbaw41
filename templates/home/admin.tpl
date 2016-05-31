@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
-    <link rel="stylesheet" href="styles/main.css">
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 5px;
-            text-align: left;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="wrap">
+<div class="container">
     <br>
     <h1>Welcome</h1>
     <hr>
     <div layout="column">
-        <div layout="row">
+        <div class="container">
             <div>
                 <h2>DENUNCIAS</h2>
-                <table>
-                    <tr>
-                        <th>Report Number</th>
-                        <th>User ID</th>
-                        <th>Username</th>
-                    </tr>
-                    {foreach $reports as $row }
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
                         <tr>
-                            <td> {$row.denuncia_id} </td>
-                            <td> {$row.user_id} </td>
-                            <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
+                            <th>Report Number</th>
+                            <th>User ID</th>
+                            <th>Username</th>
                         </tr>
-                    {/foreach}
-                </table>
-            </div>
-            <div>
-
+                        </thead>
+                        <tbody>
+                        {foreach $reports as $row }
+                            <tr>
+                                <td> {$row.denuncia_id} </td>
+                                <td> {$row.user_id} </td>
+                                <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
+                            </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <h2>USERS</h2>
