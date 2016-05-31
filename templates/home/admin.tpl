@@ -11,10 +11,9 @@
     <br>
     <h1>Welcome</h1>
     <hr>
-    <div layout="column">
         <div class="container">
             <div>
-                <h2>DENUNCIAS</h2>
+                <h2>Reported Users</h2>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -37,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <h2>USERS</h2>
+        <h2>SYstem Users</h2>
         <table>
             <tr>
                 <th>User ID</th>
@@ -52,7 +51,7 @@
                 </tr>
             {/foreach}
         </table>
-    </div>
 </div>
+
 </body>
 </html>
