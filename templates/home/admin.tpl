@@ -8,18 +8,17 @@
 </head>
 <body>
 <div class="container">
-    <br>
-    <h1>Welcome</h1>
-    <hr>
     <h2>Denuncias</h2>
+    <p>Denuncias efetuadas</p>
+
     <div class="table-responsive">
         <table class="table">
             <thead>
-            <tr>
-                <th>#</th>
-                <th>user ID</th>
-                <th>Username</th>
-            </tr>
+                <tr>
+                    <th>#</th>
+                    <th>user ID</th>
+                    <th>Username</th>
+                </tr>
             </thead>
             <tbody>
             {foreach $reports as $row }
@@ -33,5 +32,6 @@
         </table>
     </div>
 </div>
+
 </body>
 </html>
