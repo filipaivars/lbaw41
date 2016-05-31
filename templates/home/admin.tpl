@@ -7,7 +7,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div>
     <br>
     <h1>Welcome</h1>
     <hr>
