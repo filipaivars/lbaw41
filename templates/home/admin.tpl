@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        table, td, th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+        tr:hover {
+            background-color: darkgrey;
+        }
+    </style>
 </head>
 <body>
 <br>
@@ -33,7 +50,7 @@
         </table>
     </div>
 </div>
-<h2>SYstem Users</h2>
+<h2>System Users</h2>
         <table>
             <tr>
                 <th>User ID</th>
