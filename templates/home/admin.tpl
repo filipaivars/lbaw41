@@ -28,6 +28,7 @@
                 <td> {$row.user_id} </td>
                 <td><a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
             </tr>
+            {/foreach}
             </tbody>
         </table>
     </div>
