@@ -3,7 +3,7 @@ include_once('../../config/init.php');
 include_once('../../database/users.php');
 include_once('../../database/perguntas.php');
 
-function delete($id) {
+function deleteThis($id) {
     echo $id;
     deleteUser($id);
 }
