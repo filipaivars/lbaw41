@@ -121,4 +121,11 @@ function getReportedUsers() {
     return $stmt->fetchAll();
 }
 
+function deleteReport($report_id) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM Report
+                              WHERE report_id= ?");
+    return $stmt->execute(array($report_id));
+}
+
 ?>
