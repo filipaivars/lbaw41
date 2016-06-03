@@ -9,7 +9,6 @@
 
         table {
             border-collapse: collapse;
-            width: 100%;
         }
 
         th, td {
@@ -17,9 +16,6 @@
         }
         tr:nth-child(even) {
             background-color: #f2f2f2
-        }
-        tr:hover {
-            background-color: darkgrey;
         }
     </style>
 </head>
