@@ -36,12 +36,8 @@ function getUser($user_id) {
 function deleteUser($user_id) {
     global $conn;
     $stmt = $conn->prepare("DELETE FROM Utilizador
-                              WHERE user_id= ?;");
-    try{
-        return $stmt->execute(array($user_id));
-    } catch(PDOException $e) {
-
-    }
+                              WHERE user_id= ?");
+    return $stmt->execute(array($user_id));
 }
 
 function getUserInfo($user_id) {
