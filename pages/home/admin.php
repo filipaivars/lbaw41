@@ -4,6 +4,7 @@ include_once('../../database/users.php');
 include_once('../../database/perguntas.php');
 
 function deleteThis($user_id, $report_id) {
+    echo "Carlos";
     deleteUser($user_id);
     deleteReport($report_id);
 }

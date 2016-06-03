@@ -33,6 +33,7 @@
                 <th>#</th>
                 <th>User ID</th>
                 <th>Username</th>
+                <th>Actions</th>
                 <th>Description</th>
             </tr>
             </thead>
