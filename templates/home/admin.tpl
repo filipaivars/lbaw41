@@ -33,6 +33,7 @@
                 <th>#</th>
                 <th>User ID</th>
                 <th>Username</th>
+                <th>Description</th>
             </tr>
             </thead>
             <tbody>
@@ -42,6 +43,7 @@
                     <td> {$row.user_id} </td>
                     <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
                     <td> <button onclick="{deleteThis($row.user_id,$row.denuncia_id)}" type="submit" class="btn btn-default" style="background-color: firebrick; color: white; margin-top: 5px;">Remove User</button></td>
+                    <td> {$row.descricao} </td>
                 </tr>
             {/foreach}
             </tbody>

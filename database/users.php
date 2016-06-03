@@ -114,8 +114,8 @@ function getAllUsers() {
 }
 function getReportedUsers() {
     global $conn;
-    $stmt = $conn->prepare("SELECT denuncia.denuncia_id, utilizador.username, utilizador.user_id FROM Utilizador
-         JOIN denuncia on (denuncia.denuncia_id = utilizador.user_id)
+    $stmt = $conn->prepare("SELECT denuncia.denuncia_id, utilizador.username, utilizador.user_id, denuncia.descricao FROM Utilizador
+         JOIN Denuncia on (denuncia.user_id = utilizador.user_id)
         ");
     $stmt->execute();
     return $stmt->fetchAll();
