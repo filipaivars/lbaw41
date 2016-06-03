@@ -123,8 +123,8 @@ function getReportedUsers() {
 
 function deleteReport($report_id) {
     global $conn;
-    $stmt = $conn->prepare("DELETE FROM Report
-                              WHERE report_id= ?");
+    $stmt = $conn->prepare("DELETE FROM Denuncia
+                              WHERE denuncia_id= ?");
     return $stmt->execute(array($report_id));
 }
 
