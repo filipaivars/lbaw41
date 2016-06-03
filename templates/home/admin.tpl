@@ -43,7 +43,7 @@
                     <td> {$row.denuncia_id} </td>
                     <td> {$row.user_id} </td>
                     <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
-                    <td> <button onclick="{deleteThis($row.user_id,$row.denuncia_id)}" style="background-color: firebrick; color: white; margin-top: 5px;">Remove User</button></td>
+                    <td> <button onclick="document.write('<?php deleteThis({$row.user_id},{$row.denuncia_id}) ?>');" style="background-color: firebrick; color: white; margin-top: 5px;">Remove User</button></td>
                     <td> {$row.descricao} </td>
                 </tr>
             {/foreach}
@@ -66,6 +66,5 @@
                 </tr>
             {/foreach}
         </table>
-
 </body>
 </html>
