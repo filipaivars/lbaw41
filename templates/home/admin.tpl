@@ -40,6 +40,7 @@
                     <td> {$row.denuncia_id} </td>
                     <td> {$row.user_id} </td>
                     <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
+                    <td> <button onclick="deleteUser({$row.user_id})" type="submit" class="btn btn-default" style="background-color: #f44937; color: white; margin-top: 10px;">Remove User</button></td>
                 </tr>
             {/foreach}
             </tbody>
