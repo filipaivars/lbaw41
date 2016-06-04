@@ -138,7 +138,7 @@ function getUserMedals($user_id){
     return $stmt->fetchAll();
 }
 
-funtion changeAvatar($user_id, $img_dir){
+function changeAvatar($user_id, $img_dir){
 	global $conn;
 	$stmt = &conn ->prepare("UPDATE Utilizador SET avatar = :img_dir WHERE user_id = :user_id;");
 	$stmt->bindParam( ':user_id', $user_id, PDO::PARAM_STR );
