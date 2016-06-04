@@ -10,8 +10,6 @@
                 <br>
                 <div flex>
                     <img src="{$user.avatar}" style="width: 160px">
-					<p>"SESSION: "</p>{$_SESSION['user_id']}
-					<p>"user: "</p>{$user.user_id}
 					{if $_SESSION['user_id'] == $user.user_id}
 						<script>
 							$(document).ready(function(){
