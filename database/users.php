@@ -133,8 +133,8 @@ function getUserMedals($user_id){
     $stmt = $conn->prepare("SELECT medalhas.medalha_id, medalhas.logo as logo FROM Medalhas
                               JOIN Medalhasutilizador on (medalhasutilizador.medalha_id = medalhas.medalha_id)
                                 WHERE medalhasutilizador.user_id = ?
-        ");
-    $$stmt->execute(array($user_id));
+    ");
+    $stmt->execute(array($user_id));
     return $stmt->fetchAll();
 }
 
