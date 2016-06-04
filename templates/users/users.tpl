@@ -1,5 +1,5 @@
 
-<title>WalkMeThrough | Perfil</title>
+<title>Perfil {$user.username} | WalkMeThrough</title>
 {include file='common/header.tpl'}
 <div class="wrap">
 
@@ -43,7 +43,9 @@
             <h2>RECENT QUESTIONS<h2>
                     <section id="perguntas">
                         {if empty($perguntas)}
-                            This user hasn't asked any questions yet.
+                            <div class="perg-teaser">
+                                This user hasn't asked any questions yet.
+                            </div>
                         {/if}
                         {foreach $perguntas as $pergunta}
                             <hr>

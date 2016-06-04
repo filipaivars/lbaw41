@@ -12,5 +12,6 @@ for ($i = 0; $i < count($perguntas); $i++) {
 
 
 $smarty->assign('perguntas', $perguntas);
+$smarty->assign('search', $search);
 $smarty->display('home/searchResults.tpl');
 ?>

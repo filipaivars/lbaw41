@@ -1,3 +1,4 @@
+<title>Search {$search} | WalkMeThrough</title>
 {include file='common/header.tpl'}
 
 <div class="wrap_0">
