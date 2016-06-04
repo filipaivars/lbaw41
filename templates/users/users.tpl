@@ -10,6 +10,8 @@
                 <br>
                 <div flex>
                     <img src="{$user.avatar}" style="width: 160px">
+					<p>{$_SESSION[user_id]}</p>
+					<p>{$user.user_id}</p>
 					{if $_SESSION[user_id] == $user.user_id}
 						<script>
 							$(document).ready(function(){
@@ -19,7 +21,7 @@
 							});
 						</script>
 						<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>
-						<div id="changePic" style="width: 160px">
+						<div id="changePic" style="width: 160px" hidden>
 							<form action="uploadPFImage.php" method="post" enctype="multipart/form-data">
 								<input type="file" name="fileToUpload" id="fileToUpload">
 								<input type="submit" value="Upload Image" name="submit">
