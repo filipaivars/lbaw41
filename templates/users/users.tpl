@@ -20,7 +20,9 @@
                         <div flex style="margin-top: 5px">
                             <div layout="row">
                                 <div flex="65">
-                                    [M0] [M1] [M2]
+                                    {foreach $user_medals as $medal}
+                                        <img src="{$medal.logo}" style="width: 10px"> 
+                                    {/foreach}
                                 </div>
                                 <div>
                                     <b>{$user.questions}</b> questions<br>

@@ -128,4 +128,14 @@ function deleteReport($report_id) {
     return $stmt->execute(array($report_id));
 }
 
+function getUserMedals($user_id){
+    global $conn;
+    $stmt = $conn->prepare("SELECT medalhas.medalha_id, medalhas.logo FROM Medalhas
+                              JOIN Medalhasutilizador on (medalhasutilizador.medalha_id = medalhas.medalha_id)
+                                WHERE medalhasutilizador.user_id = ?
+        ");
+    $$stmt->execute(array($user_id));
+    return $stmt->fetchAll();
+}
+
 ?>

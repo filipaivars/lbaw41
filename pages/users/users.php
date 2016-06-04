@@ -26,6 +26,8 @@ for ($i = 0; $i < count($perguntas); $i++) {
     }
 }
 
+$user_medals = getUserMedals($user_id);
+
 
 $user["favourites"] = getUserFavourites($user_id)[0]["total"];
 $user["questions"] = getUserQuestions($user_id)[0]["total"];
