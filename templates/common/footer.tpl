@@ -1,4 +1,4 @@
-{include_php '../../pages/home/footer.php'}
+
 
 <div class="footer">
     <div class="row" style="padding-top: 50px; padding-bottom: 20px">
@@ -7,14 +7,19 @@
             <a href="../../pages/home/help.php">help</a>
         </div>
         <div class="col-xs-12 col-md-2" style="color: white">
-            {foreach $popular_tags.nome  as $tag}
-                {$popular_tags.nome}<br>
-            {/foreach}
+            rpg<br>
+            mmo<br>
+            moba<br>
+            fps<br>
+            adventure<br>
+            action
         </div>
         <div class="col-xs-12 col-md-2" style="color: white">
-            {foreach $recent_tags.nome  as $tag}
-                {$recent_tags.nome}<br>
-            {/foreach}
+            PC<br>
+            Playstation<br>
+            Xbox<br>
+            PSP<br>
+            Wii
         </div>
         <div class="col-xs-12 col-md-2" style="color: white">
             Square Enix<br>
