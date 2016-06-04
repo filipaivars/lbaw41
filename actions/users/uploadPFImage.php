@@ -3,7 +3,7 @@
 	include_once($BASE_DIR .'database/users.php');
 
 	$target_dir = "https://gnomo.fe.up.pt/~lbaw1541/lbaw41/images/users/";
-	$target_file = $BASE_DIR . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = $BASE_DIR . "images/users/" . basename($_FILES["fileToUpload"]["name"]);
 	echo $target_file;
 	$db_dir = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
