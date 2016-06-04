@@ -1,5 +1,5 @@
 
-<title>Perfil {$user.username} | WalkMeThrough</title>
+<title>{$user.username} Profile | WalkMeThrough</title>
 {include file='common/header.tpl'}
 <div class="wrap">
 
