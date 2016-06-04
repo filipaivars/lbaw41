@@ -20,6 +20,9 @@
                         <div flex style="margin-top: 5px">
                             <div layout="row">
                                 <div>
+                                    {if empty($user_medals)}
+                                        This user has no medals yet.
+                                    {/if}
                                     {foreach $user_medals as $medal}
                                         <img src="{$medal.image}" style="width: 40px">
                                     {/foreach}
@@ -39,6 +42,9 @@
             <br>
             <h2>RECENT QUESTIONS<h2>
                     <section id="perguntas">
+                        {if empty($perguntas)}
+                            This user hasn't asked any questions yet.
+                        {/if}
                         {foreach $perguntas as $pergunta}
                             <hr>
                             <div id="questaoRecente">
