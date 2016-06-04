@@ -21,7 +21,7 @@
                             <div layout="row">
                                 <div flex="65">
                                     {foreach $user_medals as $medal}
-                                        <img src="{$medal.logo}" style="width: 10px"> 
+                                        <img src="{$medal.image}" style="width: 100px">
                                     {/foreach}
                                 </div>
                                 <div>
