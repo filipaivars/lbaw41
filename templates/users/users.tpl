@@ -21,7 +21,9 @@
                             <div layout="row">
                                 <div>
                                     {if empty($user_medals)}
-                                        This user has no medals yet.
+                                        <div class="perg-teaser">
+                                            This user has no medals yet.
+                                        </div>
                                     {/if}
                                     {foreach $user_medals as $medal}
                                         <img src="{$medal.image}" style="width: 40px">
