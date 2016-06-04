@@ -65,6 +65,18 @@ function editUserInfo($user_id, $about, $password, $avatar) {
     }
 }
 
+function changeAvatar($user_id, $img_dir){
+	global $conn;
+	$stmt = $conn->prepare("UPDATE Utilizador SET avatar = :img_dir WHERE user_id = :user_id;");
+	$stmt->bindParam( ':user_id', $user_id, PDO::PARAM_STR );
+    $stmt->bindParam( ':img_dir', $img_dir, PDO::PARAM_STR );
+	try{
+        return $stmt->execute();
+    } catch(PDOException $e) {
+
+    }
+}
+
 function getUserLastQuestions($user_id) {
     global $conn;
     $stmt = $conn->prepare("SELECT pergunta.pergunta_id,pergunta.titulo,pergunta.created_date,utilizador.username, pergunta.criar_id, pergunta.conteudo, count(DISTINCT resposta.resposta_id) as n_respostas, avg(votoutilizadorpergunta.valor) as average
@@ -137,18 +149,5 @@ function getUserMedals($user_id){
     $stmt->execute(array($user_id));
     return $stmt->fetchAll();
 }
-
-/*
-function changeAvatar($user_id, $img_dir){
-	global $conn;
-	$stmt = &conn ->prepare("UPDATE Utilizador SET avatar = :img_dir WHERE user_id = :user_id;");
-	$stmt->bindParam( ':user_id', $user_id, PDO::PARAM_STR );
-    $stmt->bindParam( ':img_dir', $img_dir, PDO::PARAM_STR );
-	    try{
-        return $stmt->execute();
-    } catch(PDOException $e) {
-
-    }
-}*/
 
 ?>
