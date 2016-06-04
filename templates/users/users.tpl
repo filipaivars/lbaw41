@@ -10,7 +10,7 @@
                 <br>
                 <div flex>
                     <img src="{$user.avatar}" style="width: 160px">
-					{if $USERNAME == $user.username}
+					{if $USERNAME eq $user.username}
 						<script>
 							$(document).ready(function(){
 								$("#buttonChangePic").click(function(){
