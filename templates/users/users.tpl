@@ -10,7 +10,7 @@
                 <br>
                 <div flex>
                     <img src="{$user.avatar}" style="width: 160px">
-					{if $USERID = $user.user_id}
+					<!--{if $USERID = $user.user_id}
 						<script>
 							$(document).ready(function(){
 								$("#buttonChangePic").click(function(){
@@ -25,7 +25,7 @@
 								<input type="submit" value="Upload Image" name="submit">
 							</form>
 						</div>
-					{/if}
+					{/if}-->
                 </div>
                 <div flex="80">
                     <div layout="column">
