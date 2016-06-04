@@ -3,10 +3,8 @@
 <div class="footer">
     <div class="row" style="padding-top: 50px; padding-bottom: 20px">
         <div class="col-xs-0 col-md-2" style="color: #f44937">
-            chat<br>
-            about us<br>
-            contact<br>
-            help
+            <a href="http://lbaw.fe.up.pt/201516/doku.php/lbaw1541/proj/index">about</a>
+            <a href="../../pages/home/help.php">help</a>
         </div>
         <div class="col-xs-12 col-md-2" style="color: white">
             rpg<br>
