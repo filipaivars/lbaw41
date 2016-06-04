@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="../../css/faqreset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="../../css/styles.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="../../css/faqstyle.css"> <!-- Resource style -->
     <script src="../../javascript/modernizr.js"></script> <!-- Modernizr -->
     <title>FAQ | WalkMeThrough</title>
 </head>
