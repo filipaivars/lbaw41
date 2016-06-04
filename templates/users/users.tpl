@@ -20,7 +20,7 @@
 						</script>
 						<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>
 						<div id="changePic" style="width: 160px" hidden>
-							<form action="uploadPFImage.php" method="post" enctype="multipart/form-data">
+							<form action="../../actions/users/uploadPFImage.php" method="post" enctype="multipart/form-data">
 								<input type="file" name="fileToUpload" id="fileToUpload">
 								<input type="submit" value="Upload Image" name="submit">
 							</form>
