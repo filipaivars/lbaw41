@@ -9,21 +9,23 @@
             <div layout="row">
                 <br>
                 <div flex>
-					<script>
-						$(document).ready(function(){
-							$("#buttonChangePic").click(function(){
-								$("#changePic").toggle(250);
-							});
-						});
-					</script>
                     <img src="{$user.avatar}" style="width: 160px">
-					<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>
-					<div id="changePic" style="width: 160px">
-						<form action="upload.php" method="post" enctype="multipart/form-data">
-							<input type="file" name="fileToUpload" id="fileToUpload">
-							<input type="submit" value="Upload Image" name="submit">
-						</form>
-					</div>
+					{if $USERID = $user.user_id}
+						<script>
+							$(document).ready(function(){
+								$("#buttonChangePic").click(function(){
+									$("#changePic").toggle(250);
+								});
+							});
+						</script>
+						<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>
+						<div id="changePic" style="width: 160px">
+							<form action="uploadPFImage.php" method="post" enctype="multipart/form-data">
+								<input type="file" name="fileToUpload" id="fileToUpload">
+								<input type="submit" value="Upload Image" name="submit">
+							</form>
+						</div>
+					{/if}
                 </div>
                 <div flex="80">
                     <div layout="column">

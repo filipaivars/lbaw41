@@ -138,4 +138,16 @@ function getUserMedals($user_id){
     return $stmt->fetchAll();
 }
 
+funtion changeAvatar($user_id, $img_dir){
+	global $conn;
+	$stmt = &conn ->prepare("UPDATE Utilizador SET avatar = :img_dir WHERE user_id = :user_id;");
+	$stmt->bindParam( ':user_id', $user_id, PDO::PARAM_STR );
+    $stmt->bindParam( ':img_dir', $img_dir, PDO::PARAM_STR );
+	    try{
+        return $stmt->execute();
+    } catch(PDOException $e) {
+
+    }
+}
+
 ?>
