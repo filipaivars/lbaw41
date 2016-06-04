@@ -42,7 +42,7 @@ function deleteUser($user_id) {
 
 function getUserInfo($user_id) {
     global $conn;
-    $stmt = $conn->prepare("SELECT username, avatar,created_date, about
+    $stmt = $conn->prepare("SELECT user_id, username, avatar,created_date, about
                               FROM Utilizador
                                 WHERE user_id = ?");
     $stmt->execute(array($user_id));
