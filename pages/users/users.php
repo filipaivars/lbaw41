@@ -33,6 +33,7 @@ $user["favourites"] = getUserFavourites($user_id)[0]["total"];
 $user["questions"] = getUserQuestions($user_id)[0]["total"];
 $user["answers"] = getUserAnswers($user_id)[0]["total"];
 
+$smarty->assign('user_medals', $user_medals);
 $smarty->assign('perguntas', $perguntas);
 $smarty->assign('user', $user);
 $smarty->display('users/users.tpl');
