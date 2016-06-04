@@ -3,7 +3,8 @@
 	include_once($BASE_DIR .'database/users.php');
 
 	$target_dir = "https://gnomo.fe.up.pt/~lbaw1541/lbaw41/images/users/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = $BASE_DIR . basename($_FILES["fileToUpload"]["name"]);
+	$db_dir = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
@@ -40,7 +41,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 		$user_id = getUserId($_SESSION['username'])['user_id'];
-		changeAvatar($user_id,$target_file);
+		changeAvatar($user_id,$db_dir);
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
