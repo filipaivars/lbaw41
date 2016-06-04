@@ -7,7 +7,6 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="../../css/faqreset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="../../css/faqstyle.css"> <!-- Resource style -->
     <link rel="stylesheet" href="../../css/styles.css"> <!-- Resource style -->
     <script src="../../javascript/modernizr.js"></script> <!-- Modernizr -->
