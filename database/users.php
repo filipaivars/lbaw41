@@ -138,6 +138,7 @@ function getUserMedals($user_id){
     return $stmt->fetchAll();
 }
 
+/*
 function changeAvatar($user_id, $img_dir){
 	global $conn;
 	$stmt = &conn ->prepare("UPDATE Utilizador SET avatar = :img_dir WHERE user_id = :user_id;");
@@ -148,6 +149,6 @@ function changeAvatar($user_id, $img_dir){
     } catch(PDOException $e) {
 
     }
-}
+}*/
 
 ?>
