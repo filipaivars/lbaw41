@@ -4,9 +4,10 @@
 
 	$target_dir = "https://gnomo.fe.up.pt/~lbaw1541/lbaw41/images/users/";
 	$target_file = $BASE_DIR . basename($_FILES["fileToUpload"]["name"]);
+	echo $target_file;
 	$db_dir = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
