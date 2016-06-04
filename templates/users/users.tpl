@@ -10,7 +10,7 @@
                 <br>
                 <div flex>
                     <img src="{$user.avatar}" style="width: 160px">
-					{if $USERID == $user.user_id}
+					{if $_SESSION[user_id] == $user.user_id}
 						<script>
 							$(document).ready(function(){
 								$("#buttonChangePic").click(function(){
