@@ -40,6 +40,10 @@
 	}
 // Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
+			if($changeOk == 1) {
+				$user_id = getUserId($_SESSION['username'])['user_id'];
+				changeAvatar($user_id,$db_dir);
+			}
 		echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 	} else {
