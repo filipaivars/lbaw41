@@ -2,7 +2,7 @@
 	include_once('../../config/init.php');
 	include_once($BASE_DIR .'database/users.php');
 
-	$target_dir = $BASE_DIR."images/users";
+	$target_dir = "https://gnomo.fe.up.pt/~lbaw1541/lbaw41/images/users/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
