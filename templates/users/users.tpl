@@ -65,11 +65,10 @@
     </div>
 
     <div>
-        <hr class="style-two">
+        <hr class="style-one">
         <h4>Questions</h4>
         <div>
             {foreach $perguntas as $pergunta}
-                <hr class="style-one">
                 <div id="questaoRecente">
                     <div class="row">
                         <div class="col-md-10">
@@ -120,15 +119,8 @@
                 </div>
             {/foreach}
         </div>
-
-
-
-
-
-
-
-
     </div>
+</div>
 
 
-    {include file='common/footer.tpl'}
+{include file='common/footer.tpl'}
