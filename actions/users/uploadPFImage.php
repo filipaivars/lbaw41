@@ -58,5 +58,4 @@
 			echo '<script type="text/javascript">alert("Sorry, there was an error uploading your file.");window.history.go(-1);</script>';
     }
 }
-	header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>
