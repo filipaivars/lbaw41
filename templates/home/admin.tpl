@@ -44,12 +44,10 @@
                     <td> {$row.user_id} </td>
                     <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
                     <td>
-                        <form action="{$BASE_URL}actions/admin/delete_user.php?user_id={$row.user_id}" method="get">
-                            <button type="submit" style="background-color: firebrick; color: white; margin-top: 5px;">Remove User</button>
-                        </form>
-                        <form action="{$BASE_URL}actions/admin/delete_report.php?denuncia_id={$row.denuncia_id}" method="get">
-                            <button type="submit" style="background-color: firebrick; color: white; margin-top: 5px;">Ignore Report</button>
-                        </form>
+
+                        <button onclick="location.href='{$BASE_URL}actions/admin/delete_user.php?user_id={$row.user_id}'">Remove User</button>
+                        <button onclick="location.href='{$BASE_URL}actions/admin/delete_report.php?denuncia_id={$row.denuncia_id}'">Ignore Report</button>
+
 
                     </td>
                     <td> {$row.descricao} </td>
