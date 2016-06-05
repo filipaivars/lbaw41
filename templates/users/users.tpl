@@ -1,12 +1,12 @@
 
 <title>{$user.username} Profile | WalkMeThrough</title>
 {include file='common/header.tpl'}
-<div class="wrap">
+<div class="wrap" style="padding-top: 100px">
 
     <div class="row">
         <div class="col-md-2">
             <img id="buttonChangePic" src="{$user.avatar}" style="width: 160px">
-            <div style="width: 160px; height: 20px; background-color: #282827">
+            <div style="width: 160px; height: 30px; background-color: #282827">
 
             </div>
             {if $USERNAME eq $user.username}
@@ -25,9 +25,26 @@
                 </form>
             </div>
             {/if}
+            <br><br>
+            <div>
+                {if empty($user_medals)}
+                <div class="perg-teaser">
+                    This user has no medals yet.
+                </div>
+                {/if}
+                {foreach $user_medals as $medal}
+                <img src="{$medal.image}" style="width: 40px">
+                {/foreach}
+            </div>
+            <div>
+                <b>{$user.questions}</b> questions<br>
+                <b>{$user.answers}</b> answers<br>
+                <b>{$user.favourites}</b> favourites<br>
+            </div>
         </div>
         <div class="col-md-8" style="background-color: blue">
-
+            <h2>{$user.username}</h2><br>
+            {$user.about}
         </div>
         <div class="col-md-2" style="background-color: yellow">
 
