@@ -69,7 +69,7 @@
         <h4>Questions</h4>
         <div>
             {foreach $perguntas as $pergunta}
-                <div id="questaoRecente">
+                <div id="questaoRecente" style="padding-bottom: 50px">
                     <div class="row">
                         <div class="col-md-10">
                             <div class="row">
