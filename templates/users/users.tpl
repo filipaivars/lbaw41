@@ -6,8 +6,8 @@
     <div class="row">
         <div class="col-md-2">
             <img id="buttonChangePic" src="{$user.avatar}" style="width: 160px">
-            <div style="width: 160px; height: 30px; background-color: #282827; text-align: center">
-
+            <div style="width: 160px; height: 30px; background-color: #282827; text-align: center; color: white">
+                {$user.average}
             </div>
             {if $USERNAME eq $user.username}
                 <script>
@@ -33,8 +33,8 @@
             <br><br>
 
         </div>
-        <div class="col-md-8" style="background-color: blue">
-            <h2>{$user.username}</h2><br>
+        <div class="col-md-8">
+            <h4>{$user.username}</h4><br>
             {if $user.about eq ""}
                 <div>
                     este utilizador ainda não adicionou uma descrição
@@ -55,7 +55,7 @@
                 {/foreach}
             </div>
         </div>
-        <div class="col-md-2" style="background-color: yellow">
+        <div class="col-md-2">
             <div style="padding-top: 200px">
                 <b>{$user.questions}</b> questions<br>
                 <b>{$user.answers}</b> answers<br>
