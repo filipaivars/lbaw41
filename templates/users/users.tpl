@@ -28,7 +28,7 @@
             {if $USERNAME eq $user.username}
             <button>EDIT</button>
             {else}
-            favorite <img src="../../images/assets/favorite.png" width="25"/>
+            favorite <img src="../../images/assets/favorite.png" width="20" style="padding-left: 20px"/>
             {/if}
             <br><br>
 
@@ -62,6 +62,70 @@
                 <b>{$user.favourites}</b> favourites<br>
             </div>
         </div>
+    </div>
+
+    <div>
+        <br>
+        <h2>RECENT QUESTIONS<h2>
+                <section id="perguntas">
+                    {if empty($perguntas)}
+                        <div class="perg-teaser">
+                            This user hasn't asked any questions yet.
+                        </div>
+                    {/if}
+                    {foreach $perguntas as $pergunta}
+                        <hr>
+                        <div id="questaoRecente">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
+                                                    <div class="perg-titulo-user">
+                                                        {$pergunta.titulo}
+                                                    </div>
+                                                </a>
+                                                <div class="perg-teaser">
+                                                    {$pergunta.conteudo}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="row">
+                                        <div class="caixaPerg">
+                                            Answers
+                                        </div>
+                                        <div style="background-color: white; color: #282827; text-align: center">
+                                            <script>
+                                                document.write(checkNull({$pergunta.n_respostas}));
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="caixaPerg">
+                                        Stars
+                                    </div>
+                                    <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
+                                        <script>
+                                            document.write(roundMe(checkNull({$pergunta.average})));
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            myFunction();
+                        </script>
+                        <br>
+                    {/foreach}
+                </section>
     </div>
 
 
