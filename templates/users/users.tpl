@@ -9,7 +9,7 @@
             <div layout="row">
                 <br>
                 <div flex>
-                    <img src="{$user.avatar}" style="width: 160px">
+                    <img id="buttonChangePic" src="{$user.avatar}" style="width: 160px">
 					{if $USERNAME eq $user.username}
 						<script>
 							$(document).ready(function(){
@@ -18,7 +18,7 @@
 								});
 							});
 						</script>
-						<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>
+						<!--<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>-->
 						<div id="changePic" style="width: 160px" hidden>
 							<form action="../../actions/users/uploadPFImage.php" method="post" enctype="multipart/form-data">
 								<input type="file" name="fileToUpload" id="fileToUpload">
