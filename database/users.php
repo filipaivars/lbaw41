@@ -40,6 +40,8 @@ function deleteUser($user_id) {
     return $stmt->execute(array($user_id));
 }
 
+
+
 function getUserInfo($user_id) {
     global $conn;
     $stmt = $conn->prepare("SELECT user_id, username, avatar,created_date, about

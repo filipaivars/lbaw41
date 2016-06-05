@@ -10,12 +10,21 @@ function deleteThis($user_id, $report_id) {
     deleteReport($report_id);
 }
 */
-$users = getAllUsers();
-$reports = getReportedUsers();
+
+if(!$_SESSION['admin']) {
+
+
+    $smarty->display('home/admin_login.tpl');
+
+}
+else{
+    $users = getAllUsers();
+    $reports = getReportedUsers();
 
 //$smarty->assign('perguntas', $perguntas);
-$smarty->assign('deleteThis', 'delete_this');
-$smarty->assign('users', $users);
-$smarty->assign('reports', $reports);
-$smarty->display('home/admin.tpl');
+    $smarty->assign('deleteThis', 'delete_this');
+    $smarty->assign('users', $users);
+    $smarty->assign('reports', $reports);
+    $smarty->display('home/admin.tpl');
+}
 ?>
