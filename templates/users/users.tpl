@@ -28,7 +28,7 @@
             {if $USERNAME eq $user.username}
             <button>EDIT</button>
             {else}
-            favorite <img src="../../images/assets/favorite.png" width="20" style="padding-left: 20px"/>
+            favorite <img src="../../images/assets/favorite.png" width="20" />
             {/if}
             <br><br>
 
@@ -65,73 +65,62 @@
     </div>
 
     <div>
-        <br>
-        <h2>RECENT QUESTIONS<h2>
-                <section id="perguntas">
-                    {if empty($perguntas)}
-                        <div class="perg-teaser">
-                            This user hasn't asked any questions yet.
-                        </div>
-                    {/if}
-                    {foreach $perguntas as $pergunta}
-                        <hr>
-                        <div id="questaoRecente">
+        <hr class="style-two">
+        <h4>Questions</h4>
+        <div>
+            {foreach $perguntas as $pergunta}
+                <hr class="style-one">
+
+                <div id="questaoRecente">
+                    <div class="row">
+                        <div class="col-md-10">
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-10">
                                     <div class="row">
-                                        <div class="col-md-10">
-                                            <div class="row">
-                                                <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
-                                                    <div class="perg-titulo-user">
-                                                        {$pergunta.titulo}
-                                                    </div>
-                                                </a>
-                                                <div class="perg-teaser">
-                                                    {$pergunta.conteudo}
+                                        <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
+                                            <div class="perg-titulo">{$pergunta.titulo}</div>
+                                        </a>
+                                        {foreach $pergunta.tags as $tag}
+                                            <div class="col-md-1" style="display:flex">
+                                                <div class="tag-style">
+                                                    {$tag.nome}
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
-                                        </div>
+                                        {/foreach}
                                     </div>
                                 </div>
-                                <div class="col-md-1">
-                                    <div class="row">
-                                        <div class="caixaPerg">
-                                            Answers
-                                        </div>
-                                        <div style="background-color: white; color: #282827; text-align: center">
-                                            <script>
-                                                document.write(checkNull({$pergunta.n_respostas}));
-                                            </script>
-                                        </div>
-                                    </div>
+                                <div class="col-md-2">
+                                    <span class="perg-data" style="text-align: right">{$pergunta.created_date}</span>
                                 </div>
-                                <div class="col-md-1">
-                                    <div class="caixaPerg">
-                                        Stars
-                                    </div>
-                                    <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
-                                        <script>
-                                            document.write(roundMe(checkNull({$pergunta.average})));
-                                        </script>
-                                    </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="row">
+                                <div class="caixaPerg">
+                                    Answers
+                                </div>
+                                <div style="background-color: white; color: #282827; text-align: center">
+                                    <script>
+                                        document.write(checkNull({$pergunta.n_respostas}));
+                                    </script>
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            myFunction();
-                        </script>
-                        <br>
-                    {/foreach}
-                </section>
-    </div>
-
-
-
-
-
+                        <div class="col-md-1">
+                            <div class="caixaPerg">
+                                Stars
+                            </div>
+                            <div class="starsAvg" style="background-color: white; color: #282827; text-align: center">
+                                <script>
+                                    document.write(roundMe(checkNull({$pergunta.average})));
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {/foreach}
+        </div>
 
 
 
