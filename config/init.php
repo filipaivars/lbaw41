@@ -26,6 +26,7 @@
   $smarty->assign('FORM_VALUES', $_SESSION['form_values']);
   $smarty->assign('USERNAME', $_SESSION['username']);
   $smarty->assign('USERID', $_SESSION['user_id']);
+  $smarty->assign('ADMIN', $_SESSION['admin']);
   
   unset($_SESSION['success_messages']);
   unset($_SESSION['error_messages']);  

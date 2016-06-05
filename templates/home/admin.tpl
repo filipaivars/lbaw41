@@ -43,8 +43,8 @@
                     <td> {$row.denuncia_id} </td>
                     <td> {$row.user_id} </td>
                     <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
-                    <td> <button style="background-color: firebrick; color: white; margin-top: 5px;">Remove User</button>
-                        <button style="background-color: firebrick; color: white; margin-top: 5px;">Ignore Report</button>
+                    <td> <button formaction="{$BASE_URL}actions/admin/delete_user.php?user_id={$row.user_id}" style="background-color: firebrick; color: white; margin-top: 5px;">Remove User</button>
+                        <button formaction="{$BASE_URL}actions/admin/delete_report.php?denuncia_id={$row.denuncia_id}" style="background-color: firebrick; color: white; margin-top: 5px;">Ignore Report</button>
                     </td>
                     <td> {$row.descricao} </td>
                 </tr>
