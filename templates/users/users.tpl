@@ -28,7 +28,7 @@
             {if $USERNAME eq $user.username}
             <button>EDIT</button>
             {else}
-            favorite <img src="../../images/assets/favorite.png"/>
+            favorite <img src="../../images/assets/favorite.png" width="25"/>
             {/if}
             <br><br>
 
@@ -42,17 +42,18 @@
             {else}
                 {$user.about}
             {/if}
-        </div>
-        <br><br>
-        <div>
-            {if empty($user_medals)}
-                <div class="perg-teaser">
-                    This user has no medals yet.
-                </div>
-            {/if}
-            {foreach $user_medals as $medal}
-                <img src="{$medal.image}" style="width: 40px">
-            {/foreach}
+
+            <br><br>
+            <div>
+                {if empty($user_medals)}
+                    <div class="perg-teaser">
+                        This user has no medals yet.
+                    </div>
+                {/if}
+                {foreach $user_medals as $medal}
+                    <img src="{$medal.image}" style="width: 40px">
+                {/foreach}
+            </div>
         </div>
         <div class="col-md-2" style="background-color: yellow">
             <div style="padding-top: 200px">
