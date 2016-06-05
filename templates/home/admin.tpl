@@ -44,11 +44,8 @@
                     <td> {$row.user_id} </td>
                     <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
                     <td>
-
                         <button onclick="location.href='{$BASE_URL}actions/admin/delete_user.php?user_id={$row.user_id}'">Remove User</button>
                         <button onclick="location.href='{$BASE_URL}actions/admin/delete_report.php?denuncia_id={$row.denuncia_id}'">Ignore Report</button>
-
-
                     </td>
                     <td> {$row.descricao} </td>
                 </tr>
@@ -69,6 +66,7 @@
                     <td> {$row.user_id} </td>
                     <td> <a href="../../pages/users/users.php?user_id={$row.user_id}"> {$row.username} </a></td>
                     <td> {$row.created_date} </td>
+                    <td> <button onclick="location.href='{$BASE_URL}actions/admin/delete_user.php?user_id={$row.user_id}'">Remove User</button> </td>
                 </tr>
             {/foreach}
         </table>
