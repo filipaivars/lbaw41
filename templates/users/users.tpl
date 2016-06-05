@@ -28,7 +28,8 @@
             {if $USERNAME eq $user.username}
             <button>EDIT</button>
             {else}
-            favorite <button></button>
+            favorite <button>fav<button>
+            {/if}
             <br><br>
             <div>
                 {if empty($user_medals)}
