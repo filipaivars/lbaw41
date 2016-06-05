@@ -44,7 +44,13 @@
         </div>
         <div class="col-md-8" style="background-color: blue">
             <h2>{$user.username}</h2><br>
-            {$user.about}
+            {if $user.about eq ""}
+                <div>
+                    este utilizador ainda não adicionou uma descrição
+                </div>
+            {else}
+                {$user.about}
+            {/if}
         </div>
         <div class="col-md-2" style="background-color: yellow">
 
