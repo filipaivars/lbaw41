@@ -44,7 +44,6 @@
 				$user_id = getUserId($_SESSION['username'])['user_id'];
 				changeAvatar($user_id,$db_dir);
 			}
-		echo '<script type="text/javascript">alert("Sorry, your file was not uploaded.");window.history.go(-1);</script>';
 // if everything is ok, try to upload file
 	} else {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -58,5 +57,4 @@
 			echo '<script type="text/javascript">alert("Sorry, there was an error uploading your file.");window.history.go(-1);</script>';
     }
 }
-	header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>
