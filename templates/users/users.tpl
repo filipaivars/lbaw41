@@ -25,6 +25,10 @@
                 </form>
             </div>
             {/if}
+            {if $USERNAME eq $user.username}
+            <button>EDIT</button>
+            {else}
+            favorite <button></button>
             <br><br>
             <div>
                 {if empty($user_medals)}
@@ -36,11 +40,7 @@
                 <img src="{$medal.image}" style="width: 40px">
                 {/foreach}
             </div>
-            <div>
-                <b>{$user.questions}</b> questions<br>
-                <b>{$user.answers}</b> answers<br>
-                <b>{$user.favourites}</b> favourites<br>
-            </div>
+
         </div>
         <div class="col-md-8" style="background-color: blue">
             <h2>{$user.username}</h2><br>
@@ -53,7 +53,11 @@
             {/if}
         </div>
         <div class="col-md-2" style="background-color: yellow">
-
+            <div style="padding-top: 100px">
+                <b>{$user.questions}</b> questions<br>
+                <b>{$user.answers}</b> answers<br>
+                <b>{$user.favourites}</b> favourites<br>
+            </div>
         </div>
     </div>
 
