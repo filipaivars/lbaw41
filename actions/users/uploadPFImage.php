@@ -2,9 +2,10 @@
 	include_once('../../config/init.php');
 	include_once($BASE_DIR .'database/users.php');
 
+	$user_id = getUserId($_SESSION['username'])['user_id'];
 	$target_dir = "https://gnomo.fe.up.pt/~lbaw1541/lbaw41/images/users/";
-	$target_file = $BASE_DIR . "images/users/" . basename($_FILES["fileToUpload"]["name"]);
-	$db_dir = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$target_file = $BASE_DIR . "images/users/" . $user_id . basename($_FILES["fileToUpload"]["name"]);
+	$db_dir = $target_dir . $user_id . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	$changeOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -12,29 +13,28 @@
 	if(isset($_POST["submit"])) {
 		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 		if($check !== false) {
-			echo "File is an image - " . $check["mime"] . ".";
 			$uploadOk = 1;
 		} else {
-			echo "File is not an image.";
+			echo '<script type="text/javascript">alert("File is not an image.");window.history.go(-1);</script>';
 			$uploadOk = 0;
 			$changeOk = 0;
 		}
 	}
 // Check if file already exists
 	if (file_exists($target_file)) {
-		echo "Sorry, file already exists.";
+		echo '<script type="text/javascript">alert("Sorry, file already exists.");window.history.go(-1);</script>';
 		$uploadOk = 0;
 	}
 // Check file size
 	if ($_FILES["fileToUpload"]["size"] > 500000) {
-		echo "Sorry, your file is too large.";
+		echo '<script type="text/javascript">alert("Sorry, your file is too large.");window.history.go(-1);</script>';
 		$uploadOk = 0;
 		$changeOk = 0;
 	}
 // Allow certain file formats
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 	&& $imageFileType != "gif" ) {
-		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+		echo '<script type="text/javascript">alert("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");window.history.go(-1);</script>';
 		$uploadOk = 0;
 		$changeOk = 0;
 	}
@@ -44,11 +44,10 @@
 				$user_id = getUserId($_SESSION['username'])['user_id'];
 				changeAvatar($user_id,$db_dir);
 			}
-		echo "Sorry, your file was not uploaded.";
+		echo '<script type="text/javascript">alert("Sorry, your file was not uploaded.");window.history.go(-1);</script>';
 // if everything is ok, try to upload file
 	} else {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-			$user_id = getUserId($_SESSION['username'])['user_id'];
 			changeAvatar($user_id,$db_dir);
 			echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 		} else {
@@ -56,7 +55,7 @@
 				$user_id = getUserId($_SESSION['username'])['user_id'];
 				changeAvatar($user_id,$db_dir);
 			}
-			echo "Sorry, there was an error uploading your file.";
+			echo '<script type="text/javascript">alert("Sorry, there was an error uploading your file.");window.history.go(-1);</script>';
     }
 }
 	header('Location: ' . $_SERVER['HTTP_REFERER']);
