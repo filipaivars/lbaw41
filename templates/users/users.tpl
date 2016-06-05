@@ -10,25 +10,25 @@
 
             </div>
             {if $USERNAME eq $user.username}
-            <script>
-                $(document).ready(function(){
-                    $("#buttonChangePic").click(function(){
-                        $("#changePic").toggle(250);
+                <script>
+                    $(document).ready(function(){
+                        $("#buttonChangePic").click(function(){
+                            $("#changePic").toggle(250);
+                        });
                     });
-                });
-            </script>
-            <!--<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>-->
-            <div id="changePic" style="width: 160px" hidden>
-                <form action="../../actions/users/uploadPFImage.php" method="post" enctype="multipart/form-data">
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
-                </form>
-            </div>
+                </script>
+                <!--<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>-->
+                <div id="changePic" style="width: 160px" hidden>
+                    <form action="../../actions/users/uploadPFImage.php" method="post" enctype="multipart/form-data">
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="submit" value="Upload Image" name="submit">
+                    </form>
+                </div>
             {/if}
             {if $USERNAME eq $user.username}
-            <button>EDIT</button>
+                <button>EDIT</button>
             {else}
-            favorite <img src="../../images/assets/favorite.png" width="20" />
+                favorite <img src="../../images/assets/favorite.png" width="20" />
             {/if}
             <br><br>
 
@@ -70,13 +70,12 @@
         <div>
             {foreach $perguntas as $pergunta}
                 <hr class="style-one">
-
                 <div id="questaoRecente">
                     <div class="row">
                         <div class="col-md-10">
                             <div class="row">
                                 <div class="col-md-10">
-                                    <div class="row">
+                                    <div class="row" style="padding-left: 20px">
                                         <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
                                             <div class="perg-titulo">{$pergunta.titulo}</div>
                                         </a>
@@ -129,7 +128,7 @@
 
 
 
-</div>
+    </div>
 
 
-{include file='common/footer.tpl'}
+    {include file='common/footer.tpl'}
