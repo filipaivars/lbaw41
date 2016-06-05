@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-2">
             <img id="buttonChangePic" src="{$user.avatar}" style="width: 160px">
-            <div style="width: 160px; height: 30px; background-color: #282827">
+            <div style="width: 160px; height: 30px; background-color: #282827; text-align: center">
 
             </div>
             {if $USERNAME eq $user.username}
@@ -28,7 +28,7 @@
             {if $USERNAME eq $user.username}
             <button>EDIT</button>
             {else}
-            favorite <button>fav<button>
+            favorite <button>fav</button>
             {/if}
             <br><br>
             <div>
@@ -54,7 +54,7 @@
             {/if}
         </div>
         <div class="col-md-2" style="background-color: yellow">
-            <div style="padding-top: 100px">
+            <div style="padding-top: 200px">
                 <b>{$user.questions}</b> questions<br>
                 <b>{$user.answers}</b> answers<br>
                 <b>{$user.favourites}</b> favourites<br>
