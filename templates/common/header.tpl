@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<div style="position: absolute;">
+<div style="position: absolute;padding-top: 20px; padding-left: 20px">
     {if $ERROR_MESSAGES}
         {foreach $ERROR_MESSAGES as $error}
         <div style=" color: red">
