@@ -26,6 +26,6 @@ $user_id = getUserId($_SESSION['username'])['user_id'];
 
 updateCommentQuestion($conteudo,$user_id,$pergunta_id);
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: ' . $BASE_URL . 'pages/perguntas/show_pergunta.php?pergunta_id='. $pergunta_id);
 
 ?>
