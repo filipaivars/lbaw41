@@ -27,7 +27,7 @@
                     </div>
                 {/if}
                 {if $USERNAME eq $user.username}
-                    <button class="btn2_3">EDIT</button>
+                <button type="submit" class="perg-comment btn2_3"  style="background: none; border: none; color: #e94735; margin-top: 10px">edit</button>
                 {else}
                     favorite <img src="../../images/assets/favorite.png" width="20" />
                 {/if}
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="aparecePerfil" style="padding-left: 10%; padding-right: 30%">
+        <div class="aparecePerfil" style="padding-left: 10%; padding-right: 30%; padding-top: 50px">
             <form action="{$BASE_URL}actions/users/update_perfil.php" method="post" enctype="multipart/form-data">
                     <div>
                         <input type="text" name="about" value="{$user.about}" style="width: 100%; margin-top: 10px; border-style: none; height: 33px;">
