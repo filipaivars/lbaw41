@@ -13,7 +13,7 @@
                 {$pergunta.conteudo}
 
             </a>
-            {foreach $pergunta.tags as $tag}
+            {foreach tags as $tag}
             <div class="col-md-1" style="display:flex">
                 <div class="tag-style">
                     {$tag.nome}
