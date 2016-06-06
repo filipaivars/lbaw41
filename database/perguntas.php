@@ -77,6 +77,30 @@ function getPerguntaTags($pergunta_id) {
     return $stmt->fetchAll();
 }
 
+function getPerguntaComentario($pergunta_id,$user_id) {
+    global $conn;
+    $stmt = $conn->prepare("
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        FROM comentario
+        JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
+        WHERE comentario.pergunta_id = ? AND criar_id = ?
+                            ");
+    $stmt->execute(array($pergunta_id,$user_id));
+    return $stmt->fetchAll()[0];
+}
+
+function getRespostaComentario($resposta_id,$user_id) {
+    global $conn;
+    $stmt = $conn->prepare("
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        FROM comentario
+        JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
+        WHERE comentario.resposta_id = ? AND criar_id = ?
+                            ");
+    $stmt->execute(array($resposta_id,$user_id));
+    return $stmt->fetchAll()[0];
+}
+
 function getPerguntaComentarios($pergunta_id) {
     global $conn;
     $stmt = $conn->prepare("
