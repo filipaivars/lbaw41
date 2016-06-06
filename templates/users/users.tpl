@@ -19,7 +19,7 @@
                         });
                     </script>
                     <!--<div id="buttonChangePic" style="width: 160px">Change Profile Picture</div>-->
-                    <div id="changePic" style="width: 160px" hidden>
+                    <div id="changePic" style="width: 160px; cursor: pointer;" hidden>
                         <form action="../../actions/users/uploadPFImage.php" method="post" enctype="multipart/form-data">
                             <input type="file" name="fileToUpload" id="fileToUpload">
                             <input type="submit" value="Upload Image" name="submit">
@@ -77,7 +77,10 @@
                                     <div class="col-md-10">
                                         <div class="row" style="padding-left: 20px">
                                             <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
-                                                <div class="perg-titulo">{$pergunta.titulo}</div>
+                                                <div class="perg-titulo">{
+                                                    $pergunta.titulo}
+                                                </div>
+
                                             </a>
                                             {foreach $pergunta.tags as $tag}
                                                 <div class="col-md-1" style="display:flex">
@@ -86,6 +89,17 @@
                                                     </div>
                                                 </div>
                                             {/foreach}
+                                        </div>
+                                        <div class="btn2">
+                                            edit
+                                        </div>
+                                        <div class="aparece">
+                                            <form method="post" action="{$BASE_URL}actions/perguntas/update_pergunta.php" enctype="multipart/form-data">
+                                                <input type="text" style="display: none" name="pergunta_id" value="{$pergunta.pergunta_id}">
+                                                <input type="text" name="titulo" value="{$pergunta.titulo}" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
+                                                <input type="text" name="conteudo" value="{$pergunta.conteudo"} style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
+                                                <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">edit</button>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
