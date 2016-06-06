@@ -33,7 +33,6 @@
                 {/if}
                 <br><br>
 
-            </div>
             <div class="col-md-8">
                 <h4>{$user.username}</h4><br>
                 {if $user.about eq ""}
