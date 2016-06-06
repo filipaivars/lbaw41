@@ -11,7 +11,7 @@
                 <div id="questaoRecente">
                     <div class="row">
                         <div class="col-md-1">
-                            <img class="avatar" src="{$pergunta.avatar}">
+                            <img class="avatar" src="{$pergunta.avatar}" alt="User Avatar">
                         </div>
                         <div class="col-md-9">
                             <div class="row">
@@ -72,7 +72,7 @@
                     <div class="questaoRecente">
                         <div class="row">
                             <div class="col-md-1">
-                                <img class="avatar" src="{$bestpergunta.avatar}">
+                                <img class="avatar" src="{$bestpergunta.avatar}" alt="user Avatar">
                             </div>
                             <div class="col-md-9">
                                 <div class="row">

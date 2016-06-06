@@ -6,7 +6,7 @@
 
         <div class="row">
             <div class="col-md-2">
-                <img id="buttonChangePic" src="{$user.avatar}" style="width: 160px">
+                <img id="buttonChangePic" src="{$user.avatar}" style="width: 160px" alt="User Medal">
                 <div style="width: 160px; height: 30px; background-color: #282827; text-align: center; color: white">
                     {$user.average}
                 </div>
@@ -29,7 +29,7 @@
                 {if $USERNAME eq $user.username}
                 <button type="submit" class="perg-comment btn2_3"  style="background: none; border: none; color: #e94735; margin-top: 30px;">EDIT</button>
                 {else}
-                favorite <img src="../../images/assets/favorite.png" width="20" />
+                favorite <img src="../../images/assets/favorite.png" width="20" alt="Favourite"/>
                 {/if}
                 <br><br>
 
@@ -52,7 +52,7 @@
                     </div>
                     {/if}
                     {foreach $user_medals as $medal}
-                    <img src="{$medal.image}" style="width: 40px">
+                    <img src="{$medal.image}" style="width: 40px" alt="User Medal">
                     {/foreach}
                 </div>
             </div>

@@ -13,14 +13,15 @@
         </div>
         <hr>
         <div id="register_sFB">
-            <h4>Register without Facebook</h4>
             <form action="{$BASE_URL}actions/users/register.php" method="post" enctype="multipart/form-data">
-                <label>Username:<br></label>
-                <input type="text" name="username" value="{$FORM_VALUES.username}">
-                <label>Password:<br></label>
-                <input type="password" name="password" value="">
-                <br>
+                <fieldset>
+                    <legend><h4>Register without Facebook</h4></legend>
+                <label>Username:</label>
+                <input type="text" name="username" value="{$FORM_VALUES.username}" pattern="^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$" required>
+                <label>Password:</label>
+                <input type="password" name="password" value="" required>
                 <input type="submit" value="Register">
+            </fieldset>
             </form>
         </div>
     </div>

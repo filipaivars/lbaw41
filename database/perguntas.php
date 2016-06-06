@@ -104,7 +104,7 @@ function getRespostaComentario($resposta_id,$user_id) {
 function getResposta($resposta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT resposta.resposta_id ,resposta.conteudo,resposta.created_date,utilizador.username,resposta.pergunta_id
+        SELECT resposta.resposta_id ,resposta.conteudo,resposta.created_date,utilizador.username,resposta.pergunta_id,utilizador.avatar
         FROM resposta
         JOIN utilizador ON (resposta.criar_id = utilizador.user_id)
         WHERE resposta.resposta_id = ?
@@ -116,7 +116,7 @@ function getResposta($resposta_id) {
 function getPerguntaComentarios($pergunta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username,utilizador.avatar
         FROM comentario
         JOIN pergunta ON (pergunta.pergunta_id = comentario.pergunta_id)
         JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
@@ -129,7 +129,7 @@ function getPerguntaComentarios($pergunta_id) {
 function getRespostaComentarios($resposta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username,utilizador.avatar
         FROM comentario
         JOIN resposta ON (resposta.resposta_id = comentario.resposta_id)
         JOIN utilizador ON (comentario.criar_id = utilizador.user_id)

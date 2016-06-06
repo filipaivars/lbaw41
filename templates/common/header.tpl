@@ -21,6 +21,23 @@
 
 </head>
 <body>
+
+<div style="position: absolute;padding-top: 20px; padding-left: 20px">
+    {if $ERROR_MESSAGES}
+        {foreach $ERROR_MESSAGES as $error}
+        <div style=" color: red">
+            {$error}
+        </div>
+        {/foreach}
+    {/if}
+    {if $SUCCESS_MESSAGES}
+    {foreach $SUCCESS_MESSAGES as $success}
+    <div style=" color: green">
+        {$success}
+    </div>
+    {/foreach}
+    {/if}
+</div>
 {if $USERNAME}
     {include file='common/menu_logged_in.tpl'}
 

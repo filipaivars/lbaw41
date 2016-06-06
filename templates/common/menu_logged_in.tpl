@@ -3,7 +3,7 @@
         <div class="row" style="display: flex; align-items: center; text-align: right">
             <div class="col-xs-12 col-md-2">
                 <a href="../../pages/home/home.php">
-                    <img src="../../images/assets/logo.png" style="height: 40px;">
+                    <img src="../../images/assets/logo.png" style="height: 40px;" alt="Site logo">
                 </a>
             </div>
             <div class="col-xs-8 col-md-2">

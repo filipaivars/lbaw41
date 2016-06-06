@@ -10,7 +10,7 @@
         <hr class="style-one">
         <div class="row">
             <div class="col-md-2">
-                <img class="avatar" src="{$pergunta.avatar}" width="100" height="100"><br>
+                <img class="avatar" src="{$pergunta.avatar}" width="100" height="100" alt="User Avatar"><br>
                 <a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a><br>
                 <div class="perg-data">{$pergunta.created_date}</div>
                 <br><br>
@@ -70,7 +70,7 @@
                         <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px;">
                             <div >
                                 <div class="col-md-1">
-                                    <img class="avatar" src="{$comentario.avatar}">
+                                    <img class="avatar" src="{$comentario.avatar}" alt="User Avatar">
                                 </div>
                                 <div class="col-md-9" style="padding-left: 20px">
                                     <b>{$comentario.username}</b><br>
@@ -107,7 +107,7 @@
             {foreach $respostas as $resposta}
                 <div class="row">
                     <div class="col-md-2">
-                        <img class="avatar" src="{$resposta.avatar}" width="100" height="100"><br>
+                        <img class="avatar" src="{$resposta.avatar}" width="100" height="100" alt="User Avatar"><br>
                         {$resposta.username}<br>
                         <div class="perg-data">{$resposta.created_date}</div>
                         <br><br>
@@ -146,7 +146,7 @@
                             <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
                                 <div >
                                     <div class="col-md-1">
-                                        <img class="avatar" src="{$comentario.avatar}">
+                                        <img class="avatar" src="{$comentario.avatar}" alt="User Avatar">
                                     </div>
                                     <div class="col-md-9" style="padding-left: 20px">
                                         <b>{$comentario.username}</b><br>
@@ -161,10 +161,6 @@
                             {if $USERNAME eq $comentario.username}
                             <a href="../../pages/perguntas/update_comentario_resposta.php?resposta_id={$resposta.resposta_id}">edit</a>
                             {/if}
-
-                            <script>
-                                myFunction();
-                            </script>
                         {/foreach}
                     </div>
                 </div>
