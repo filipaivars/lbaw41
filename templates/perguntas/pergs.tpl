@@ -2,6 +2,7 @@
 {include file='common/header.tpl'}
 
 <script src="../../javascript/perguntas.js"></script>
+<script>BASE_URL = {$BASE_URL}</script>
 
 <div class="wrap_0">
     <div class="wrap">
