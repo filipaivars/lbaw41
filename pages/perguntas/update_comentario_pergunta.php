@@ -17,15 +17,13 @@ if(!$_SESSION['user_id']) {
 
 $pergunta_id = $_GET['pergunta_id'];
 
-$pergunta = getPergunta($pergunta_id);
+$pergunta = getPergunta($pergunta_id)[0];
 $comentario = getPerguntaComentario($pergunta_id,$_SESSION['user_id']);
 
 
 
 $tags = getPerguntaTags($pergunta_id);
 
-
-var_dump($pergunta);
 
 $smarty->assign('pergunta', $pergunta);
 $smarty->assign('comentario', $comentario);
