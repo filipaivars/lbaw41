@@ -67,12 +67,12 @@
                     </div>
                     <a class="perg-comment" id="btn2_1">COMMENT</a>
                     {foreach $pergunta.comentarios as $comentario}
-                        <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px; padding-left: 20px">
+                        <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px;">
                             <div >
                                 <div class="col-md-1">
                                     <img class="avatar" src="">
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-9" style="padding-left: 20px">
                                     <b>{$comentario.username}</b><br>
                                     {$comentario.conteudo}
                                 </div>
