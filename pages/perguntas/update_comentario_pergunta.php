@@ -9,11 +9,11 @@ if (!$_GET['pergunta_id']) {
     exit;
 }
 
-if(!$_SESSION['user_id']) {
+/*if(!$_SESSION['user_id']) {
     $_SESSION['error_messages'][] = 'User not logged';
     header("Location: $BASE_URL");
     exit;
-}
+}*/
 
 $pergunta_id = $_GET['pergunta_id'];
 

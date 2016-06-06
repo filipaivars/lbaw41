@@ -3,7 +3,7 @@ include_once('../../config/init.php');
 include_once($BASE_DIR .'database/perguntas.php');
 
 
-if (!$_GET['pergunta_id']) {
+if (!$_GET['resposta_id']) {
     $_SESSION['error_messages'][] = 'Undefined pergunta_id';
     header("Location: $BASE_URL");
     exit;
