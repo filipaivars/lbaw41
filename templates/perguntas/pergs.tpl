@@ -112,6 +112,10 @@
                         <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
                         {$resposta.username}<br>
                         <div class="perg-data">{$resposta.created_date}</div>
+                        <br><br>
+                        {if $USERNAME eq $resposta.username}
+                            <a href="../../pages/perguntas/update_resposta.php?resposta_id={$resposta.resposta_id}">edit</a>
+                        {/if}
                     </div>
                     <div class="col-md-10">
 
