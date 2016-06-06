@@ -11,7 +11,6 @@
             selectedStar.removeClass('glyphicon-star-empty').addClass('glyphicon-star');
             selectedStar.prevAll('[data-value]').removeClass('glyphicon-star-empty').addClass('glyphicon-star');
             selectedStar.nextAll('[data-value]').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
-            console.log(selectedStar);
         }
 
         // A private function to remove the selected rating
@@ -88,7 +87,8 @@
                 var val = self.data('value');
                 self.siblings('input').val(val).trigger('change');
                 self.siblings('.rating-clear').show();
-                console.log("CHEGUEI");
+
+                console.log(USERID);
                 e.preventDefault();
                 false
             })
@@ -115,5 +115,7 @@
             $('input.rating[type=number]').rating();
         }
     });
+
+
 
 }(jQuery));
