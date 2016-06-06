@@ -33,7 +33,7 @@
 
         <hr class="style-one">
 
-        <h4>EDIT YOUR ANSWER</h4>
+        <h4>EDIT YOUR COMMENT</h4>
         <div id="{$comentario.resposta_id}">
             <form method="post" action="{$BASE_URL}actions/perguntas/update_comentario_resposta.php" enctype="multipart/form-data">
                 <input type="text" style="display: none" name="resposta_id" value="{$resposta.resposta_id}">
