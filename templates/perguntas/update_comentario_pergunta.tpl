@@ -8,16 +8,7 @@
             <div class="col-md-2">
                 <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
                 <a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a><br>
-                <div class="perg-data">{$pergunta.created_date}</div>
-                <br><br>
-                {if $USERNAME eq $pergunta.username}
-                <form action="">
-                    <input type="checkbox" name="fechar" value="">fechar pergunta<br>
-                    <input type="submit">
-                </form>
-
-                <a href="../../pages/perguntas/update_pergunta.php?pergunta_id={$pergunta.pergunta_id}">edit</a>
-                {/if}
+                <div class="perg-data">{$pergunta.created_date}</div
             </div>
             <div class="col-md-10">
                 <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
