@@ -1,4 +1,4 @@
-BASE_URL = '...';
+BASE_URL = '';
 
 $(document).ready(function() {
   initMessageClosers();

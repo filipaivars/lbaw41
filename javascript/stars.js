@@ -101,7 +101,7 @@ BASE_URL = "";
                 var val = self.data('value');
                 self.siblings('input').val(val).trigger('change');
                 self.siblings('.rating-clear').show();
-                console.log(self);
+                console.log(BASE_URL);
                 if(self.data('case') == 0) {
                     votoPergunta(self.data('user_id'),self.data('id'),self.data('value'));
                 }
