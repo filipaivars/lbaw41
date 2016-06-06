@@ -27,7 +27,7 @@
                     </div>
                 {/if}
                 {if $USERNAME eq $user.username}
-                <button type="submit" class="perg-comment btn2_3"  style="background: none; border: none; color: #e94735; margin-top: 10px; padding-top: 20px">EDIT</button>
+                <button type="submit" class="perg-comment btn2_3"  style="background: none; border: none; color: #e94735; margin-top: 30px;>EDIT</button>
                 {else}
                     favorite <img src="../../images/assets/favorite.png" width="20" />
                 {/if}
