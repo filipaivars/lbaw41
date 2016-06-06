@@ -45,7 +45,7 @@
 
 
                         {if not ($USERNAME eq $pergunta.username)}
-                            <div id="stars-green"><input type=hidden name"rating" id={$pergunta.pergunta_id}/></div>
+                            <div id="stars-green"><input type=hidden name="rating" id={$pergunta.pergunta_id}/></div>
 
 
                         {/if}
