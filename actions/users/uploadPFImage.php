@@ -23,11 +23,13 @@
 // Check if file already exists
 	if (file_exists($target_file)) {
 		echo '<script type="text/javascript">alert("Sorry, file already exists.");window.history.go(-1);</script>';
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 		$uploadOk = 0;
 	}
 // Check file size
 	if ($_FILES["fileToUpload"]["size"] > 500000) {
 		echo '<script type="text/javascript">alert("Sorry, your file is too large.");window.history.go(-1);</script>';
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 		$uploadOk = 0;
 		$changeOk = 0;
 	}
@@ -57,5 +59,6 @@
 			}
 			echo '<script type="text/javascript">alert("Sorry, there was an error uploading your file.");window.history.go(-1);</script>';
     }
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 ?>
