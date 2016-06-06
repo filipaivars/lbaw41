@@ -45,7 +45,7 @@
 
                         {if not ($USERNAME eq $pergunta.username)}
                             <form action="votoPergunta({$USERID},{$pergunta.pergunta_id},test)">
-                            <input  type="submit" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
+                            <input  type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
                             </form>
                         {/if}
                         <br>
