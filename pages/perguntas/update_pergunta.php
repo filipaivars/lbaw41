@@ -26,7 +26,7 @@ $tags = getPerguntaTags($pergunta_id);
 
 $tagstext = $tags[0]['nome'];
 for ($i = 1; $i < count($tags); $i++) {
-    $tagstext .= " " .$tags[0]['nome'];
+    $tagstext .= " " .$tags[$i]['nome'];
 }
 
 var_dump($tagstext);
