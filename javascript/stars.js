@@ -27,6 +27,7 @@
                 originalInput = $(this[element]),
                 max = originalInput.data('max') || 5,
                 min = originalInput.data('min') || 0,
+
                 clearable = originalInput.data('clearable') || null,
                 stars = '';
             console.log(originalInput);
@@ -56,6 +57,12 @@
                 originalInput.val(),
                 '" id="',
                 originalInput.attr('id'),
+                '" data-id="',
+                originalInput.data('id'),
+                '" data-user_id="',
+                originalInput.data('case'),
+                '" data-case="',
+                originalInput.data('user_id'),
                 '" />',
                 '</div>'].join('');
 
@@ -87,6 +94,13 @@
                 var val = self.data('value');
                 self.siblings('input').val(val).trigger('change');
                 self.siblings('.rating-clear').show();
+                if(self.data('case') == 0) {
+                    votoPergunta(self.data('user_id'),self.data('id'),self.data('value'));
+                }
+                else if(self.data('case') == 1){
+
+                }
+
                 e.preventDefault();
                 false
             })
@@ -115,3 +129,15 @@
     });
 
 }(jQuery));
+
+
+function votoPergunta(userid,perguntaid,valor) {
+    console.log("HEEEEEEEEEELOOOOOOOOOOOOOOO");
+    $.getJSON(BASE_URL + "api/votes/votePergunta.php", {user_id: userid,pergunta_id: perguntaid, valor: valor}, null);
+
+}
+
+function votoResposta(userid,perguntaid,valor) {
+    $.getJSON(BASE_URL + "api/votes/votePergunta.php", {user_id: userid,pergunta_id: perguntaid, valor: valor}, null);
+
+}

@@ -46,7 +46,7 @@
 
                         {if not ($USERNAME eq $pergunta.username)}
                             <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0" data-id="{$pergunta.pergunta_id}"
-                                   data-user_id="{$USERID}">
+                                   data-user_id="{$USERID}" data-case="0">
 
 
                         {/if}
