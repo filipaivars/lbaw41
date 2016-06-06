@@ -23,11 +23,13 @@
 // Check if file already exists
 	if (file_exists($target_file)) {
 		echo '<script type="text/javascript">alert("Sorry, file already exists.");window.history.go(-1);</script>';
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 		$uploadOk = 0;
 	}
 // Check file size
 	if ($_FILES["fileToUpload"]["size"] > 500000) {
 		echo '<script type="text/javascript">alert("Sorry, your file is too large.");window.history.go(-1);</script>';
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 		$uploadOk = 0;
 		$changeOk = 0;
 	}
@@ -49,6 +51,7 @@
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 			changeAvatar($user_id,$db_dir);
 			echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		} else {
 			if($changeOk == 1) {
 				$user_id = getUserId($_SESSION['username'])['user_id'];
@@ -56,5 +59,6 @@
 			}
 			echo '<script type="text/javascript">alert("Sorry, there was an error uploading your file.");window.history.go(-1);</script>';
     }
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 ?>
