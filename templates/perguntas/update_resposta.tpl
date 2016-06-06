@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <div style="padding-left: 200px; padding-top: 150px">
+        <div style="padding-left: 300px; padding-top: 150px">
             <div class="perg-conteudo">
                 {$resposta.conteudo}
             </div>
