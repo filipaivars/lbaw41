@@ -34,6 +34,8 @@ if(getRespostaCriador($resposta_id) != $user_id){
 
 updateAnswer($resposta_id,$conteudo);
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+$pergunta_id = getResposta($resposta_id)['pergunta_id'];
+
+header('Location: ' . $BASE_URL . 'pages/perguntas/show_pergunta.php?pergunta_id='. $pergunta_id);
 
 ?>
