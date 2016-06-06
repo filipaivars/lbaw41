@@ -2,6 +2,8 @@
 include_once('../../config/init.php');
 include_once($BASE_DIR .'database/perguntas.php');
 
+var_dump($_SESSION["error_messages"]);
+
 $perguntas = getLastPerguntas();
 for ($i = 0; $i < count($perguntas); $i++) {
     $perguntas[$i]["tags"] = getPerguntaTags($perguntas[$i]["pergunta_id"]);
