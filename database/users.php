@@ -152,4 +152,13 @@ function getUserMedals($user_id){
     return $stmt->fetchAll();
 }
 
+function updateAbout($user_id, $about) {
+    global $conn;
+    $query = "UPDATE utilizador SET about= :about WHERE user_id= :user_id;";
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam( ':about', $about, PDO::PARAM_STR );
+    $stmt->bindParam( ':user_id', $user_id, PDO::PARAM_STR );
+    return $stmt->execute();
+}
+
 ?>
