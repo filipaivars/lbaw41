@@ -241,7 +241,7 @@ function getRespostaVoto($resposta_id,$user_id) {
 function getSearchResults($search) {
     global $conn;
     $stmt = $conn->prepare("
-            SELECT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username, avg(votoutilizadorpergunta.valor) as average,count(DISTINCT resposta.resposta_id) as n_respostas, ts_rank_cd(pergunta.searchtext,plainto_tsquery('english', ?)) AS rank
+            SELECT pergunta.pergunta_id,pergunta.titulo, pergunta.created_date,utilizador.user_id, utilizador.username,utilizador.avatar, avg(votoutilizadorpergunta.valor) as average,count(DISTINCT resposta.resposta_id) as n_respostas, ts_rank_cd(pergunta.searchtext,plainto_tsquery('english', ?)) AS rank
             FROM pergunta
             JOIN utilizador ON pergunta.criar_id = utilizador.user_id
             LEFT OUTER JOIN resposta on (pergunta.pergunta_id = resposta.pergunta_id) 

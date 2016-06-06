@@ -6,7 +6,7 @@
 
         <div class="row" style="padding-left: 20px">
             <div class="col-md-2">
-                <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
+                <img class="avatar" src="{$pergunta.avatar}" width="100" height="100"><br>
                 <a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$resposta.username}</a><br>
                 <div class="perg-data">{$resposta.created_date}</div>
             </div>
