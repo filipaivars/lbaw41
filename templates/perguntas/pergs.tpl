@@ -84,10 +84,6 @@
                         {if $USERNAME eq $comentario.username}
                             <a href="../../pages/perguntas/update_comentario_pergunta.php?pergunta_id={$pergunta.pergunta_id}">edit</a>
                         {/if}
-
-                        <script>
-                            myFunction();
-                        </script>
                     {/foreach}
 
                     <div style="margin-top: 30px;">
@@ -163,10 +159,6 @@
                             {if $USERNAME eq $comentario.username}
                             <a href="../../pages/perguntas/update_comentario_resposta.php?resposta_id={$resposta.resposta_id}">edit</a>
                             {/if}
-
-                            <script>
-                                myFunction();
-                            </script>
                         {/foreach}
                     </div>
                 </div>
