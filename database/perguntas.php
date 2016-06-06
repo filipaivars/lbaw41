@@ -104,7 +104,7 @@ function getRespostaComentario($resposta_id,$user_id) {
 function getResposta($resposta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT resposta.conteudo,resposta.created_date,utilizador.username
+        SELECT resposta.resposta_id ,resposta.conteudo,resposta.created_date,utilizador.username
         FROM resposta
         JOIN utilizador ON (resposta.criar_id = utilizador.user_id)
         WHERE resposta.resposta_id = ?
