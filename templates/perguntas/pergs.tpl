@@ -67,7 +67,7 @@
                     </div>
                     <a class="perg-comment" id="btn2_1">COMMENT</a>
                     {foreach $pergunta.comentarios as $comentario}
-                        <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
+                        <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px; padding-left: 20px">
                             <div >
                                 <div class="col-md-1">
                                     <img class="avatar" src="">
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         {if $USERNAME eq $comentario.username}
-                            <a href="../../pages/perguntas/update_comentario_pergunta.php?pergunta_id={$comentario.pergunta_id}">edit</a>
+                            <a href="../../pages/perguntas/update_comentario_pergunta.php?pergunta_id={$pergunta.pergunta_id}">edit</a>
                         {/if}
 
                         <script>
