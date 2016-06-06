@@ -3,6 +3,25 @@
 
 <div class="wrap_0">
     <div class="wrap">
+
+        <div class="row" style="padding-left: 20px">
+            <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
+                <div class="perg-titulo">
+                    {$pergunta.titulo}
+                </div>
+
+            </a>
+            {foreach $pergunta.tags as $tag}
+            <div class="col-md-1" style="display:flex">
+                <div class="tag-style">
+                    {$tag.nome}
+                </div>
+            </div>
+            {/foreach}
+        </div>
+
+        <hr class="style-one">
+
         <div id="{$pergunta.pergunta_id}">
             <form method="post" action="{$BASE_URL}actions/perguntas/update_pergunta.php" enctype="multipart/form-data">
                 <input type="text" style="display: none" name="pergunta_id" value="{$pergunta.pergunta_id}">
