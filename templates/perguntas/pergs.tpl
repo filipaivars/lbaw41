@@ -1,6 +1,8 @@
 <title>{$pergunta.titulo} | WalkMeThrough</title>
 {include file='common/header.tpl'}
 
+<script src="../../javascript/perguntas.js"></script>
+
 <div class="wrap_0">
     <div class="wrap">
         <h4>{$pergunta.titulo}</h4>
@@ -41,7 +43,7 @@
 
 
                         {if not ($USERNAME eq $pergunta.username)}
-                            <input onclick="submit" type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
+                            <input onclick="votoPergunta({$USERID},$pergunta.pergunta_id,value)" type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
                         {/if}
                         <br>
                     <div id="apareceComm1">

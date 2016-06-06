@@ -250,6 +250,47 @@ function updateQuestion($pergunta_id, $titulo, $conteudo) {
 }
 
 
+/*VOTOS*/
+
+function existsVotoPergunta($user_id, $pergunta_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * 
+                            FROM votoutilizadorpergunta 
+                            WHERE user_id = ? AND pergunta_id = ?");
+    $stmt->execute(array($user_id, $pergunta_id));
+    return $stmt->fetch() == true;
+}
+
+
+function createVotoPergunta($user_id, $pergunta_id, $valor){
+
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO votoutilizadorpergunta (user_id,pergunta_id,valor) VALUES (:user_id,:pergunta_id,:valor)");
+    $stmt->bindParam( ':valor', $valor, PDO::PARAM_STR );
+    $stmt->bindParam( ':user_id', $user_id, PDO::PARAM_STR );
+    $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
+    return $stmt->execute();
+}
+
+
+function updateVotoPergunta($user_id, $pergunta_id, $valor) {
+    global $conn;
+    $query = "UPDATE votoutilizadorpergunta SET valor= :valor WHERE pergunta_id= :pergunta_id AND user_id= :user_id;";
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam( ':valor', $valor, PDO::PARAM_STR );
+    $stmt->bindParam( ':user_id', $user_id, PDO::PARAM_STR );
+    $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
+    return $stmt->execute();
+}
+
+
+
+
+
+
+
+
+
 
   
   function getUserTweets($username) {
