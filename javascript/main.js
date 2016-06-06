@@ -1,4 +1,4 @@
-BASE_URL = 'https://gnomo.fe.up.pt/~lbaw1541/lbaw41/';
+BASE_URL = 'https://gnomo.fe.up.pt/~lbaw1541/lbaw41/'; //////////TOCHANGE
 
 /*$(document).ready(function() {
   initMessageClosers();

@@ -100,7 +100,6 @@
                 var val = self.data('value');
                 self.siblings('input').val(val).trigger('change');
                 self.siblings('.rating-clear').show();
-                console.log(BASE_URL);
                 if(self.data('case') == 0) {
                     votoPergunta(self.data('user_id'),self.data('id'),self.data('value'));
                 }
@@ -140,7 +139,6 @@
 
 
 function votoPergunta(userid,perguntaid,valor) {
-    console.log(userid + " " + perguntaid + " " + valor);
     $.getJSON(BASE_URL + "api/votes/votePergunta.php", {user_id: userid,pergunta_id: perguntaid, valor: valor}, null);
 
 }
