@@ -244,18 +244,35 @@ function createCommentAnswer($conteudo, $criar_id, $resposta_id){
 }
 
 /*UPDATES*/
-function updateQuestion($pergunta_id, $titulo, $conteudo) {
+function updateQuestion($pergunta_id, $titulo, $conteudo,$tags) {
+
     global $conn;
-    $query = "UPDATE Pergunta SET titulo= :titulo, conteudo= :conteudo WHERE pergunta_id= :pergunta_id;";
-    $stmt = $conn->prepare($query);
-    $stmt->bindParam( ':titulo', $titulo, PDO::PARAM_STR );
-    $stmt->bindParam( ':conteudo', $conteudo, PDO::PARAM_STR );
-    $stmt->bindParam(':pergunta_id', $pergunta_id, PDO::PARAM_STR );
+    $final = 'DELETE FROM perguntatag  WHERE pergunta_id= ?;';
+    $stmt = $conn->prepare($final);
+    $stmt->execute(array($pergunta_id));
+    $final = 'BEGIN transaction';
+    $stmt = $conn->prepare($final);
+    $stmt->execute();
+    $final = 'UPDATE Pergunta SET titulo= ?, conteudo= ? WHERE pergunta_id= ?;';
+    $stmt = $conn->prepare($final);
+    $stmt->execute(array($titulo,$conteudo,$pergunta_id));
+    foreach ($tags as $tag) {
+        $final = 'INSERT INTO PerguntaTag VALUES (?,?)';
+        $stmt = $conn->prepare($final);
+        $stmt->execute(array($pergunta_id,$tag));
+    }
+    $final = 'COMMIT transaction';
+    $stmt = $conn->prepare($final);
     return $stmt->execute();
+
 }
 
 
 function updateAnswer($resposta_id, $conteudo) {
+
+
+
+
     global $conn;
     $query = "UPDATE resposta SET conteudo= :conteudo WHERE resposta_id= :resposta_id;";
     $stmt = $conn->prepare($query);

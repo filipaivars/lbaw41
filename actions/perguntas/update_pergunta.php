@@ -11,7 +11,7 @@ if(!$_SESSION['username']) {
     exit;
 }
 
-if(!$_POST['titulo'] || !$_POST['conteudo'] || !$_POST['tags']) {
+if(!$_POST['titulo'] || !$_POST['conteudo'] || !$_POST['tags'] || !$_POST['pergunta_id']) {
     $_SESSION['error_messages'][] = 'Missing form values';
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
@@ -20,6 +20,7 @@ if(!$_POST['titulo'] || !$_POST['conteudo'] || !$_POST['tags']) {
 
 
 
+$pergunta_id = $_POST['pergunta_id'];
 $titulo = $_POST['titulo'];
 $conteudo = $_POST['conteudo'];
 $tags = $_POST['tags'];
@@ -34,7 +35,7 @@ foreach ($tags_split as $tag) {
 
 
 $user_id = getUserId($_SESSION['username'])['user_id'];
-$pergunta_id = addQuestion($titulo, $conteudo, $user_id, $tags_id)['currval'];
+updateQuestion($pergunta_id,$titulo, $conteudo, $tags_id);
 
 
 header('Location: ' . $BASE_URL . 'pages/perguntas/show_pergunta.php?pergunta_id='. $pergunta_id);
