@@ -77,8 +77,8 @@
                                     <div class="col-md-10">
                                         <div class="row" style="padding-left: 20px">
                                             <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
-                                                <div class="perg-titulo">{
-                                                    $pergunta.titulo}
+                                                <div class="perg-titulo">
+                                                    {$pergunta.titulo}
                                                 </div>
 
                                             </a>
@@ -98,7 +98,7 @@
                                                 <input type="text" style="display: none" name="pergunta_id" value="{$pergunta.pergunta_id}">
                                                 <input type="text" name="titulo" value="{$pergunta.titulo}" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
                                                 <input type="text" name="conteudo" value="{$pergunta.conteudo}" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
-                                                <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">edit</button>
+                                                <button type="submit" class="perg-comment btn2" style="background: none; border: none; color: #e94735; margin-top: 10px">edit</button>
                                             </form>
                                         </div>
                                     </div>
