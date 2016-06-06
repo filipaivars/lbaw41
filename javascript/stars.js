@@ -81,6 +81,6 @@
 $(document).ready(function(){
 
     $("#stars-default").rating();
-    $("#stars-green").rating('create',{coloron:'green',onClick:test($(this).attr('pergunta_id'))});
+    $("#stars-green").rating('create',{coloron:'green',onClick:function(){ console.log($(this).attr('pergunta_id')) }});
     $("#stars-herats").rating('create',{coloron:'red',limit:10,glyph:'glyphicon-heart'});
 });
