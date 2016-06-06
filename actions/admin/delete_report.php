@@ -25,12 +25,6 @@ $reportid = $_GET['denuncia_id'];
 $_SESSION['success_messages'][] = 'Delete successful';
 deleteReport($reportid);
 
-echo '<script language="javascript">';
-echo 'alert("Report Ignored successfully")';
-echo '</script>';
-
-
-
 header('Location: ' . $_SERVER['HTTP_REFERER']);
 
 ?>
