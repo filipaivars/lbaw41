@@ -24,6 +24,12 @@ $conteudo = $_POST['conteudo'];
 
 $user_id = getUserId($_SESSION['username'])['user_id'];
 
+if(getRespostaCriador($resposta_id) != $user_id){
+    $_SESSION['error_messages'][] = 'User is not the owner of the answer';
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
+}
+
 
 
 updateAnswer($resposta_id,$conteudo);

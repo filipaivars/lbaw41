@@ -20,7 +20,17 @@ if(!$_POST['titulo'] || !$_POST['conteudo'] || !$_POST['tags'] || !$_POST['pergu
 
 
 
+
+
 $pergunta_id = $_POST['pergunta_id'];
+$user_id = getUserId($_SESSION['username'])['user_id'];
+
+if(getPerguntaCriador($pergunta_id) != $user_id){
+    $_SESSION['error_messages'][] = 'User is not the owner of the question';
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
+}
+
 $titulo = $_POST['titulo'];
 $conteudo = $_POST['conteudo'];
 $tags = $_POST['tags'];
@@ -34,7 +44,7 @@ foreach ($tags_split as $tag) {
 
 
 
-$user_id = getUserId($_SESSION['username'])['user_id'];
+
 updateQuestion($pergunta_id,$titulo, $conteudo, $tags_id);
 
 
