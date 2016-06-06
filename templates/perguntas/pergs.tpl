@@ -15,7 +15,6 @@
                 <div class="perg-data">{$pergunta.created_date}</div>
                 <br><br>
                 {if $USERNAME eq $pergunta.username}
-                    É MEU<br>
                     <form action="">
                         <input type="checkbox" name="fechar" value="">fechar pergunta<br>
                         <input type="submit">
@@ -76,6 +75,9 @@
                                 </div>
                             </div>
                         </div>
+                        {if $USERNAME eq $comentario.username}
+                            <a href="../../pages/perguntas/update_comentario_pergunta.php?pergunta_id={$comentario.pergunta_id}">edit</a>
+                        {/if}
 
                         <script>
                             myFunction();
