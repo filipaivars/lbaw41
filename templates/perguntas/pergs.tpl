@@ -120,7 +120,7 @@
                         </div>
                         <br>
                         <script>
-                            document.write(checkNull({$resposta.average}));
+                            document.write(checkNull({$resposta.average}))
                         </script>
 
                         {if not ($USERNAME eq $resposta.username)}
@@ -155,6 +155,10 @@
                                     </div>
                                 </div>
                             </div>
+
+                            {if $USERNAME eq $comentario.username}
+                            <a href="../../pages/perguntas/update_comentario_resposta.php?resposta_id={$resposta.resposta_id}">edit</a>
+                            {/if}
 
                             <script>
                                 myFunction();
