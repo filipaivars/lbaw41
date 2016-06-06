@@ -23,7 +23,7 @@
         <li><a class="selected" href="#basics">Basics</a></li>
         <li><a href="#mobile">Mobile</a></li>
         <li><a href="#account">Account</a></li>
-        <li><a href="#rules">Privacy</a></li>
+        <li><a href="#rules">Site Rules</a></li>
     </ul> <!-- cd-faq-categories -->
 
     <div class="cd-faq-items">
@@ -32,7 +32,7 @@
             <li>
                 <a class="cd-faq-trigger" href="#0">How do I post a question?</a>
                 <div class="cd-faq-content">
-                    <p>It's real easy! Scroll up. See that bar? That's right. Press it, enjoy the dropdown animation, add a title to your question, add additional information in the description and finally just add the tags you find appropriate. Then all you have to do is wait for someone to answer./p>
+                    <p>It's real easy! Scroll up. See that bar? That's right. Press it, enjoy the dropdown animation, add a title to your question, add additional information in the description and finally just add the tags you find appropriate. Then all you have to do is wait for someone to answer. </p>
                 </div> <!-- cd-faq-content -->
             </li>
 
@@ -53,7 +53,7 @@
             <li>
                 <a class="cd-faq-trigger" href="#0">How do scores work?</a>
                 <div class="cd-faq-content">
-                    <p>You can give scores to both questions and answers. The score system is by stars, it's super simple, so be sure to leave yours since it'll be addded to the average of that specific content</p>
+                    <p>You can give scores to both questions and answers. The score system is by stars, it's super simple, so be sure to leave yours since it'll be addded to the average of that specific content.</p>
                 </div> <!-- cd-faq-content -->
             </li>
         </ul> <!-- cd-faq-group -->
@@ -63,7 +63,7 @@
             <li>
                 <a class="cd-faq-trigger" href="#0">Is WalkMeThrough mobile friendly?</a>
                 <div class="cd-faq-content">
-                    <p>But of course! We are professionals here.</p>
+                    <p>But of course! We are professionals here.</p> <br> <p>Using WalkMeThrough on your phone should be just a easy as it is on your computer.</p>
                 </div> <!-- cd-faq-content -->
             </li>
         </ul> <!-- cd-faq-group -->
