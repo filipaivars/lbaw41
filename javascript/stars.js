@@ -87,13 +87,14 @@
                 var val = self.data('value');
                 self.siblings('input').val(val).trigger('change');
                 self.siblings('.rating-clear').show();
-                //e.preventDefault();
+                console.log("CHEGUEI");
+                e.preventDefault();
                 false
             })
             // Remove value on clear
             .on('click', '.rating-clear', function (e) {
                 _clearValue($(this).closest('.rating-input'));
-                //e.preventDefault();
+                e.preventDefault();
                 false
             })
             // Initialize view with default value
