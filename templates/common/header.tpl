@@ -22,11 +22,20 @@
 </head>
 <body>
 
-<div style="position: absolute; color: red">
+<div style="position: absolute;">
     {if $ERROR_MESSAGES}
         {foreach $ERROR_MESSAGES as $error}
-            aqui {$error}
+        <div style=" color: red">
+            {$error}
+        </div>
         {/foreach}
+    {/if}
+    {if $SUCCESS_MESSAGES}
+    {foreach $SUCCESS_MESSAGES as $success}
+    <div style=" color: green">
+        {$success}
+    </div>
+    {/foreach}
     {/if}
 </div>
 {if $USERNAME}
