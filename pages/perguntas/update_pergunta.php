@@ -23,15 +23,17 @@ $pergunta["comentarios"] = getPerguntaComentarios($pergunta["pergunta_id"]);
 
 $tags = getPerguntaTags($pergunta_id);
 
-$respostas = getPerguntaRespostas($pergunta_id);
 
-for ($i = 0; $i < count($respostas); $i++) {
-    $respostas[$i]["comentarios"] = getRespostaComentarios($respostas[$i]["resposta_id"]);
+$tagstext = $tags[0]['nome'];
+for ($i = 1; $i < count($tags); $i++) {
+    $tagstext .= " " .$tags[$i]['nome'];
 }
+
 
 
 $smarty->assign('pergunta', $pergunta);
 $smarty->assign('tags', $tags);
+$smarty->assign('tagstext', $tagstext);
 $smarty->assign('respostas', $respostas);
 
 
