@@ -25,7 +25,7 @@ $comentario = getPerguntaComentario($pergunta_id,$_SESSION['user_id']);
 $tags = getPerguntaTags($pergunta_id);
 
 
-
+var_dump($pergunta);
 
 $smarty->assign('pergunta', $pergunta);
 $smarty->assign('comentario', $comentario);
