@@ -130,6 +130,5 @@
 </div>
 
 
-<!--<script src="{$BASE_URL}javascript/tweets.js"></script>-->
 
 {include file='common/footer.tpl'}
