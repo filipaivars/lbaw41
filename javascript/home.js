@@ -35,14 +35,14 @@ $(function(){
     $("#includeHome").load("views/home.html");
 });
 
-function myFunction() {
+/*function myFunction() {
     var x = document.getElementsByClassName("avatar");
     var i;
     for (i in x) {
         x[i].src = "../../images/assets/default.png";
     }
 
-}
+}*/
 
 function changeTitle(title) {
     document.title = title;
