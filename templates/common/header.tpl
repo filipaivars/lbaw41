@@ -21,6 +21,14 @@
 
 </head>
 <body>
+
+<div style="position: absolute; color: red">
+    {if $ERROR_MESSAGES}
+        {foreach $ERROR_MESSAGES as $error}
+            aqui {$error}
+        {/foreach}
+    {/if}
+</div>
 {if $USERNAME}
     {include file='common/menu_logged_in.tpl'}
 
