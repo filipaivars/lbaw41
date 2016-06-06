@@ -44,7 +44,7 @@
 
 
                         {if not ($USERNAME eq $pergunta.username)}
-                            <input onclick="votoPergunta({$USERID},{$pergunta.pergunta_id},value)" type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
+                            <input onclick=votoPergunta({$USERID},{$pergunta.pergunta_id},value) type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0">
                         {/if}
                         <br>
                     <div id="apareceComm1">
