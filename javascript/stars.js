@@ -11,6 +11,7 @@
             selectedStar.removeClass('glyphicon-star-empty').addClass('glyphicon-star');
             selectedStar.prevAll('[data-value]').removeClass('glyphicon-star-empty').addClass('glyphicon-star');
             selectedStar.nextAll('[data-value]').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+            console.log(selectedStar);
         }
 
         // A private function to remove the selected rating
@@ -88,8 +89,8 @@
                 self.siblings('input').val(val).trigger('change');
                 self.siblings('.rating-clear').show();
                 console.log("CHEGUEI");
-                //e.preventDefault();
-                true
+                e.preventDefault();
+                false
             })
             // Remove value on clear
             .on('click', '.rating-clear', function (e) {
