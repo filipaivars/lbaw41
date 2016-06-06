@@ -37,7 +37,12 @@ BASE_URL = "...";
             // HTML element construction
             for (i = min; i <= max; i++) {
                 // Create <max> empty stars
-                stars += ['<span class="glyphicon glyphicon-star-empty" data-value="', i, '"></span>'].join('');
+                stars += ['<span class="glyphicon glyphicon-star-empty" data-value="', i,'" data-id="',
+                    originalInput.data('id'),
+                    '" data-user_id="',
+                    originalInput.data('user_id'),
+                    '" data-case="',
+                    originalInput.data('case'), ,'"></span>'].join('');
             }
             // Add a clear link if clearable option is set
             if (clearable) {
@@ -62,9 +67,9 @@ BASE_URL = "...";
                 '" data-id="',
                 originalInput.data('id'),
                 '" data-user_id="',
-                originalInput.data('case'),
-                '" data-case="',
                 originalInput.data('user_id'),
+                '" data-case="',
+                originalInput.data('case'),
                 '" />',
                 '</div>'].join('');
 
