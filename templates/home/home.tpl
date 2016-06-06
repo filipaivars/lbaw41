@@ -67,7 +67,7 @@
             <h4>Top Questions</h4>
             <div>
                 {foreach $bestperguntas as $bestpergunta}
-                    <hr class="style-one">
+                    <hr class="style-two">
 
                     <div class="questaoRecente">
                         <div class="row">
