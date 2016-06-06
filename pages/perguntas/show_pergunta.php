@@ -16,6 +16,10 @@
     $pergunta = $perguntas[0];
 
     $pergunta["comentarios"] = getPerguntaComentarios($pergunta["pergunta_id"]);
+    if($_SESSION['user_id']) {
+        $pergunta["voto"] = getPerguntaVoto($pergunta_id,$_SESSION['user_id']);
+    }
+
 
 
 
@@ -27,6 +31,10 @@
 
     for ($i = 0; $i < count($respostas); $i++) {
         $respostas[$i]["comentarios"] = getRespostaComentarios($respostas[$i]["resposta_id"]);
+        if($_SESSION['user_id']) {
+            $respostas[$i]["voto"] = getRespostaVoto($respostas[$i]['resposta_id'],$_SESSION['user_id']);
+        }
+        
     }
 
 

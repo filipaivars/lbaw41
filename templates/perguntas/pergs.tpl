@@ -46,9 +46,15 @@
 
 
                         {if not ($USERNAME eq $pergunta.username)}
-                            <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0" data-id="{$pergunta.pergunta_id}"
-                                   data-user_id="{$USERID}" data-case="0">
+                            {if isset($pergunta.voto)}
+                                <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="{$pergunta.voto}" data-id="{$pergunta.pergunta_id}"
+                                                             data-user_id="{$USERID}" data-case="0">
+                            {else}
 
+
+                            <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="" data-id="{$pergunta.pergunta_id}"
+                                   data-user_id="{$USERID}" data-case="0">
+                            {/if}
 
                         {/if}
                         <br>
@@ -118,8 +124,14 @@
                         </script>
 
                         {if not ($USERNAME eq $resposta.username)}
-                            <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0" data-id="{$resposta.resposta_id}"
+
+                            {if isset($resposta.voto)}
+                                <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="{$resposta.voto}" data-id="{$resposta.resposta_id}"
+                                       data-user_id="{$USERID}" data-case="1">
+                            {else}
+                                <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="" data-id="{$resposta.resposta_id}"
                                    data-user_id="{$USERID}" data-case="1">
+                            {/if}
                         {/if}
                         <br>
                         <form method="POST" action="{$BASE_URL}actions/perguntas/create_comentario_resposta.php" enctype="multipart/form-data">

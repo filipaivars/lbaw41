@@ -62,6 +62,8 @@ function getPerguntaRespostas($pergunta_id) {
     return $stmt->fetchAll();
 }
 
+
+
 function getPerguntaTags($pergunta_id) {
     global $conn;
     $stmt = $conn->prepare("
@@ -159,6 +161,44 @@ function getRecentTags() {
     $stmt->execute();
     return $stmt->fetchAll();
 }
+
+function getPerguntaCriador($pergunta_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT criar_id
+                            FROM pergunta 
+                            WHERE pergunta_id = ?");
+    $stmt->execute(array($pergunta_id));
+    return $stmt->fetchAll()[0]['criar_id'];
+}
+
+function getRespostaCriador($resposta_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT criar_id
+                            FROM resposta 
+                            WHERE resposta_id = ?");
+    $stmt->execute(array($resposta_id));
+    return $stmt->fetchAll()[0]['criar_id'];
+}
+
+function getPerguntaVoto($pergunta_id,$user_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT valor
+                            FROM votoutilizadorpergunta 
+                            WHERE pergunta_id = ? AND user_id = ?");
+    $stmt->execute(array($pergunta_id,$user_id));
+    return $stmt->fetchAll()[0]['valor'];
+}
+
+function getRespostaVoto($resposta_id,$user_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT valor
+                            FROM votoutilizadorresposta 
+                            WHERE resposta_id = ? AND user_id = ?");
+    $stmt->execute(array($resposta_id,$user_id));
+    return $stmt->fetchAll()[0]['valor'];
+}
+
+
 
 /*SEARCH*/
 
