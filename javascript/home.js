@@ -24,6 +24,11 @@ $(document).ready(function(){
             $(".apareceComm2").slideDown();
         })
     });
+    $(".btn2_3").each(function () {
+        $(this).on("click", function () {
+            $(".aparecePerfil").slideDown();
+        })
+    });
 });
 
 $(function(){

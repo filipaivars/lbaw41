@@ -5,23 +5,36 @@
     <div class="wrap" style="padding-top: 100px">
 
         <div class="row" style="padding-left: 20px">
-            <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
-                <div class="perg-titulo">
-                    {$pergunta.titulo}
-                </div>
-            </a>
-            <br>
-            {$pergunta.conteudo}
-
-
-            <br><br>
-            {foreach $tags as $tag}
-            <div class="col-md-1" style="display:flex">
-                <div class="tag-style">
-                    {$tag.nome}
-                </div>
+            <div class="col-md-2">
+                <img class="avatar" src="../../images/assets/default.png" width="100" height="100"><br>
+                <a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a><br>
+                <div class="perg-data">{$pergunta.created_date}</div>
             </div>
-            {/foreach}
+            <div class="col-md-10">
+                <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
+                    <div class="perg-titulo">
+                        {$pergunta.titulo}
+                    </div>
+                </a>
+                <br>
+                {$pergunta.conteudo}
+
+
+                <br><br>
+                {foreach $tags as $tag}
+                <div class="col-md-1" style="display:flex">
+                    <div class="tag-style">
+                        {$tag.nome}
+                    </div>
+                </div>
+                {/foreach}
+            </div>
+        </div>
+
+        <div style="padding-left: 300px; padding-top: 150px">
+            <div class="perg-conteudo">
+                {$resposta.conteudo}
+            </div>
         </div>
 
         <hr class="style-one">
