@@ -6,7 +6,7 @@
         <section id="perguntas">
             <h4 style="margin-top: 0; padding-top: 20px">Recent Questions</h4>
             {foreach $perguntas as $pergunta}
-                <hr class="style-two">
+                <hr class="style-one">
 
                 <div id="questaoRecente">
                     <div class="row">
@@ -67,7 +67,7 @@
             <h4>Top Questions</h4>
             <div>
                 {foreach $bestperguntas as $bestpergunta}
-                    <hr class="style-two">
+                    <hr class="style-one">
 
                     <div class="questaoRecente">
                         <div class="row">
