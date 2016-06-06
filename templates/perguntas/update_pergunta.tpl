@@ -9,10 +9,12 @@
                 <div class="perg-titulo">
                     {$pergunta.titulo}
                 </div>
+            </a>
                 <br>
                 {$pergunta.conteudo}
 
-            </a>
+
+            <br><br>
             {foreach $tags as $tag}
             <div class="col-md-1" style="display:flex">
                 <div class="tag-style">
