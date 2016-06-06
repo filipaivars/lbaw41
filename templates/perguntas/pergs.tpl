@@ -10,7 +10,7 @@
         <hr class="style-one">
         <div class="row">
             <div class="col-md-2">
-                <img class="avatar" src="../../images/assets/default.png" width="100" height="100" alt="User Avatar"><br>
+                <img class="avatar" src="{$pergunta.avatar}" width="100" height="100" alt="User Avatar"><br>
                 <a href="../../pages/users/users.php?user_id={$pergunta.criar_id}">{$pergunta.username}</a><br>
                 <div class="perg-data">{$pergunta.created_date}</div>
                 <br><br>

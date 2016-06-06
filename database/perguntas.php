@@ -35,7 +35,7 @@ function getBestPerguntas() {
 function getPergunta($pergunta_id) {
   global $conn;
   $stmt = $conn->prepare("
-        SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date, utilizador.username, pergunta.criar_id, avg(votoutilizadorpergunta.valor) as average
+        SELECT pergunta.pergunta_id, pergunta.titulo, pergunta.conteudo,pergunta.created_date, utilizador.username, utilizador.avatar ,pergunta.criar_id, avg(votoutilizadorpergunta.valor) as average
         FROM pergunta
         JOIN utilizador ON (pergunta.criar_id = utilizador.user_id)
         LEFT OUTER JOIN votoutilizadorpergunta ON (votoutilizadorpergunta.pergunta_id = pergunta.pergunta_id)
@@ -49,7 +49,7 @@ function getPergunta($pergunta_id) {
 function getPerguntaRespostas($pergunta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT resposta.resposta_id, resposta.conteudo,resposta.created_date , utilizador.username, avg(votoutilizadorresposta.valor) as average
+        SELECT resposta.resposta_id, resposta.conteudo,resposta.created_date ,utilizador.avatar, utilizador.username, avg(votoutilizadorresposta.valor) as average
         FROM resposta
         JOIN pergunta ON (resposta.pergunta_id = pergunta.pergunta_id)
         JOIN utilizador ON (resposta.criar_id = utilizador.user_id)
@@ -80,7 +80,7 @@ function getPerguntaTags($pergunta_id) {
 function getPerguntaComentario($pergunta_id,$user_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username, utilizador.avatar
         FROM comentario
         JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
         WHERE comentario.pergunta_id = ? AND criar_id = ?
@@ -92,7 +92,7 @@ function getPerguntaComentario($pergunta_id,$user_id) {
 function getRespostaComentario($resposta_id,$user_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username, utilizador.avatar
         FROM comentario
         JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
         WHERE comentario.resposta_id = ? AND criar_id = ?
@@ -104,7 +104,7 @@ function getRespostaComentario($resposta_id,$user_id) {
 function getResposta($resposta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT resposta.resposta_id ,resposta.conteudo,resposta.created_date,utilizador.username,resposta.pergunta_id
+        SELECT resposta.resposta_id ,resposta.conteudo,resposta.created_date,utilizador.username,resposta.pergunta_id,utilizador.avatar
         FROM resposta
         JOIN utilizador ON (resposta.criar_id = utilizador.user_id)
         WHERE resposta.resposta_id = ?
@@ -116,7 +116,7 @@ function getResposta($resposta_id) {
 function getPerguntaComentarios($pergunta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username,utilizador.avatar
         FROM comentario
         JOIN pergunta ON (pergunta.pergunta_id = comentario.pergunta_id)
         JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
@@ -129,7 +129,7 @@ function getPerguntaComentarios($pergunta_id) {
 function getRespostaComentarios($resposta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT comentario.conteudo,comentario.created_date,utilizador.username
+        SELECT comentario.conteudo,comentario.created_date,utilizador.username,utilizador.avatar
         FROM comentario
         JOIN resposta ON (resposta.resposta_id = comentario.resposta_id)
         JOIN utilizador ON (comentario.criar_id = utilizador.user_id)
