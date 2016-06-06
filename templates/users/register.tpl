@@ -16,9 +16,9 @@
             <h4>Register without Facebook</h4>
             <form action="{$BASE_URL}actions/users/register.php" method="post" enctype="multipart/form-data">
                 <label>Username:<br></label>
-                <input type="text" name="username" value="{$FORM_VALUES.username}">
+                <input type="text" name="username" value="{$FORM_VALUES.username}" pattern="^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$" required>
                 <label>Password:<br></label>
-                <input type="password" name="password" value="">
+                <input type="password" name="password" value="" required>
                 <br>
                 <input type="submit" value="Register">
             </form>
