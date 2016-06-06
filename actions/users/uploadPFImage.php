@@ -49,6 +49,7 @@
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 			changeAvatar($user_id,$db_dir);
 			echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		} else {
 			if($changeOk == 1) {
 				$user_id = getUserId($_SESSION['username'])['user_id'];
