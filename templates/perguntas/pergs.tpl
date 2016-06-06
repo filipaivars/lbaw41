@@ -45,8 +45,8 @@
 
 
                         {if not ($USERNAME eq $pergunta.username)}
-                            <div id="stars-default"><input onclick="test()" type=hidden name"rating"/></div>
-                    </form>
+                            <div id="stars-default"><input type=hidden name"rating" id={$pergunta.pergunta_id}/></div>
+
 
                         {/if}
                         <br>

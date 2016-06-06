@@ -31,6 +31,7 @@
             //initialize the data-rating property
             this.each(function(){
                 attr = $(this).attr('data-rating');
+                $(this).attr('pergunta_id', $(this).id);
                 if (attr === undefined || attr === false) { $(this).attr('data-rating',settings.value); }
             })
 
@@ -80,6 +81,6 @@
 $(document).ready(function(){
 
     $("#stars-default").rating();
-    $("#stars-green").rating('create',{coloron:'green',onClick:function(){ alert('rating is ' + this.attr('data-rating')); }});
+    $("#stars-green").rating('create',{coloron:'green',onClick:test($(this).attr('pergunta_id'))});
     $("#stars-herats").rating('create',{coloron:'red',limit:10,glyph:'glyphicon-heart'});
 });
