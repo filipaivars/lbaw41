@@ -20,6 +20,8 @@
                         <input type="checkbox" name="fechar" value="">fechar pergunta<br>
                         <input type="submit">
                     </form>
+
+                    <a href="../../pages/perguntas/update_pergunta.php?pergunta_id={$pergunta.pergunta_id}">edit</a>
                 {/if}
             </div>
             <div class="col-md-10">

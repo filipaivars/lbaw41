@@ -90,9 +90,11 @@
                                                 </div>
                                             {/foreach}
                                         </div>
+                                        {if $USERNAME eq $user.username}
                                         <div>
                                             <a href="../../pages/perguntas/update_pergunta.php?pergunta_id={$pergunta.pergunta_id}">edit</a>
                                         </div>
+                                        {/if}
 
                                     </div>
                                     <div class="col-md-2">
