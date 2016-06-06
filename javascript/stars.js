@@ -88,7 +88,7 @@
             .on('mouseleave', '[data-value]', function () {
                 var self = $(this);
                 var val = self.siblings('input').val();
-                if (val >= 0) {
+                if (val) {
                     _paintValue(self.closest('.rating-input'), val);
                 } else {
                     _clearValue(self.closest('.rating-input'));
