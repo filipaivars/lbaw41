@@ -88,8 +88,8 @@
                 self.siblings('input').val(val).trigger('change');
                 self.siblings('.rating-clear').show();
                 console.log("CHEGUEI");
-                e.preventDefault();
-                false
+                //e.preventDefault();
+                true
             })
             // Remove value on clear
             .on('click', '.rating-clear', function (e) {
