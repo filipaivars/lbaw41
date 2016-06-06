@@ -91,7 +91,7 @@
                                             {/foreach}
                                         </div>
                                         <div>
-                                            <a href="../..pages/perguntas/update_pergunta.php?pergunta_id={$pergunta.pergunta_id}">edit</a>
+                                            <a href="../../pages/perguntas/update_pergunta.php?pergunta_id={$pergunta.pergunta_id}">edit</a>
                                         </div>
 
                                     </div>
