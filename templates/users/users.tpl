@@ -67,12 +67,13 @@
 
         <div class="aparecePerfil" style="padding-left: 10%; padding-right: 30%; padding-top: 50px">
             <form action="{$BASE_URL}actions/users/update_perfil.php" method="post" enctype="multipart/form-data">
-                    <div>
-                        <input type="text" name="about" value="{$user.about}" style="width: 100%; margin-top: 10px; border-style: none; height: 33px;">
-                    </div>
-                    <div>
-                        <button type="submit" class="perg-comment"  style="background: none; border: none; color: #e94735; margin-top: 10px">edit</button>
-                    </div>
+                <div>
+                    <input type="text" style="display: none" name="user_id" value="{$user.user_id}">
+                    <input type="text" name="about" value="{$user.about}" style="width: 100%; margin-top: 10px; border-style: none; height: 33px;">
+                </div>
+                <div>
+                    <button type="submit" class="perg-comment"  style="background: none; border: none; color: #e94735; margin-top: 10px">edit</button>
+                </div>
 
             </form>
         </div>
