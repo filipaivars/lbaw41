@@ -26,6 +26,9 @@
 .apareceComm2{
     display:none;
 }
+.aparecePerfil{
+    display: none;
+}
 .btn2{
     padding-top: 15px;
     padding-bottom: 15px;
