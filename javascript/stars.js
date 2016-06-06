@@ -31,7 +31,7 @@
             //initialize the data-rating property
             this.each(function(){
                 attr = $(this).attr('data-rating');
-                $(this).attr('pergunta_id', $(this).id);
+                $(this).attr('pergunta_id', div.find("input").id);
                 if (attr === undefined || attr === false) { $(this).attr('data-rating',settings.value); }
             })
 
