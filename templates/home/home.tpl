@@ -69,7 +69,7 @@
                 {foreach $bestperguntas as $bestpergunta}
                     <hr class="style-one">
 
-                    <div id="questaoRecente">
+                    <div class="questaoRecente">
                         <div class="row">
                             <div class="col-md-1">
                                 <img class="avatar" src="{$bestpergunta.avatar}">
