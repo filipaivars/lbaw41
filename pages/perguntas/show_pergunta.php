@@ -20,7 +20,6 @@
         $pergunta["voto"] = getPerguntaVoto($pergunta_id,$_SESSION['user_id']);
     }
 
-    var_dump($pergunta);
 
 
 
@@ -35,7 +34,7 @@
         if($_SESSION['user_id']) {
             $respostas[$i]["voto"] = getRespostaVoto($respostas[$i]['resposta_id'],$_SESSION['user_id']);
         }
-        var_dump($respostas[$i]);
+        
     }
 
 
