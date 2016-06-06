@@ -15,23 +15,19 @@ if(!$_SESSION['user_id']) {
     exit;
 }
 
-$pergunta_id = $_GET['pergunta_id'];
+$resposta_id = $_GET['resposta_id'];
 
-$pergunta = getPergunta($pergunta_id);
-$comentario = getPerguntaComentario($pergunta_id,$_SESSION['user_id']);
-
-
-
-$tags = getPerguntaTags($pergunta_id);
+$resposta = getResposta($resposta_id);
+$comentario = getRespostaComentario($resposta_id,$_SESSION['user_id']);
 
 
 
 
-$smarty->assign('pergunta', $pergunta);
+
+$smarty->assign('resposta', $resposta);
 $smarty->assign('comentario', $comentario);
-$smarty->assign('tags', $tags);
 
 
-$smarty->display('perguntas/update_comentario_pergunta.tpl');
+$smarty->display('perguntas/update_comentario_resposta.tpl');
 
 ?>

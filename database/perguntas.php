@@ -101,6 +101,18 @@ function getRespostaComentario($resposta_id,$user_id) {
     return $stmt->fetchAll()[0];
 }
 
+function getResposta($resposta_id) {
+    global $conn;
+    $stmt = $conn->prepare("
+        SELECT resposta.conteudo,resposta.created_date,utilizador.username
+        FROM resposta
+        JOIN utilizador ON (resposta.criar_id = utilizador.user_id)
+        WHERE resposta.resposta_id = ?
+                            ");
+    $stmt->execute(array($resposta_id));
+    return $stmt->fetchAll()[0];
+}
+
 function getPerguntaComentarios($pergunta_id) {
     global $conn;
     $stmt = $conn->prepare("
