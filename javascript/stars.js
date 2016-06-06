@@ -105,6 +105,7 @@
                     votoPergunta(self.data('user_id'),self.data('id'),self.data('value'));
                 }
                 else if(self.data('case') == 1){
+                    votoResposta(self.data('user_id'),self.data('id'),self.data('value'));
 
                 }
 
@@ -144,7 +145,7 @@ function votoPergunta(userid,perguntaid,valor) {
 
 }
 
-function votoResposta(userid,perguntaid,valor) {
-    $.getJSON(BASE_URL + "api/votes/votePergunta.php", {user_id: userid,pergunta_id: perguntaid, valor: valor}, null);
+function votoResposta(userid,respostaid,valor) {
+    $.getJSON(BASE_URL + "api/votes/voteResposta.php", {user_id: userid,resposta_id: respostaid, valor: valor}, null);
 
 }
