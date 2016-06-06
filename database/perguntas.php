@@ -104,7 +104,7 @@ function getRespostaComentario($resposta_id,$user_id) {
 function getResposta($resposta_id) {
     global $conn;
     $stmt = $conn->prepare("
-        SELECT resposta.resposta_id ,resposta.conteudo,resposta.created_date,utilizador.username
+        SELECT resposta.resposta_id ,resposta.conteudo,resposta.created_date,utilizador.username,resposta.pergunta_id
         FROM resposta
         JOIN utilizador ON (resposta.criar_id = utilizador.user_id)
         WHERE resposta.resposta_id = ?
@@ -345,10 +345,7 @@ function updateQuestion($pergunta_id, $titulo, $conteudo,$tags) {
 
 
 function updateAnswer($resposta_id, $conteudo) {
-
-
-
-
+    
     global $conn;
     $query = "UPDATE resposta SET conteudo= :conteudo WHERE resposta_id= :resposta_id;";
     $stmt = $conn->prepare($query);
