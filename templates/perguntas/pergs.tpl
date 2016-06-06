@@ -15,10 +15,10 @@
                 <br><br>
                 {if $USERNAME eq $pergunta.username}
                     É MEU<br>
-                <form action="">
-                    <input type="checkbox" name="fechar" value="">fechar pergunta<br>
-                    <input type="submit">
-                </form>
+                    <form action="">
+                        <input type="checkbox" name="fechar" value="">fechar pergunta<br>
+                        <input type="submit">
+                    </form>
                 {/if}
             </div>
             <div class="col-md-10">
@@ -27,13 +27,13 @@
                     {$pergunta.conteudo}
                 </div>
                 <div style="margin-top: 10px; margin-bottom: 10px">
-                {foreach $tags as $tag}
-                    <div class="col-md-1" style="display:flex">
-                        <div class="tag-style">
-                            {$tag.nome}
+                    {foreach $tags as $tag}
+                        <div class="col-md-1" style="display:flex">
+                            <div class="tag-style">
+                                {$tag.nome}
+                            </div>
                         </div>
-                    </div>
-                {/foreach}
+                    {/foreach}
                 </div>
                 <div>
                     <br><br>
@@ -108,15 +108,15 @@
                             document.write(checkNull({$resposta.average}));
                         </script>
 
-                            {if not ($USERNAME eq $resposta.username)}
+                        {if not ($USERNAME eq $resposta.username)}
                             <br><a style="padding-top: 30px; margin-top: 20px">RATE ME</a><br>
-                            {/if}
-                            <br>
-                            <form method="POST" action="{$BASE_URL}actions/perguntas/create_comentario_resposta.php" enctype="multipart/form-data">
-                                <input type="text" style="display: none" name="resposta_id" value="{$resposta.resposta_id}">
-                                <input type="text" name="conteudo" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
-                                <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">COMMENT</button>
-                            </form>
+                        {/if}
+                        <br>
+                        <form method="POST" action="{$BASE_URL}actions/perguntas/create_comentario_resposta.php" enctype="multipart/form-data">
+                            <input type="text" style="display: none" name="resposta_id" value="{$resposta.resposta_id}">
+                            <input type="text" name="conteudo" placeholder="my comment" style="width: 100%; margin-top: 10px; border-style: none; height: 50px;">
+                            <button type="submit" class="perg-comment btn2_2" style="background: none; border: none; color: #e94735; margin-top: 10px">COMMENT</button>
+                        </form>
 
                         {foreach $resposta.comentarios as $comentario}
                             <div class="row" style="margin-top: 20px; padding-top: 5px; margin-left: 3px; margin-right: 5px;background-color: #ecf0f1; min-height: 85px">
