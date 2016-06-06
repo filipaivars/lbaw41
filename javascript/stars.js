@@ -1,3 +1,5 @@
+BASE_URL = "...";
+
 (function ($) {
 
     $.fn.rating = function () {
