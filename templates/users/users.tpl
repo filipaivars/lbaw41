@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="aparecePerfil" style="padding-left: 30%">
+        <div class="aparecePerfil" style="padding-left: 10%">
             <form action="{$BASE_URL}actions/users/update_perfil.php" method="post" enctype="multipart/form-data">
                     <div>
                         <input type="text" name="about" value="{$user.about}" style="width: 100%; margin-top: 10px; border-style: none; height: 33px;">
