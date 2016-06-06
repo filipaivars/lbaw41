@@ -45,8 +45,8 @@
 
 
                         {if not ($USERNAME eq $pergunta.username)}
-                            <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0" content-id="{$pergunta.pergunta_id}"
-                                   user-id="{$USERID}">
+                            <input type="number" class="rating" id="test" name="test" data-min="1" data-max="5" value="0" data-id="{$pergunta.pergunta_id}"
+                                   data-user_id="{$USERID}">
 
 
                         {/if}
