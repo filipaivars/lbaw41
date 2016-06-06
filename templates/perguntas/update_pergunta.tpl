@@ -2,7 +2,7 @@
 {include file='common/header.tpl'}
 
 <div class="wrap_0">
-    <div class="wrap">
+    <div class="wrap" style="padding-top: 100px">
 
         <div class="row" style="padding-left: 20px">
             <a href="../../pages/perguntas/show_pergunta.php?pergunta_id={$pergunta.pergunta_id}">
@@ -22,6 +22,7 @@
 
         <hr class="style-one">
 
+        <h4>EDIT YOUR QUESTION</h4>
         <div id="{$pergunta.pergunta_id}">
             <form method="post" action="{$BASE_URL}actions/perguntas/update_pergunta.php" enctype="multipart/form-data">
                 <input type="text" style="display: none" name="pergunta_id" value="{$pergunta.pergunta_id}">
