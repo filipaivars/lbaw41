@@ -154,6 +154,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         {$comentario.created_date}
+
                                     </div>
                                 </div>
                             </div>
