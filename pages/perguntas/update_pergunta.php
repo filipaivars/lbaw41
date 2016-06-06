@@ -29,7 +29,7 @@ for ($i = 1; $i < count($tags); $i++) {
     $tagstext .= " " .$tags[$i]['nome'];
 }
 
-var_dump($tagstext);
+
 
 $smarty->assign('pergunta', $pergunta);
 $smarty->assign('tags', $tags);
