@@ -9,6 +9,8 @@
                 <div class="perg-titulo">
                     {$pergunta.titulo}
                 </div>
+                <br>
+                {$pergunta.conteudo}
 
             </a>
             {foreach $pergunta.tags as $tag}
