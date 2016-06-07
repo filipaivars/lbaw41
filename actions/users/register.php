@@ -21,7 +21,7 @@
     //chmod($BASE_DIR . "images/users/" . $username . '.' . $extension, 0644);
   } catch (PDOException $e) {
   
-    if (strpos($e->getMessage(), 'users_pkey') !== false) {
+    if (strpos($e->getMessage(), 'users_pkey') != false) {
       $_SESSION['error_messages'][] = 'Duplicate username';
       $_SESSION['field_errors']['username'] = 'Username already exists';
     }
